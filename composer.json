@@ -1,0 +1,21 @@
+{
+    "name": "rgjoni/spotify-auth",
+    "description": "Spotify API authentication in PHP",
+    "authors": [
+        {
+            "name": "Reard Gjoni",
+            "email": "gjoni-r@hotmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SpotifyAPI\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.0",
+        "ext-json": "*"
+    }
+}
