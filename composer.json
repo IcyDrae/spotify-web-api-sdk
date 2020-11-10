@@ -11,11 +11,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SpotifyAPI\\": "src/"
+            "SpotifyAPI\\": "src/",
+            "Config\\": "config/"
         }
     },
     "require": {
         "guzzlehttp/guzzle": "^6.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-http": "*",
+        "rgjoni/router": "^1.0"
     }
 }

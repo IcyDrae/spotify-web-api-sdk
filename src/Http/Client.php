@@ -1,13 +1,10 @@
 <?php
 
-namespace SpotifyAPI\Controllers;
 
-#require_once(__DIR__ . "./../../vendor/autoload.php");
+namespace SpotifyAPI\Http;
 
+use Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\TransferStats;
-use Psr\Http\Message\ResponseInterface;
-use SpotifyAPI\Secrets\Secrets;
 
 /**
  * Class Client
@@ -31,9 +28,9 @@ class Client extends GuzzleClient
     private $httpMethod;
 
     /**
-     * @var string $toUrl
+     * @var string $url
      */
-    private $toUrl;
+    private $url;
 
     /**
      * @var array $parametersArray
@@ -43,7 +40,7 @@ class Client extends GuzzleClient
     /**
      * @var array $configArray
      */
-    private $configArray;
+    public array $configArray;
 
     /**
      * @var array $authParams
@@ -66,33 +63,54 @@ class Client extends GuzzleClient
     private $authCode;
 
     /**
+     * @var array $allowRedirects
+     */
+    private array $allowRedirects;
+
+    /**
      * Client constructor.
      * @param string $baseUri
      * @param integer $timeout
+     * @param array $allowRedirects
      */
-    public function __construct ($baseUri, $timeout)
+    public function __construct (string $baseUri, int $timeout, array $allowRedirects = [])
     {
+        $this->setConfigs();
+
         $this->baseUri = $baseUri;
         $this->timeout = $timeout;
+        $this->allowRedirects = $allowRedirects;
 
         parent::__construct([
             "base_uri" => $this->baseUri,
-            "timeout" => $this->timeout
+            "timeout" => $this->timeout,
+            "allow_redirects" => $this->allowRedirects
         ]);
     }
 
     /**
-     * @param string $httpMethod
-     * @param string $toUrl
-     * @param array $parametersArray
-     * @return ResponseInterface
+     * @return $this
      */
-    public function makeRequest($httpMethod, $toUrl, $parametersArray) {
-        $this->httpMethod = $httpMethod;
-        $this->toUrl = $toUrl;
-        $this->parametersArray = $parametersArray;
+    private function setConfigs() {
+        $this->configArray = [
+            "client_id" => SecretsCollection::$id,
+            "response_type" => "code",
+            "redirect_uri" => "http://frontend.spotify-auth.com:1024",
+            "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
+            "grant_type" => "authorization_code",
+            "code" => $this->authCode,
+            "headers" => [
+                "accept" => "application/json",
+                "content_type" => "application/json",
+                "authorization" => sprintf("Bearer %s",  SecretsCollection::$tokens["access_token"]),
+                "authorization_access" => sprintf("Basic %s", base64_encode(SecretsCollection::$id . ":" . SecretsCollection::$secret)),
+            ],
+            "query" => [
+                "limit" => 25,
+            ],
+        ];
 
-        return parent::request($this->httpMethod, $this->toUrl, $this->parametersArray);
+        return $this;
     }
 
     /**
@@ -103,24 +121,16 @@ class Client extends GuzzleClient
         if (isset($_GET["code"])) {
             $this->authCode = $_GET["code"];
         }
-        $secretsObj = new Secrets;
 
         $this->configArray = [
-            "client_id" => $secretsObj->getId(),
+            "client_id" => SecretsCollection::$id,
             "response_type" => "code",
-            "redirect_uri" => $secretsObj->getHost() . "/callback",
+            "redirect_uri" => "http://frontend.spotify-auth.com:1024",
             "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
-            "on_stats_callback" => function (TransferStats $stats) {
-                echo $stats->getHandlerStats()["redirect_url"];
-
-                if ($stats->hasResponse()) {
-                    return $stats->getResponse();
-                }
-            },
             "request_headers" => [
                 "accept" => "application/json",
                 "content-type" => "application/json",
-                "authorization_access" => sprintf("Basic %s", base64_encode($secretsObj->getId() . ":" . $secretsObj->getSecret())),
+                "authorization_access" => sprintf("Basic %s", base64_encode(SecretsCollection::$id . ":" . SecretsCollection::$secret)),
             ],
             "form_params" => [
                 "grant_type" => "authorization_code",
@@ -141,7 +151,6 @@ class Client extends GuzzleClient
                 "redirect_uri" => $this->getConfigArray()["redirect_uri"],
                 "scope" => $this->getConfigArray()["scope"],
             ],
-            "on_stats" => $this->getConfigArray()["on_stats_callback"],
         ];
 
         return $this->authParams;
@@ -178,7 +187,6 @@ class Client extends GuzzleClient
             "query" => [
                 "limit" => 25,
             ],
-            "on_stats" => $this->getConfigArray()["on_stats_callback"],
         ];
 
         return $this->getParams;

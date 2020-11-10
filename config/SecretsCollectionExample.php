@@ -1,6 +1,8 @@
 <?php
 
-class SecretsCollection {
+namespace Config;
+
+class SecretsCollectionExample {
     public static string $id = "";
     public static string $secret = "";
     public static string $host = "";
