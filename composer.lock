@@ -287,16 +287,16 @@
         },
         {
             "name": "rgjoni/router",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ReardGjoni/router.git",
-                "reference": "7b5fb0a79a3baa9ad437ae5ada3ddd70880a992c"
+                "reference": "1efc08f77a9476b01c74dcbc9927a4653fac649d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ReardGjoni/router/zipball/7b5fb0a79a3baa9ad437ae5ada3ddd70880a992c",
-                "reference": "7b5fb0a79a3baa9ad437ae5ada3ddd70880a992c",
+                "url": "https://api.github.com/repos/ReardGjoni/router/zipball/1efc08f77a9476b01c74dcbc9927a4653fac649d",
+                "reference": "1efc08f77a9476b01c74dcbc9927a4653fac649d",
                 "shasum": ""
             },
             "require": {
@@ -320,7 +320,7 @@
                 }
             ],
             "description": "Minimal routing package",
-            "time": "2020-11-08T13:03:49+00:00"
+            "time": "2020-11-11T21:18:38+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
