@@ -16,6 +16,7 @@ Router::group("/authorize", function () {
 
 Router::group("/user", function() {
     Router::get("/profile", "UserController@getProfile");
+    Router::get("/playlists", "UserController@getPlaylists");
 });
 
 Router::get("/test-custom-header", "TestController@customHeader");

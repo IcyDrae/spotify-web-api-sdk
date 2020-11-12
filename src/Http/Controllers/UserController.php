@@ -3,7 +3,6 @@
 
 namespace SpotifyAPI\Http\Controllers;
 
-use GuzzleHttp\RedirectMiddleware;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
 use SpotifyAPI\Http\Response;
@@ -32,7 +31,7 @@ class UserController
      */
     public function getProfile()
     {
-        $config = $this->client->configArray;
+        $config = $this->client->getConfigArray();
         $output = new Response();
         $reqHeaders = getallheaders();
 
@@ -62,12 +61,26 @@ class UserController
         }
     }
 
-    public function getUserPlaylists() {
-        try {
-            $secrets = new Secrets;
-            $this->client = new Client($secrets->getApiUri(), 1);
+    public function getPlaylists() {
+        $output = new Response();
+        $reqHeaders = getallheaders();
 
-            $request = $this->client->makeRequest("GET", "/v1/me/playlists", $this->client->getParams());
+        try {
+            $config = $this->client->getConfigArray();
+
+            $request = $this->client->get("/v1/me/playlists", [
+                "headers" => [
+                    "Accept" => $config["headers"]["accept"],
+                    "Content-Type" => $config["headers"]["content_type"],
+                    "Authorization" => sprintf("Bearer %s",  $reqHeaders["Access-Token"])
+                ]
+            ]);
+
+            $body = json_decode($request->getBody());
+
+            return $output->json([
+                "body" => $body
+            ]);
         } catch (RequestException $exception) {
             echo Psr7\str($exception->getRequest());
             if ($exception->hasResponse()) {

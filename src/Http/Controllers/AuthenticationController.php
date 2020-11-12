@@ -18,12 +18,7 @@ class AuthenticationController {
     /**
      * @var Client $client
      */
-    private $client;
-
-    /**
-     * @var \GuzzleHttp\Client
-     */
-    private $response;
+    private Client $client;
 
     /**
      * Authentication constructor.
@@ -46,7 +41,7 @@ class AuthenticationController {
         $response = new Response();
 
         try {
-            $config = $this->client->configArray;
+            $config = $this->client->getConfigArray();
 
             $options = [
                 "response_type" => $config["response_type"],
@@ -71,7 +66,7 @@ class AuthenticationController {
      * @return mixed
      */
     public function requestAccessToken() {
-        $config = $this->client->configArray;
+        $config = $this->client->getConfigArray();
         $output = new Response();
         $reqHeaders = getallheaders();
 
