@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SpotifyAPI\Controllers;
+namespace SpotifyAPI\Http\Controllers;
 
 use GuzzleHttp\RedirectMiddleware;
 use GuzzleHttp\Exception\RequestException;

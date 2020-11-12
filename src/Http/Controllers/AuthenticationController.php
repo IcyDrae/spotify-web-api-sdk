@@ -1,9 +1,9 @@
 <?php
 
 
-namespace SpotifyAPI\Controllers;
+namespace SpotifyAPI\Http\Controllers;
 
-use GuzzleHttp\RedirectMiddleware;
+use Exception;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 use SpotifyAPI\Http\Response;
@@ -26,14 +26,6 @@ class AuthenticationController {
     private $response;
 
     /**
-     * @var array $tokens
-     */
-    private $tokens = [
-        "access_token",
-        "refresh_token"
-    ];
-
-    /**
      * Authentication constructor.
      */
     public function __construct()
@@ -46,50 +38,42 @@ class AuthenticationController {
     }
 
     /**
-     * Requests authorization code, gets it and calls getAccessToken() with it
+     * Requests authorization code
      *
      * @return Response
      */
-    public function requestAuthCode() {
+    public function buildAuthorizationUrl() {
+        $response = new Response();
+
         try {
             $config = $this->client->configArray;
 
-            $response = $this->client->get( "/authorize", [
-                "query" => [
-                    "response_type" => $config["response_type"],
-                    "client_id" => $config["client_id"],
-                    "redirect_uri" => $config["redirect_uri"],
-                    "scope" => $config["scope"]
-                ]
+            $options = [
+                "response_type" => $config["response_type"],
+                "client_id" => $config["client_id"],
+                "redirect_uri" => $config["redirect_uri"],
+                "scope" => $config["scope"]
+            ];
+
+            $url = SecretsCollection::$baseUri . "/authorize?" . http_build_query($options, null, "&");
+
+            return $response->json([
+                "url" => $url,
             ]);
-
-            $redirect = $response->getHeader(RedirectMiddleware::HISTORY_HEADER);
-
-            if (isset($redirect[0]) && is_string($redirect[0])) {
-                $output = new Response();
-
-                return $output->json([
-                    "url" => $redirect[0]
-                ]);
-            }
-            #$this->getAccessToken();
-
-        } catch (RequestException $exception) {
-            echo $exception->getMessage();
-            if ($exception->hasResponse()) {
-                echo Psr7\str($exception->getResponse());
-            }
+        } catch (Exception $exception) {
+            return $response->json([
+                "error" => $exception->getMessage()
+            ]);
         }
     }
 
     /**
-     * Calls getUserProfile() with the access token
-     * @param $code
      * @return mixed
      */
-    public function getAccessToken($code) {
+    public function requestAccessToken() {
         $config = $this->client->configArray;
         $output = new Response();
+        $reqHeaders = getallheaders();
 
         try {
             $request = $this->client->post("/api/token", [
@@ -98,7 +82,7 @@ class AuthenticationController {
                 ],
                 "form_params" => [
                     "grant_type" => $config["grant_type"],
-                    "code" => $code,
+                    "code" => $reqHeaders["Auth-Code"],
                     "redirect_uri" => $config["redirect_uri"],
                 ],
             ]);

@@ -19,7 +19,7 @@ class Response
         if($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         {
             header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
-            header("Access-Control-Allow-Headers: Content-Type, Authorization, Test-Vue, Test-Insomnia, Access-Token");
+            header("Access-Control-Allow-Headers: Content-Type, Authorization, Access-Token, Auth-Code, Test-Vue, Test-Insomnia");
 
             exit(0);
         }

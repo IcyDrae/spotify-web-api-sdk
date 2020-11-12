@@ -3,15 +3,16 @@
 
 use Gjoni\Router\Router;
 
-Router::setMap("SpotifyAPI\\Controllers");
+Router::setMap("SpotifyAPI\\Http\\Controllers");
 
 Router::get("/", function() {
     echo "home";
 });
 
-Router::get("/build-request-url", "AuthenticationController@requestAuthCode");
-
-Router::post("/request-access-token/{code}", "AuthenticationController@getAccessToken");
+Router::group("/authorize", function () {
+    Router::get("/build-url", "AuthenticationController@buildAuthorizationUrl");
+    Router::get("/request-access-token", "AuthenticationController@requestAccessToken");
+});
 
 Router::group("/user", function() {
     Router::get("/profile", "UserController@getProfile");

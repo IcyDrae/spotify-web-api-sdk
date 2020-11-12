@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SpotifyAPI\Controllers;
+namespace SpotifyAPI\Http\Controllers;
 
 use SpotifyAPI\Http\Response;
 
