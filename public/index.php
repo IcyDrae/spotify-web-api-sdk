@@ -6,8 +6,8 @@ require_once dirname(__DIR__) . "/bootstrap.php";
 
 use SpotifyAPI\Http\Response;
 
-$output = new Response();
-$output->headers();
+$response = new Response();
+$response->headers();
 
 require_once "router.php";
 
