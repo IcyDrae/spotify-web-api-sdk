@@ -23,9 +23,9 @@ class Client extends GuzzleClient
     private $timeout;
 
     /**
-     * @var array $configArray
+     * @var array $configs
      */
-    public array $configArray;
+    public array $configs;
 
     /**
      * @var string $authCode
@@ -62,7 +62,7 @@ class Client extends GuzzleClient
      * @return $this
      */
     private function setConfigs() {
-        $this->configArray = [
+        $this->configs = [
             "client_id" => SecretsCollection::$id,
             "response_type" => "code",
             "redirect_uri" => "http://frontend.spotify-auth.com:1024",
@@ -85,8 +85,8 @@ class Client extends GuzzleClient
     /**
      * @return array
      */
-    public function getConfigArray()
+    public function getConfigs()
     {
-        return $this->configArray;
+        return $this->configs;
     }
 }

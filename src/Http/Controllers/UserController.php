@@ -31,7 +31,7 @@ class UserController
      */
     public function getProfile()
     {
-        $config = $this->client->getConfigArray();
+        $config = $this->client->getConfigs();
         $output = new Response();
         $reqHeaders = getallheaders();
 
@@ -66,7 +66,7 @@ class UserController
         $reqHeaders = getallheaders();
 
         try {
-            $config = $this->client->getConfigArray();
+            $config = $this->client->getConfigs();
 
             $request = $this->client->get("/v1/me/playlists", [
                 "headers" => [

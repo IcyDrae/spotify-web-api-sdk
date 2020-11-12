@@ -41,7 +41,7 @@ class AuthenticationController {
         $response = new Response();
 
         try {
-            $config = $this->client->getConfigArray();
+            $config = $this->client->getConfigs();
 
             $options = [
                 "response_type" => $config["response_type"],
@@ -66,7 +66,7 @@ class AuthenticationController {
      * @return mixed
      */
     public function requestAccessToken() {
-        $config = $this->client->getConfigArray();
+        $config = $this->client->getConfigs();
         $output = new Response();
         $reqHeaders = getallheaders();
 
