@@ -29,9 +29,19 @@ class AuthenticationController {
     private Client $client;
 
     /**
+     * @var Response $response
+     */
+    private Response $response;
+
+    /**
      * @var array $headers
      */
     private array $headers;
+
+    /**
+     * @var array $configs
+     */
+    private array $configs;
 
     /**
      * Authentication constructor.
@@ -44,7 +54,9 @@ class AuthenticationController {
             ["track_redirects" => true]
         );
 
-        $this->headers = getallheaders();
+        $this->response = $this->client->getResponse();
+        $this->headers = $this->client->getHeaders();
+        $this->configs = $this->client->getConfigs();
     }
 
     /**
@@ -53,25 +65,23 @@ class AuthenticationController {
      * @return string
      */
     public function buildAuthorizationUrl() {
-        $response = new Response();
-
         try {
             $config = $this->client->getConfigs();
 
             $options = [
-                "response_type" => $config["response_type"],
-                "client_id" => $config["client_id"],
-                "redirect_uri" => $config["redirect_uri"],
-                "scope" => $config["scope"]
+                "response_type" => $this->configs["response_type"],
+                "client_id" => $this->configs["client_id"],
+                "redirect_uri" => $this->configs["redirect_uri"],
+                "scope" => $this->configs["scope"]
             ];
 
             $url = SecretsCollection::$baseUri . "/authorize?" . http_build_query($options, null, "&");
 
-            return $response->json([
+            return $this->response->json([
                 "url" => $url,
             ]);
         } catch (Exception $exception) {
-            return $response->json([
+            return $this->response->json([
                 "error" => $exception->getMessage()
             ]);
         }
@@ -81,18 +91,15 @@ class AuthenticationController {
      * @return string
      */
     public function requestAccessToken() {
-        $config = $this->client->getConfigs();
-        $output = new Response();
-
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
-                    "Authorization" => $config["headers"]["authorization_access"],
+                    "Authorization" => $this->configs["headers"]["authorization_access"],
                 ],
                 "form_params" => [
-                    "grant_type" => $config["grant_type"],
+                    "grant_type" => $this->configs["grant_type"],
                     "code" => $this->headers["Auth-Code"],
-                    "redirect_uri" => $config["redirect_uri"],
+                    "redirect_uri" => $this->configs["redirect_uri"],
                 ],
             ]);
 
@@ -102,12 +109,12 @@ class AuthenticationController {
 
             $body = json_decode($body, true);
 
-            return $output->json([
+            return $this->response->json([
                 "body" => $body
             ]);
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
-                $output->json([
+                return $this->response->json([
                     "error" => $exception->getMessage(),
                     "request" => Message::toString($exception->getRequest())
                 ], $exception->getCode());
@@ -119,13 +126,10 @@ class AuthenticationController {
      * @return string
      */
     public function refreshAccessToken() {
-        $config = $this->client->getConfigs();
-        $output = new Response();
-
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
-                    "Authorization" => $config["headers"]["authorization_access"],
+                    "Authorization" => $this->configs["headers"]["authorization_access"],
                 ],
                 "form_params" => [
                     "grant_type" => "refresh_token",
@@ -137,12 +141,12 @@ class AuthenticationController {
 
             $body = json_decode($body, true);
 
-            return $output->json([
+            return $this->response->json([
                 "body" => $body
             ]);
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
-                $output->json([
+                return $this->response->json([
                     "error" => $exception->getMessage(),
                     "request" => Message::toString($exception->getRequest())
                 ], $exception->getCode());

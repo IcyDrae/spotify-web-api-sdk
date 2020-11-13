@@ -5,6 +5,13 @@ namespace SpotifyAPI\Http;
 
 use JsonSerializable;
 
+/**
+ * Class Response
+ * @package SpotifyAPI\Http
+ * @author Reard Gjoni
+ *
+ * Responsible for serializing data into json and setting headers
+ */
 class Response implements JsonSerializable
 {
     /**

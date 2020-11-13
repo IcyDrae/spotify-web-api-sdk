@@ -5,6 +5,7 @@ namespace SpotifyAPI\Http;
 
 use Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * Class Client
@@ -28,14 +29,19 @@ class Client extends GuzzleClient
     public array $configs;
 
     /**
-     * @var string $authCode
-     */
-    private string $authCode;
-
-    /**
      * @var array $allowRedirects
      */
     private array $allowRedirects;
+
+    /**
+     * @var array $headers
+     */
+    public array $headers;
+
+    /**
+     * @var Response $response
+     */
+    private Response $response;
 
     /**
      * Client constructor.
@@ -50,6 +56,8 @@ class Client extends GuzzleClient
         $this->allowRedirects = $allowRedirects;
 
         $this->setConfigs();
+        $this->setHeaders(getallheaders());
+        $this->setResponse(new Response());
 
         parent::__construct([
             "base_uri" => $this->baseUri,
@@ -88,4 +96,68 @@ class Client extends GuzzleClient
     {
         return $this->configs;
     }
+
+    /**
+     * @param array $headers
+     * @return $this
+     */
+    private function setHeaders(array $headers) {
+        $this->headers = $headers;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getHeaders(): array
+    {
+        return $this->headers;
+    }
+
+    /**
+     * @param Response $response
+     * @return $this
+     */
+    private function setResponse(Response $response) {
+        $this->response = $response;
+
+        return $this;
+    }
+
+    /**
+     * @return Response
+     */
+    public function getResponse(): Response
+    {
+        return $this->response;
+    }
+
+    /*public function makeRequest() {
+        $output = new Response();
+        $reqHeaders = getallheaders();
+
+        try {
+            $config = $this->client->getConfigs();
+
+            $request = $this->client->get("/v1/me/playlists", [
+                "headers" => [
+                    "Accept" => $config["headers"]["accept"],
+                    "Content-Type" => $config["headers"]["content_type"],
+                    "Authorization" => sprintf("Bearer %s",  $reqHeaders["Access-Token"])
+                ]
+            ]);
+
+            $body = json_decode($request->getBody());
+
+            return $output->json([
+                "body" => $body
+            ]);
+        } catch (RequestException $exception) {
+            echo Psr7\str($exception->getRequest());
+            if ($exception->hasResponse()) {
+                echo Psr7\str($exception->getResponse());
+            }
+        }
+    }*/
 }

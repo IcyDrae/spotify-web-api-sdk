@@ -4,7 +4,7 @@
 namespace SpotifyAPI\Http\Controllers;
 
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Message;
 use SpotifyAPI\Http\Response;
 use SpotifyAPI\Http\Client;
 use Config\SecretsCollection;
@@ -16,6 +16,21 @@ class UserController
      */
     private Client $client;
 
+    /**
+     * @var Response
+     */
+    private Response $response;
+
+    /**
+     * @var array $headers
+     */
+    private array $headers;
+
+    /**
+     * @var array $configs
+     */
+    private array $configs;
+
     public function __construct()
     {
         $this->client = new Client(
@@ -23,24 +38,25 @@ class UserController
             1,
             ["track_redirects" => true]
         );
+
+        $this->response = $this->client->getResponse();
+        $this->headers = $this->client->getHeaders();
+        $this->configs = $this->client->getConfigs();
     }
 
     /**
      * Fetches us the user profile after authenticating
-     * @return Response
+     *
+     * @return string
      */
     public function getProfile()
     {
-        $config = $this->client->getConfigs();
-        $output = new Response();
-        $reqHeaders = getallheaders();
-
         try {
             $request = $this->client->get( "/v1/me", [
                 "headers" => [
-                    "Accept" => $config["headers"]["accept"],
-                    "Content-Type" => $config["headers"]["content_type"],
-                    "Authorization" => sprintf("Bearer %s",  $reqHeaders["Access-Token"])
+                    "Accept" => $this->configs["headers"]["accept"],
+                    "Content-Type" => $this->configs["headers"]["content_type"],
+                    "Authorization" => sprintf("Bearer %s",  $this->configs["Access-Token"])
                 ],
             ]);
 
@@ -48,45 +64,45 @@ class UserController
 
             $body = json_decode($body, true);
 
-            return $output->json([
+            return $this->response->json([
                 "body" => $body
             ]);
 
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
-                $output->json([
-                    "error" => $exception->getMessage()
-                ]);
+                return $this->response->json([
+                    "error" => $exception->getMessage(),
+                    "request" => Message::toString($exception->getRequest())
+                ], $exception->getCode());
             }
         }
     }
 
+    /**
+     * @return string
+     */
     public function getPlaylists() {
-        $output = new Response();
-        $reqHeaders = getallheaders();
-
         try {
-            $config = $this->client->getConfigs();
-
             $request = $this->client->get("/v1/me/playlists", [
                 "headers" => [
-                    "Accept" => $config["headers"]["accept"],
-                    "Content-Type" => $config["headers"]["content_type"],
-                    "Authorization" => sprintf("Bearer %s",  $reqHeaders["Access-Token"])
+                    "Accept" => $this->configs["headers"]["accept"],
+                    "Content-Type" => $this->configs["headers"]["content_type"],
+                    "Authorization" => sprintf("Bearer %s",  $this->configs["Access-Token"])
                 ]
             ]);
 
             $body = json_decode($request->getBody());
 
-            return $output->json([
+            return $this->response->json([
                 "body" => $body
             ]);
         } catch (RequestException $exception) {
-            echo Psr7\str($exception->getRequest());
             if ($exception->hasResponse()) {
-                echo Psr7\str($exception->getResponse());
+                return $this->response->json([
+                    "error" => $exception->getMessage(),
+                    "request" => Message::toString($exception->getRequest())
+                ], $exception->getCode());
             }
         }
     }
-
 }
