@@ -68,7 +68,6 @@ class Client extends GuzzleClient
             "redirect_uri" => "http://frontend.spotify-auth.com:1024",
             "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
             "grant_type" => "authorization_code",
-            "code" => $this->authCode,
             "headers" => [
                 "accept" => "application/json",
                 "content_type" => "application/json",

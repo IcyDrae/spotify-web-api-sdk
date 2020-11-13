@@ -11,6 +11,7 @@ Router::get("/", function() {
 Router::group("/authorize", function () {
     Router::get("/build-url", "AuthenticationController@buildAuthorizationUrl");
     Router::get("/request-access-token", "AuthenticationController@requestAccessToken");
+    Router::get("/refresh-access-token", "AuthenticationController@refreshAccessToken");
 });
 
 Router::group("/user", function() {
