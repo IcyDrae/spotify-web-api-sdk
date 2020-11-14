@@ -5,7 +5,10 @@ namespace SpotifyAPI\Http;
 
 use Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Message;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Client
@@ -45,6 +48,7 @@ class Client extends GuzzleClient
 
     /**
      * Client constructor.
+     *
      * @param string $baseUri
      * @param integer $timeout
      * @param array $allowRedirects
@@ -67,6 +71,8 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Initializes a config blueprint to be used in most of the requests
+     *
      * @return $this
      */
     private function setConfigs() {
@@ -133,31 +139,44 @@ class Client extends GuzzleClient
         return $this->response;
     }
 
-    /*public function makeRequest() {
-        $output = new Response();
-        $reqHeaders = getallheaders();
+    /**
+     * @param $method
+     * @param $uri
+     * @param array $options
+     * @return ResponseInterface|string
+     * @throws GuzzleException
+     */
+    public function fetch($method,
+                          $uri,
+                          array $options = []) {
+        $response = $this->getResponse();
 
         try {
-            $config = $this->client->getConfigs();
+            # Set default headers for a typical user request. Includes the access token
+            if (empty($options["headers"])) {
+                $options["headers"] = [
+                    "Accept" => $this->configs["headers"]["accept"],
+                    "Content-Type" => $this->configs["headers"]["content_type"],
+                    "Authorization" => sprintf("Bearer %s",  $this->headers["Access-Token"])
+                ];
+            }
 
-            $request = $this->client->get("/v1/me/playlists", [
-                "headers" => [
-                    "Accept" => $config["headers"]["accept"],
-                    "Content-Type" => $config["headers"]["content_type"],
-                    "Authorization" => sprintf("Bearer %s",  $reqHeaders["Access-Token"])
-                ]
-            ]);
+            $request = parent::request($method, $uri, $options);
 
-            $body = json_decode($request->getBody());
+            if ($body = $request->getBody()) {
+                $body = json_decode($body);
 
-            return $output->json([
-                "body" => $body
-            ]);
+                return $response->json([
+                    "body" => $body
+                ]);
+            }
         } catch (RequestException $exception) {
-            echo Psr7\str($exception->getRequest());
             if ($exception->hasResponse()) {
-                echo Psr7\str($exception->getResponse());
+                return $this->response->json([
+                    "error" => $exception->getMessage(),
+                    "request" => Message::toString($exception->getRequest())
+                ], $exception->getCode());
             }
         }
-    }*/
+    }
 }

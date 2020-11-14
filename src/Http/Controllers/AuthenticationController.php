@@ -60,14 +60,12 @@ class AuthenticationController {
     }
 
     /**
-     * Requests authorization code
+     * Builds the URL the user will be redirected to give authorization
      *
      * @return string
      */
     public function buildAuthorizationUrl() {
         try {
-            $config = $this->client->getConfigs();
-
             $options = [
                 "response_type" => $this->configs["response_type"],
                 "client_id" => $this->configs["client_id"],
@@ -108,6 +106,9 @@ class AuthenticationController {
             $body = $request->getBody();
 
             $body = json_decode($body, true);
+            $timestamp = time() + $body["expires_in"];
+
+            $body["expires_in"] = $timestamp;
 
             return $this->response->json([
                 "body" => $body

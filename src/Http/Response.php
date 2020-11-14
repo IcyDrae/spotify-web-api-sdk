@@ -63,7 +63,7 @@ class Response implements JsonSerializable
 
         header("Content-Type: application/json", true, $statusCode);
 
-        $data = json_encode($this->data);
+        $data = json_encode($data);
 
         echo $data;
 
