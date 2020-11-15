@@ -3,6 +3,7 @@
 
 namespace SpotifyAPI\Http;
 
+use Config\SecretsCollection;
 use JsonSerializable;
 
 /**
@@ -30,7 +31,9 @@ class Response implements JsonSerializable
      * @return $this
      */
     public function headers() {
-        header("Access-Control-Allow-Origin: http://frontend.spotify-auth.com:1024");
+        if (in_array($_SERVER["HTTP_ORIGIN"], SecretsCollection::ALLOWED_ORIGINS)) {
+            header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
+        }
 
         # *
         #header("Access-Control-Allow-Credentials: true");
