@@ -19,6 +19,6 @@ Router::group("/user", function() {
     Router::get("/playlists", "UserController@getPlaylists");
 });
 
-Router::get("/test-custom-header", "TestController@customHeader");
+Router::get("/test", "TestController@customHeader");
 
 Router::run();

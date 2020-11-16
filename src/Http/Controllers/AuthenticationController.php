@@ -101,8 +101,6 @@ class AuthenticationController {
                 ],
             ]);
 
-            setrawcookie("access_token", json_decode($request->getBody()->getContents(), true)["access_token"]);
-
             $body = $request->getBody();
 
             $body = json_decode($body, true);
