@@ -79,12 +79,13 @@ class Client extends GuzzleClient
         $this->configs = [
             "client_id" => SecretsCollection::$id,
             "response_type" => "code",
-            "redirect_uri" => "http://frontend.spotify-auth.com:1024",
+            "redirect_uri" => $_SERVER["HTTP_ORIGIN"],
             "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
             "grant_type" => "authorization_code",
             "headers" => [
                 "accept" => "application/json",
-                "content_type" => "application/json",
+                "content_type_json" => "application/json",
+                "content_type_urlencoded" => "application/x-www-form-urlencoded",
                 "authorization_access" => sprintf("Basic %s", base64_encode(SecretsCollection::$id . ":" . SecretsCollection::$secret)),
             ],
             "query" => [
@@ -156,8 +157,8 @@ class Client extends GuzzleClient
             if (empty($options["headers"])) {
                 $options["headers"] = [
                     "Accept" => $this->configs["headers"]["accept"],
-                    "Content-Type" => $this->configs["headers"]["content_type"],
-                    "Authorization" => sprintf("Bearer %s",  $this->headers["Access-Token"])
+                    "Content-Type" => $this->configs["headers"]["content_type_json"],
+                    "Authorization" => sprintf("Bearer %s",  $_COOKIE["access_token"])
                 ];
             }
 
@@ -167,7 +168,9 @@ class Client extends GuzzleClient
                 $body = json_decode($body);
 
                 return $response->json([
-                    "body" => $body
+                    "body" => $body,
+                    "headers" => getallheaders(),
+                    "access_token" => $_COOKIE["access_token"]
                 ]);
             }
         } catch (RequestException $exception) {

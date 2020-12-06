@@ -8,6 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 use SpotifyAPI\Http\Response;
 use SpotifyAPI\Http\Client;
+use SpotifyAPI\Http\Cookie;
 use Config\SecretsCollection;
 
 /**
@@ -93,6 +94,7 @@ class AuthenticationController {
             $request = $this->client->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->configs["headers"]["authorization_access"],
+                    "Content-Type" => $this->configs["headers"]["content_type_urlencoded"]
                 ],
                 "form_params" => [
                     "grant_type" => $this->configs["grant_type"],
@@ -108,8 +110,14 @@ class AuthenticationController {
 
             $body["expires_in"] = $timestamp;
 
+            # TODO is there a better way to have different expiry times?
+            $cookie = new Cookie([], "/", true, true, "None", "spotify-auth.com", 3600);
+            $cookie->access_token = $body["access_token"];
+            $cookie_2 = new Cookie([], "/", true, true, "None", "spotify-auth.com");
+            $cookie_2->refresh_token = $body["refresh_token"];
+
             return $this->response->json([
-                "body" => $body
+                "body" => $body,
             ]);
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
@@ -126,13 +134,15 @@ class AuthenticationController {
      */
     public function refreshAccessToken() {
         try {
+            # TODO delete actual access_token
             $request = $this->client->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->configs["headers"]["authorization_access"],
+                    "Content-Type" => $this->configs["headers"]["content_type_urlencoded"]
                 ],
                 "form_params" => [
                     "grant_type" => "refresh_token",
-                    "refresh_token" => $this->headers["Refresh-Token"],
+                    "refresh_token" => $_COOKIE["refresh_token"],
                 ],
             ]);
 
@@ -140,6 +150,7 @@ class AuthenticationController {
 
             $body = json_decode($body, true);
 
+            # TODO set access_token, and set refresh_token if it was also reset
             return $this->response->json([
                 "body" => $body
             ]);

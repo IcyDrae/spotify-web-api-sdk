@@ -35,8 +35,7 @@ class Response implements JsonSerializable
             header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
         }
 
-        # *
-        #header("Access-Control-Allow-Credentials: true");
+        header("Access-Control-Allow-Credentials: true");
 
         /**
          * Assuming this is a preflight request, this will need to be called at the top of index.php
@@ -46,7 +45,7 @@ class Response implements JsonSerializable
         if($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         {
             header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
-            header("Access-Control-Allow-Headers: Content-Type, Authorization, Access-Token, Refresh-Token, Auth-Code, Test-Vue, Test-Insomnia");
+            header("Access-Control-Allow-Headers: Cookie, Content-Type, Authorization, Auth-Code, Test-Vue, Test-Insomnia");
 
             exit(0);
         }

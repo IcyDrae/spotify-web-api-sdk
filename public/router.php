@@ -8,10 +8,11 @@ Router::get("/", function() {
     echo "home";
 });
 
-Router::group("/authorize", function () {
-    Router::get("/build-url", "AuthenticationController@buildAuthorizationUrl");
-    Router::get("/request-access-token", "AuthenticationController@requestAccessToken");
-    Router::get("/refresh-access-token", "AuthenticationController@refreshAccessToken");
+Router::group("/authorization", function () {
+    Router::get("/url", "AuthenticationController@buildAuthorizationUrl");
+
+    Router::post("/access-token", "AuthenticationController@requestAccessToken");
+    Router::post("/refreshed-access-token", "AuthenticationController@refreshAccessToken");
 });
 
 Router::group("/user", function() {
@@ -19,6 +20,8 @@ Router::group("/user", function() {
     Router::get("/playlists", "UserController@getPlaylists");
 });
 
-Router::get("/test", "TestController@customHeader");
+Router::group("/test", function() {
+    Router::get("/cookie", "TestController@customHeader");
+});
 
 Router::run();
