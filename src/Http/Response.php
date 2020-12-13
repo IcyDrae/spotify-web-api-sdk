@@ -20,7 +20,7 @@ class Response implements JsonSerializable
      */
     private array $data;
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return $this->data;
     }
@@ -30,7 +30,8 @@ class Response implements JsonSerializable
      *
      * @return $this
      */
-    public function headers() {
+    public function headers(): Response
+    {
         if (in_array($_SERVER["HTTP_ORIGIN"], SecretsCollection::ALLOWED_ORIGINS)) {
             header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
         }

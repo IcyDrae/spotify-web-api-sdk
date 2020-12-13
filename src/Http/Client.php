@@ -12,6 +12,9 @@ use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Client
+ * @package SpotifyAPI\Http
+ * @author Reard Gjoni <gjoni-r@hotmail.com>
+ *
  * Serves as a boilerplate with client and request parameters for our specific needs
  */
 class Client extends GuzzleClient
@@ -49,6 +52,8 @@ class Client extends GuzzleClient
     /**
      * Client constructor.
      *
+     * Initializes configs, headers and the response object
+     *
      * @param string $baseUri
      * @param integer $timeout
      * @param array $allowRedirects
@@ -75,7 +80,8 @@ class Client extends GuzzleClient
      *
      * @return $this
      */
-    private function setConfigs() {
+    private function setConfigs(): Client
+    {
         $this->configs = [
             "client_id" => SecretsCollection::$id,
             "response_type" => "code",
@@ -99,7 +105,7 @@ class Client extends GuzzleClient
     /**
      * @return array
      */
-    public function getConfigs()
+    public function getConfigs(): array
     {
         return $this->configs;
     }
@@ -108,7 +114,8 @@ class Client extends GuzzleClient
      * @param array $headers
      * @return $this
      */
-    private function setHeaders(array $headers) {
+    private function setHeaders(array $headers): Client
+    {
         $this->headers = $headers;
 
         return $this;
@@ -126,7 +133,8 @@ class Client extends GuzzleClient
      * @param Response $response
      * @return $this
      */
-    private function setResponse(Response $response) {
+    private function setResponse(Response $response): Client
+    {
         $this->response = $response;
 
         return $this;
@@ -141,6 +149,8 @@ class Client extends GuzzleClient
     }
 
     /**
+     * This method is built to be as reusable as possible, used as a base request method for user resources.
+     *
      * @param $method
      * @param $uri
      * @param array $options
@@ -151,26 +161,25 @@ class Client extends GuzzleClient
                           $uri,
                           array $options = []) {
         $response = $this->getResponse();
+        $accessToken = $_COOKIE["access_token"] ?? '';
+
+        # Set default headers for a typical user request. Includes the access token
+        if (empty($options["headers"])) {
+            $options["headers"] = [
+                "Accept" => $this->configs["headers"]["accept"],
+                "Content-Type" => $this->configs["headers"]["content_type_json"],
+                "Authorization" => sprintf("Bearer %s",  $accessToken)
+            ];
+        }
 
         try {
-            # Set default headers for a typical user request. Includes the access token
-            if (empty($options["headers"])) {
-                $options["headers"] = [
-                    "Accept" => $this->configs["headers"]["accept"],
-                    "Content-Type" => $this->configs["headers"]["content_type_json"],
-                    "Authorization" => sprintf("Bearer %s",  $_COOKIE["access_token"])
-                ];
-            }
-
             $request = parent::request($method, $uri, $options);
 
             if ($body = $request->getBody()) {
                 $body = json_decode($body);
 
                 return $response->json([
-                    "body" => $body,
-                    "headers" => getallheaders(),
-                    "access_token" => $_COOKIE["access_token"]
+                    "body" => $body
                 ]);
             }
         } catch (RequestException $exception) {

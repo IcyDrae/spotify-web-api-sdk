@@ -8,6 +8,13 @@ use SpotifyAPI\Http\Response;
 use SpotifyAPI\Http\Client;
 use Config\SecretsCollection;
 
+/**
+ * Class UserController
+ * @package SpotifyAPI\Http\Controllers
+ * @author Reard Gjoni <gjoni-r@hotmail.com>
+ *
+ * Contains basic user resource requests(profile, playlists et cetera)
+ */
 class UserController
 {
     /**

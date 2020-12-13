@@ -1,11 +1,16 @@
 <?php
 
-
 namespace SpotifyAPI\Http;
 
-// Class that abstracts both the $_COOKIE and setcookie()
 use Exception;
 
+/**
+ * Class Cookie
+ * @package SpotifyAPI\Http
+ * @author Reard Gjoni <gjoni-r@hotmail.com>
+ *
+ * Abstracts both the $_COOKIE and setcookie()
+ */
 class Cookie
 {
     /**
@@ -51,34 +56,37 @@ class Cookie
     /**
      * Cookie constructor.
      *
-     * @param array $cookie
-     * @param int $expires
-     * @param string $domain
+     * Takes either a config array or single values while also considering default values.
+     *
+     * @param array $config
+     * @param array $data
      * @param string $path
      * @param bool $secure
      * @param bool $httpOnly
      * @param string $sameSite
+     * @param string $domain
+     * @param int $expires
      *
      * Default expiration is 28 days (28 * 3600 * 24 = 2419200).
      */
-    public function __construct(array $cookie,
-                                string $path,
-                                bool $secure,
-                                bool $httpOnly,
-                                string $sameSite,
-                                string $domain = "",
-                                int $expires = 2419200)
+    public function __construct(array $config,
+                                $data = [],
+                                $path = '',
+                                $secure = false,
+                                $httpOnly = false,
+                                $sameSite = '',
+                                $domain = '',
+                                $expires = 2419200)
     {
-        $this->data = $cookie;
-        $this->expires = $expires;
-        $this->path = $path;
-        $this->secure = $secure;
-        $this->httpOnly = $httpOnly;
-        $this->sameSite = $sameSite;
+        $this->data = $config["data"] ?? $data;
+        $this->expires = $config["expires"] ?? $expires;
+        $this->path = $config["path"] ?? $path;
+        $this->secure = $config["secure"] ?? $secure;
+        $this->httpOnly = $config["httpOnly"] ?? $httpOnly;
+        $this->sameSite = $config["sameSite"] ?? $sameSite;
 
-
-        if ($domain) {
-            $this->domain = $domain;
+        if ($config["domain"]) {
+            $this->domain = $config["domain"] ?? $domain;
         } else {
             $this->domain = (isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
                 : isset($_SERVER['HTTP_HOST'])) ? $_SERVER['HTTP_HOST']
@@ -86,22 +94,32 @@ class Cookie
         }
     }
 
-    public function __get($name)
+    public function __get($name): string
     {
         return (isset($this->data[$name])) ? $this->data[$name] : "";
     }
 
     public function __set($name, $value = null)
     {
-        // Check whether the headers are already sent or not
+        # Check whether the headers are already sent or not
         if (headers_sent()) {
             throw new Exception("Can't change cookie " . $name . " after sending headers.");
         }
 
         // Delete the cookie
         if (!$value) {
+            /**
+             * Warning: In order for the cookie to get deleted in Firefox, the browser needs all the previous data to be the same
+             * as well as(weirdly) the time to be -1.
+             *
+             * Also, if no data is sent(which when deleting a cookie is pretty normal) Firefox will trigger the warning:
+             * "Cookie 'access_token' has been rejected because it is already expired."
+             *
+             * All other browsers work fine this way.
+             *
+             */
             setcookie($name, null, [
-                "expires" => time() - 10,
+                "expires" => -1,
                 "domain" => $this->domain,
                 "path" => $this->path,
                 "secure" => $this->secure,
