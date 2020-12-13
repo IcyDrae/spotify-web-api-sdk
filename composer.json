@@ -19,6 +19,7 @@
         "guzzlehttp/guzzle": "^6.0",
         "ext-json": "*",
         "ext-http": "*",
-        "rgjoni/router": "^1.0"
+        "rgjoni/router": "^1.0",
+        "bandwidth-throttle/token-bucket": "^2.0"
     }
 }
