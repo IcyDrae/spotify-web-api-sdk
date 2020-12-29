@@ -47,11 +47,7 @@ class Client extends GuzzleClient
         $this->setHeaders(getallheaders());
         $this->setResponse(new Response());
 
-        parent::__construct([
-            "base_uri" => $options["base_uri"],
-            "timeout" => $options["timeout"],
-            "allow_redirects" => $options["allow_redirects"]
-        ]);
+        parent::__construct($options);
     }
 
     /**
