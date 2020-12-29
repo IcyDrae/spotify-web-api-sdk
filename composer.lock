@@ -60,6 +60,10 @@
                 "throttling",
                 "token bucket"
             ],
+            "support": {
+                "issues": "https://github.com/bandwidth-throttle/token-bucket/issues",
+                "source": "https://github.com/bandwidth-throttle/token-bucket/tree/master"
+            },
             "time": "2017-10-13T19:09:01+00:00"
         },
         {
@@ -127,6 +131,10 @@
                 "rest",
                 "web service"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/6.5"
+            },
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -178,6 +186,10 @@
             "keywords": [
                 "promise"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/1.4.0"
+            },
             "time": "2020-09-30T07:37:28+00:00"
         },
         {
@@ -249,6 +261,10 @@
                 "uri",
                 "url"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.7.0"
+            },
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
@@ -327,6 +343,10 @@
                 "redlock",
                 "semaphore"
             ],
+            "support": {
+                "issues": "https://github.com/php-lock/lock/issues",
+                "source": "https://github.com/php-lock/lock/tree/v1.4"
+            },
             "time": "2018-07-07T18:43:25+00:00"
         },
         {
@@ -376,6 +396,11 @@
                 "pseudorandom",
                 "random"
             ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
             "time": "2020-10-15T10:06:57+00:00"
         },
         {
@@ -426,6 +451,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -473,6 +501,9 @@
                 "psr",
                 "psr-3"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.3"
+            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -513,20 +544,24 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "rgjoni/router",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ReardGjoni/router.git",
-                "reference": "5dcd343d8246618596c5be0e137621c7e3188422"
+                "reference": "eea29a5efe177e32f298df1b16364c4a4b06e2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ReardGjoni/router/zipball/5dcd343d8246618596c5be0e137621c7e3188422",
-                "reference": "5dcd343d8246618596c5be0e137621c7e3188422",
+                "url": "https://api.github.com/repos/ReardGjoni/router/zipball/eea29a5efe177e32f298df1b16364c4a4b06e2ad",
+                "reference": "eea29a5efe177e32f298df1b16364c4a4b06e2ad",
                 "shasum": ""
             },
             "require": {
@@ -550,7 +585,11 @@
                 }
             ],
             "description": "Minimal routing package",
-            "time": "2020-11-14T00:49:42+00:00"
+            "support": {
+                "issues": "https://github.com/ReardGjoni/router/issues",
+                "source": "https://github.com/ReardGjoni/router/tree/1.0.6"
+            },
+            "time": "2020-12-27T23:49:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -620,6 +659,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -701,6 +743,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -774,6 +819,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -802,5 +850,5 @@
         "ext-http": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

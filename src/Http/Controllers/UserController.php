@@ -37,13 +37,18 @@ class UserController
      */
     private array $configs;
 
+    /**
+     * UserController constructor.
+     *
+     * Initializes the client object, response, headers and client config
+     */
     public function __construct()
     {
-        $this->client = new Client(
-            SecretsCollection::$apiUri,
-            1,
-            ["track_redirects" => true]
-        );
+        $this->client = new Client([
+            "base_uri" => SecretsCollection::$apiUri,
+            "timeout" => 1,
+            "allow_redirects" => ["track_redirects" => true]
+        ]);
 
         $this->response = $this->client->getResponse();
         $this->headers = $this->client->getHeaders();
@@ -51,18 +56,24 @@ class UserController
     }
 
     /**
+     * Gets the user profile
+     *
      * @throws GuzzleException
+     * @return string
      */
-    public function getProfile()
+    public function getProfile(): string
     {
-        $this->client->fetch( "GET", "/v1/me");
+        return $this->client->fetch( "GET", "/v1/me");
     }
 
     /**
+     * Gets all the user playlists
+     *
      * @throws GuzzleException
+     * @return string
      */
-    public function getPlaylists() {
-        $this->client->fetch("GET", "/v1/me/playlists", [
+    public function getPlaylists(): string {
+        return $this->client->fetch("GET", "/v1/me/playlists", [
             "query" => $this->configs["query"]
         ]);
     }

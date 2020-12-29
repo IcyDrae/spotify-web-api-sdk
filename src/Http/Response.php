@@ -32,7 +32,7 @@ class Response implements JsonSerializable
      */
     public function headers(): Response
     {
-        if (in_array($_SERVER["HTTP_ORIGIN"], SecretsCollection::ALLOWED_ORIGINS)) {
+        if (isset($_SERVER["HTTP_ORIGIN"]) && in_array($_SERVER["HTTP_ORIGIN"], SecretsCollection::ALLOWED_ORIGINS)) {
             header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
         }
 
@@ -46,7 +46,7 @@ class Response implements JsonSerializable
         if($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         {
             header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
-            header("Access-Control-Allow-Headers: Cookie, Content-Type, Authorization, Auth-Code, Test-Vue, Test-Insomnia");
+            header("Access-Control-Allow-Headers: Cookie, Access-Token, Refresh-Token, Content-Type, Authorization, Auth-Code, Test-Vue, Test-Insomnia");
 
             exit(0);
         }

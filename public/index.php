@@ -6,8 +6,8 @@ date_default_timezone_set("Europe/Berlin");
 
 require_once dirname(__DIR__) . "/bootstrap.php";
 
-use bandwidthThrottle\tokenBucket\storage\StorageException;
 use SpotifyAPI\Http\Response;
+use bandwidthThrottle\tokenBucket\storage\StorageException;
 use bandwidthThrottle\tokenBucket\Rate;
 use bandwidthThrottle\tokenBucket\TokenBucket;
 use bandwidthThrottle\tokenBucket\storage\FileStorage;

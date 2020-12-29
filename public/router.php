@@ -4,7 +4,9 @@ use Gjoni\Router\Router;
 
 Router::setMap("SpotifyAPI\\Http\\Controllers");
 
-Router::get("/", "TestController@home");
+Router::get("/", function() {
+    echo "Home API";
+});
 
 Router::group("/authorization", function () {
     Router::get("/url", "AuthenticationController@buildAuthorizationUrl");

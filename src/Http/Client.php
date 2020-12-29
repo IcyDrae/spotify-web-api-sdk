@@ -20,24 +20,9 @@ use Psr\Http\Message\ResponseInterface;
 class Client extends GuzzleClient
 {
     /**
-     * @var string $baseUri
-     */
-    private string $baseUri;
-
-    /**
-     * @var string $timeout
-     */
-    private $timeout;
-
-    /**
      * @var array $configs
      */
     public array $configs;
-
-    /**
-     * @var array $allowRedirects
-     */
-    private array $allowRedirects;
 
     /**
      * @var array $headers
@@ -52,26 +37,20 @@ class Client extends GuzzleClient
     /**
      * Client constructor.
      *
-     * Initializes configs, headers and the response object
+     * Initializes the Guzzle Client, configs, headers and the response object
      *
-     * @param string $baseUri
-     * @param integer $timeout
-     * @param array $allowRedirects
+     * @param array $options
      */
-    public function __construct (string $baseUri, int $timeout, array $allowRedirects = [])
+    public function __construct (array $options = [])
     {
-        $this->baseUri = $baseUri;
-        $this->timeout = $timeout;
-        $this->allowRedirects = $allowRedirects;
-
         $this->setConfigs();
         $this->setHeaders(getallheaders());
         $this->setResponse(new Response());
 
         parent::__construct([
-            "base_uri" => $this->baseUri,
-            "timeout" => $this->timeout,
-            "allow_redirects" => $this->allowRedirects
+            "base_uri" => $options["base_uri"],
+            "timeout" => $options["timeout"],
+            "allow_redirects" => $options["allow_redirects"]
         ]);
     }
 
@@ -85,7 +64,7 @@ class Client extends GuzzleClient
         $this->configs = [
             "client_id" => SecretsCollection::$id,
             "response_type" => "code",
-            "redirect_uri" => $_SERVER["HTTP_ORIGIN"],
+            "redirect_uri" => SecretsCollection::$frontend,
             "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
             "grant_type" => "authorization_code",
             "headers" => [
@@ -161,7 +140,7 @@ class Client extends GuzzleClient
                           $uri,
                           array $options = []) {
         $response = $this->getResponse();
-        $accessToken = $_COOKIE["access_token"] ?? '';
+        $accessToken = $this->headers["Access-Token"] ?? '';
 
         # Set default headers for a typical user request. Includes the access token
         if (empty($options["headers"])) {
@@ -175,20 +154,23 @@ class Client extends GuzzleClient
         try {
             $request = parent::request($method, $uri, $options);
 
-            if ($body = $request->getBody()) {
-                $body = json_decode($body);
+            $body = $request->getBody();
+            $body = json_decode($body);
 
-                return $response->json([
+            return $response->json([
+                "data" => [
                     "body" => $body
-                ]);
-            }
+                ]
+            ]);
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
-                return $this->response->json([
-                    "error" => $exception->getMessage(),
-                    "request" => Message::toString($exception->getRequest())
-                ], $exception->getCode());
+                $request = Message::toString($exception->getRequest());
             }
+
+            return $this->response->json([
+                "error" => $exception->getMessage(),
+                "request" => $request ?? ''
+            ], $exception->getCode());
         }
     }
 }
