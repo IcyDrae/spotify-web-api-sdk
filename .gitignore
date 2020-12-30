@@ -1,3 +1,4 @@
 /vendor
 /.idea
 config/SecretsCollection.php
+public/api.bucket
