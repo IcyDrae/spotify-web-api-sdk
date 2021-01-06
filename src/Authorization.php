@@ -1,18 +1,18 @@
 <?php
 
 
-namespace SpotifyAPI\Http\Controllers;
+namespace Gjoni\SpotifyWebApiSdk;
 
 use Exception;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
-use SpotifyAPI\Http\Response;
-use SpotifyAPI\Http\Client;
+use Gjoni\SpotifyWebApiSdk\Http\Response;
+use Gjoni\SpotifyWebApiSdk\Http\Client;
 use Config\SecretsCollection;
 
 /**
- * Class AuthenticationController
- * @package SpotifyAPI\Http\Controllers
+ * Class Authorization
+ * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  *
  * Responsible for
@@ -21,7 +21,7 @@ use Config\SecretsCollection;
  *      (3) refreshing the expired access token in order to stay logged in and not repeat the authorization process
  *
  */
-class AuthenticationController {
+class Authorization {
     /**
      * @var Client $client
      */
@@ -43,7 +43,7 @@ class AuthenticationController {
     private array $configs;
 
     /**
-     * Authentication constructor.
+     * AuthorizationController constructor.
      *
      * Initializes the client object, response, headers and client config
      */
@@ -65,7 +65,7 @@ class AuthenticationController {
      *
      * @return string
      */
-    public function buildAuthorizationUrl(): string {
+    public function buildUrl(): string {
         try {
             $options = [
                 "response_type" => $this->configs["response_type"],
@@ -89,7 +89,7 @@ class AuthenticationController {
     }
 
     /**
-     * Using an authentication code from the client(as a header), will request an access token.
+     * Using an authorization code from the client(as a header), will request an access token.
      *
      * If successful, returns:
      *  (1) access token

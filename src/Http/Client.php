@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SpotifyAPI\Http;
+namespace Gjoni\SpotifyWebApiSdk\Http;
 
 use Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;

@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SpotifyAPI\\": "src/",
+            "Gjoni\\SpotifyWebApiSdk\\": "src/",
             "Config\\": "config/"
         }
     },
@@ -19,8 +19,7 @@
         "php": ">7.4",
         "ext-json": "*",
         "ext-http": "*",
-        "guzzlehttp/guzzle": "^6.0",
-        "rgjoni/router": "^1.0",
-        "bandwidth-throttle/token-bucket": "^2.0"
-    }
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "minimum-stability": "dev"
 }

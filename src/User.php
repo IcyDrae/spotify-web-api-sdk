@@ -1,21 +1,21 @@
 <?php
 
 
-namespace SpotifyAPI\Http\Controllers;
+namespace Gjoni\SpotifyWebApiSdk;
 
 use GuzzleHttp\Exception\GuzzleException;
-use SpotifyAPI\Http\Response;
-use SpotifyAPI\Http\Client;
+use Gjoni\SpotifyWebApiSdk\Http\Response;
+use Gjoni\SpotifyWebApiSdk\Http\Client;
 use Config\SecretsCollection;
 
 /**
  * Class UserController
- * @package SpotifyAPI\Http\Controllers
+ * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  *
  * Contains basic user resource requests(profile, playlists et cetera)
  */
-class UserController
+class User
 {
     /**
      * @var Client $client

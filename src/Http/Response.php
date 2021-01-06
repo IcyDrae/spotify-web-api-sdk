@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SpotifyAPI\Http;
+namespace Gjoni\SpotifyWebApiSdk\Http;
 
 use Config\SecretsCollection;
 use JsonSerializable;
@@ -64,7 +64,7 @@ class Response implements JsonSerializable
     public function json(array $data, $statusCode = 200): string {
         $this->data = $data;
 
-        header("Content-Type: application/json", true, $statusCode);
+        header("Content-Type: application/json; charset=utf-8", true, $statusCode);
 
         $data = json_encode($data);
 
