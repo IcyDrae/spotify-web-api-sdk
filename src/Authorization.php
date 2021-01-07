@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
-use Config\SecretsCollection;
+use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 
 /**
  * Class Authorization

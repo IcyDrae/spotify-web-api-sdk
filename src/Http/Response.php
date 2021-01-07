@@ -3,7 +3,7 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
-use Config\SecretsCollection;
+use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use JsonSerializable;
 
 /**

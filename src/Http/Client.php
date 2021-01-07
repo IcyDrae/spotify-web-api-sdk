@@ -3,7 +3,7 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
-use Config\SecretsCollection;
+use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;

@@ -6,7 +6,7 @@ namespace Gjoni\SpotifyWebApiSdk;
 use GuzzleHttp\Exception\GuzzleException;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
-use Config\SecretsCollection;
+use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 
 /**
  * Class UserController

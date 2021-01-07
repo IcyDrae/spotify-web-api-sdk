@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace Gjoni\SpotifyWebApiSdk\Config;
 
 class SecretsCollectionExample {
     public static string $id = "";
