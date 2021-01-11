@@ -4,6 +4,7 @@
 namespace Gjoni\SpotifyWebApiSdk;
 
 use Exception;
+use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
@@ -43,12 +44,21 @@ class Authorization {
     private array $configs;
 
     /**
-     * AuthorizationController constructor.
-     *
-     * Initializes the client object, response, headers and client config
+     * @var SdkInterface $sdk
      */
-    public function __construct()
+    private SdkInterface $sdk;
+
+    /**
+     * Authorization constructor.
+     *
+     * Initializes the SDK object, client, response, headers and client config
+     *
+     * @param SdkInterface $sdk An SDK object
+     */
+    public function __construct(SdkInterface $sdk)
     {
+        $this->sdk = $sdk;
+
         $this->client = new Client([
             "base_uri" => SecretsCollection::$baseUri,
             "timeout" => 1,
@@ -69,7 +79,7 @@ class Authorization {
         try {
             $options = [
                 "response_type" => $this->configs["response_type"],
-                "client_id" => $this->configs["client_id"],
+                "client_id" => $this->sdk->getClientId(),
                 "redirect_uri" => $this->configs["redirect_uri"],
                 "scope" => $this->configs["scope"]
             ];
