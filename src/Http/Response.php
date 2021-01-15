@@ -15,17 +15,20 @@ use JsonSerializable;
 class Response implements JsonSerializable
 {
     /**
-     * @var array $data
+     * @var array $data Passed data to be serialized
      */
     private array $data;
 
+    /**
+     * @inheritDoc
+     */
     public function jsonSerialize(): array
     {
         return $this->data;
     }
 
     /**
-     * Sets basic headers & handles preflight OPTIONS requests
+     * Sets predefined headers & handles preflight OPTIONS requests
      *
      * @return $this
      */
@@ -45,7 +48,7 @@ class Response implements JsonSerializable
         if($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         {
             header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
-            header("Access-Control-Allow-Headers: Cookie, Access-Token, Refresh-Token, Content-Type, Authorization, Auth-Code, Test-Vue, Test-Insomnia");
+            header("Access-Control-Allow-Headers: Access-Token, Authorization, Auth-Code, Cookie, Refresh-Token, Content-Type, Test-Vue, Test-Insomnia");
 
             exit(0);
         }
@@ -56,8 +59,8 @@ class Response implements JsonSerializable
     /**
      * Serializes a given array into JSON and prints it to the client
      *
-     * @param array $data
-     * @param int $statusCode
+     * @param array $data Content being converted
+     * @param int $statusCode Status code
      * @return string
      */
     public function json(array $data, $statusCode = 200): string {
