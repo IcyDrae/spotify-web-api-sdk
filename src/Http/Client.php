@@ -64,8 +64,8 @@ class Client extends GuzzleClient
             "grant_type" => "authorization_code",
             "headers" => [
                 "accept" => "application/json",
-                "content_type_json" => "application/json",
-                "content_type_urlencoded" => "application/x-www-form-urlencoded",
+                "ctype_json" => "application/json",
+                "ctype_urlencoded" => "application/x-www-form-urlencoded",
                 "authorization_access" => sprintf("Basic %s", base64_encode(SecretsCollection::$id . ":" . SecretsCollection::$secret)),
             ],
             "query" => [
@@ -150,8 +150,8 @@ class Client extends GuzzleClient
         # Set default headers for a typical user request. Includes the access token
         if (empty($options["headers"])) {
             $options["headers"] = [
-                "Accept" => $this->configs["headers"]["accept"],
-                "Content-Type" => $this->configs["headers"]["content_type_json"],
+                "Accept" => $this->parameters["headers"]["accept"],
+                "Content-Type" => $this->parameters["headers"]["ctype_json"],
                 "Authorization" => sprintf("Bearer %s",  $accessToken)
             ];
         }

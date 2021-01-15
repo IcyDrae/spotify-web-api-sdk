@@ -33,12 +33,12 @@ class Authorization {
     private Response $response;
 
     /**
-     * @var array $headers Request headers
+     * @var array $headers Client headers
      */
     private array $headers;
 
     /**
-     * @var array $parameters Request parameters
+     * @var array $parameters Client parameters
      */
     private array $parameters;
 
@@ -114,7 +114,7 @@ class Authorization {
             $request = $this->client->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->parameters["headers"]["authorization_access"],
-                    "Content-Type" => $this->parameters["headers"]["content_type_urlencoded"]
+                    "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
                 ],
                 "form_params" => [
                     "grant_type" => $this->parameters["grant_type"],
@@ -159,7 +159,7 @@ class Authorization {
             $request = $this->client->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->parameters["headers"]["authorization_access"],
-                    "Content-Type" => $this->parameters["headers"]["content_type_urlencoded"]
+                    "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
                 ],
                 "form_params" => [
                     "grant_type" => "refresh_token",

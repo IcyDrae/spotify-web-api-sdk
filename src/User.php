@@ -17,29 +17,29 @@ use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 class User
 {
     /**
-     * @var Client $client
+     * @var Client $client Custom client object
      */
     private Client $client;
 
     /**
-     * @var Response
+     * @var Response Response object
      */
     private Response $response;
 
     /**
-     * @var array $headers
+     * @var array $headers Client headers
      */
     private array $headers;
 
     /**
-     * @var array $configs
+     * @var array $parameters Client parameters
      */
-    private array $configs;
+    private array $parameters;
 
     /**
      * UserController constructor.
      *
-     * Initializes the client object, response, headers and client config
+     * Initializes the client object, response, headers and client parameters
      */
     public function __construct()
     {
@@ -51,7 +51,7 @@ class User
 
         $this->response = $this->client->getResponse();
         $this->headers = $this->client->getHeaders();
-        $this->configs = $this->client->getConfigs();
+        $this->parameters = $this->client->getParameters();
     }
 
     /**
@@ -73,7 +73,7 @@ class User
      */
     public function getPlaylists(): string {
         return $this->client->fetch("GET", "/v1/me/playlists", [
-            "query" => $this->configs["query"]
+            "query" => $this->parameters["query"]
         ]);
     }
 }
