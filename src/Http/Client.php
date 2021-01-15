@@ -11,39 +11,38 @@ use GuzzleHttp\Psr7\Message;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Class Client
+ * Serves as a boilerplate with client and request parameters for our specific needs
+ *
  * @package SpotifyAPI\Http
  * @author Reard Gjoni <gjoni-r@hotmail.com>
- *
- * Serves as a boilerplate with client and request parameters for our specific needs
  */
 class Client extends GuzzleClient
 {
     /**
-     * @var array $configs
+     * @var array $parameters Base Guzzle client parameters
      */
-    public array $configs;
+    public array $parameters;
 
     /**
-     * @var array $headers
+     * @var array $headers Request headers
      */
     public array $headers;
 
     /**
-     * @var Response $response
+     * @var Response $response Response object
      */
     private Response $response;
 
     /**
      * Client constructor.
      *
-     * Initializes the Guzzle Client, configs, headers and the response object
+     * Initializes the Guzzle Client, configs, headers and the response object.
      *
      * @param array $options
      */
     public function __construct (array $options = [])
     {
-        $this->setConfigs();
+        $this->setParameters();
         $this->setHeaders(getallheaders());
         $this->setResponse(new Response());
 
@@ -51,13 +50,13 @@ class Client extends GuzzleClient
     }
 
     /**
-     * Initializes a config blueprint to be used in most of the requests
+     * Initializes base parameters to be used in most of the requests
      *
      * @return $this
      */
-    private function setConfigs(): Client
+    private function setParameters(): Client
     {
-        $this->configs = [
+        $this->parameters = [
             "client_id" => SecretsCollection::$id,
             "response_type" => "code",
             "redirect_uri" => SecretsCollection::$frontend,
@@ -78,15 +77,19 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Returns the parameters array.
+     *
      * @return array
      */
-    public function getConfigs(): array
+    public function getParameters(): array
     {
-        return $this->configs;
+        return $this->parameters;
     }
 
     /**
-     * @param array $headers
+     * Sets the request headers.
+     *
+     * @param array $headers Request headers
      * @return $this
      */
     private function setHeaders(array $headers): Client
@@ -97,6 +100,8 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Returns the request headers.
+     *
      * @return array
      */
     public function getHeaders(): array
@@ -105,6 +110,8 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Sets the Response object.
+     *
      * @param Response $response
      * @return $this
      */
@@ -116,6 +123,8 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Returns the Response object.
+     *
      * @return Response
      */
     public function getResponse(): Response
@@ -124,7 +133,7 @@ class Client extends GuzzleClient
     }
 
     /**
-     * This method is built to be as reusable as possible, used as a base request method for user resources.
+     * This method is built to be as reusable as possible, used as a base request method for resources.
      *
      * @param $method
      * @param $uri

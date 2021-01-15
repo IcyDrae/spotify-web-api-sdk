@@ -7,11 +7,10 @@ use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use JsonSerializable;
 
 /**
- * Class Response
+ * Responsible for serializing data into json and setting headers
+ *
  * @package SpotifyAPI\Http
  * @author Reard Gjoni
- *
- * Responsible for serializing data into json and setting headers
  */
 class Response implements JsonSerializable
 {

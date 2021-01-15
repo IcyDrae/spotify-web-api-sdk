@@ -3,6 +3,12 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Interfaces;
 
+/**
+ * Main contract for initializing the SDK. Responsible for secret/token handling and will be the main object being passed
+ * into each entity.
+ *
+ * @package Gjoni\SpotifyWebApiSdk\Interfaces
+ */
 interface SdkInterface
 {
     /**

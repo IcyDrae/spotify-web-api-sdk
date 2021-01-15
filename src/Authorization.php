@@ -12,39 +12,38 @@ use Gjoni\SpotifyWebApiSdk\Http\Client;
 use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 
 /**
- * Class Authorization
+ * Responsible for
+ *      1. generating a request URL where the user will be prompted to give access,
+ *      2. requesting access/refresh tokens &
+ *      3. refreshing the expired access token in order to stay logged in and not repeat the authorization process
+ *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
- *
- * Responsible for
- *      (1) generating a request URL where the user will be prompted to give access,
- *      (2) requesting access/refresh tokens &
- *      (3) refreshing the expired access token in order to stay logged in and not repeat the authorization process
  *
  */
 class Authorization {
     /**
-     * @var Client $client
+     * @var Client $client Client object
      */
     private Client $client;
 
     /**
-     * @var Response $response
+     * @var Response $response Response object
      */
     private Response $response;
 
     /**
-     * @var array $headers
+     * @var array $headers Request headers
      */
     private array $headers;
 
     /**
-     * @var array $configs
+     * @var array $parameters Request parameters
      */
-    private array $configs;
+    private array $parameters;
 
     /**
-     * @var SdkInterface $sdk
+     * @var SdkInterface $sdk Main interface
      */
     private SdkInterface $sdk;
 
@@ -67,21 +66,21 @@ class Authorization {
 
         $this->response = $this->client->getResponse();
         $this->headers = $this->client->getHeaders();
-        $this->configs = $this->client->getConfigs();
+        $this->parameters = $this->client->getParameters();
     }
 
     /**
-     * Builds the URL the user will be redirected to give authorization
+     * Builds the URL the user will be redirected to for authorization
      *
      * @return string
      */
     public function buildUrl(): string {
         try {
             $options = [
-                "response_type" => $this->configs["response_type"],
+                "response_type" => $this->parameters["response_type"],
                 "client_id" => $this->sdk->getClientId(),
-                "redirect_uri" => $this->configs["redirect_uri"],
-                "scope" => $this->configs["scope"]
+                "redirect_uri" => $this->parameters["redirect_uri"],
+                "scope" => $this->parameters["scope"]
             ];
 
             $url = SecretsCollection::$baseUri . "/authorize?" . http_build_query($options, null, "&");
@@ -114,13 +113,13 @@ class Authorization {
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
-                    "Authorization" => $this->configs["headers"]["authorization_access"],
-                    "Content-Type" => $this->configs["headers"]["content_type_urlencoded"]
+                    "Authorization" => $this->parameters["headers"]["authorization_access"],
+                    "Content-Type" => $this->parameters["headers"]["content_type_urlencoded"]
                 ],
                 "form_params" => [
-                    "grant_type" => $this->configs["grant_type"],
+                    "grant_type" => $this->parameters["grant_type"],
                     "code" => $authCode,
-                    "redirect_uri" => $this->configs["redirect_uri"],
+                    "redirect_uri" => $this->parameters["redirect_uri"],
                 ],
             ]);
 
@@ -159,8 +158,8 @@ class Authorization {
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
-                    "Authorization" => $this->configs["headers"]["authorization_access"],
-                    "Content-Type" => $this->configs["headers"]["content_type_urlencoded"]
+                    "Authorization" => $this->parameters["headers"]["authorization_access"],
+                    "Content-Type" => $this->parameters["headers"]["content_type_urlencoded"]
                 ],
                 "form_params" => [
                     "grant_type" => "refresh_token",

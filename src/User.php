@@ -9,11 +9,10 @@ use Gjoni\SpotifyWebApiSdk\Http\Client;
 use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 
 /**
- * Class UserController
+ * Contains basic user resource requests(profile, playlists et cetera)
+ *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
- *
- * Contains basic user resource requests(profile, playlists et cetera)
  */
 class User
 {
