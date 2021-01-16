@@ -147,11 +147,11 @@ class Client extends GuzzleClient
         $response = $this->getResponse();
         $accessToken = $this->headers["Access-Token"] ?? '';
 
-        # Set default headers for a typical user request. Includes the access token
         if (!isset($options["headers"])) {
             $options["headers"] = [];
         }
 
+        # Set default headers for a typical user request. Includes the access token
         # Append to possibly existing values
         $options["headers"] = array_merge($options["headers"], [
             "Accept" => $this->parameters["headers"]["accept"],
