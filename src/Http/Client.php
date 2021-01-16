@@ -3,6 +3,7 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
+use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
@@ -34,14 +35,22 @@ class Client extends GuzzleClient
     private Response $response;
 
     /**
+     * @var SdkInterface $sdk Sdk object
+     */
+    private SdkInterface $sdk;
+
+    /**
      * Client constructor.
      *
-     * Initializes the Guzzle Client, configs, headers and the response object.
+     * Initializes the Sdk object, Guzzle Client, configs, headers and the response object.
      *
+     * @param SdkInterface $sdk
      * @param array $options
      */
-    public function __construct (array $options = [])
+    public function __construct (SdkInterface $sdk, array $options = [])
     {
+        $this->sdk = $sdk;
+
         $this->setParameters();
         $this->setHeaders(getallheaders());
         $this->setResponse(new Response());
@@ -57,7 +66,7 @@ class Client extends GuzzleClient
     private function setParameters(): Client
     {
         $this->parameters = [
-            "client_id" => SecretsCollection::$id,
+            "client_id" => $this->sdk->getClientId(),
             "response_type" => "code",
             "redirect_uri" => SecretsCollection::$frontend,
             "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
@@ -66,7 +75,7 @@ class Client extends GuzzleClient
                 "accept" => "application/json",
                 "ctype_json" => "application/json",
                 "ctype_urlencoded" => "application/x-www-form-urlencoded",
-                "authorization_access" => sprintf("Basic %s", base64_encode(SecretsCollection::$id . ":" . SecretsCollection::$secret)),
+                "authorization_access" => sprintf("Basic %s", base64_encode($this->sdk->getClientId() . ":" . $this->sdk->getClientSecret())),
             ],
             "query" => [
                 "limit" => 25,

@@ -3,10 +3,11 @@
 
 namespace Gjoni\SpotifyWebApiSdk;
 
-use GuzzleHttp\Exception\GuzzleException;
+use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
 use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
+use GuzzleHttp\Exception\GuzzleException;
 
 /**
  * Contains basic user resource requests(profile, playlists et cetera)
@@ -37,13 +38,20 @@ class User
     private array $parameters;
 
     /**
+     * @var SdkInterface $sdk Sdk object
+     */
+    private SdkInterface $sdk;
+
+    /**
      * UserController constructor.
      *
      * Initializes the client object, response, headers and client parameters
+     *
+     * @param SdkInterface $sdk
      */
-    public function __construct()
+    public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client([
+        $this->client = new Client($sdk , [
             "base_uri" => SecretsCollection::$apiUri,
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]

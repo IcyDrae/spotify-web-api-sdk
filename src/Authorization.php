@@ -43,7 +43,7 @@ class Authorization {
     private array $parameters;
 
     /**
-     * @var SdkInterface $sdk Main interface
+     * @var SdkInterface $sdk Sdk object
      */
     private SdkInterface $sdk;
 
@@ -58,7 +58,7 @@ class Authorization {
     {
         $this->sdk = $sdk;
 
-        $this->client = new Client([
+        $this->client = new Client($sdk, [
             "base_uri" => SecretsCollection::$baseUri,
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]
