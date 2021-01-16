@@ -15,7 +15,7 @@ use GuzzleHttp\Exception\GuzzleException;
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  */
-class User
+class UserProfile
 {
     /**
      * @var Client $client Custom client object
@@ -45,7 +45,7 @@ class User
     /**
      * UserController constructor.
      *
-     * Initializes the client object, response, headers and client parameters
+     * Initializes the client object, response, headers and client parameters.
      *
      * @param SdkInterface $sdk
      */
@@ -63,25 +63,25 @@ class User
     }
 
     /**
-     * Gets the user profile
+     * Fetches the current users' profile.
      *
      * @throws GuzzleException
      * @return string
      */
-    public function getProfile(): string
+    public function me(): string
     {
         return $this->client->fetch( "GET", "/v1/me");
     }
 
     /**
-     * Gets all the user playlists
+     * Fetches a users' public profile.
      *
+     * @param string $id The user id
      * @throws GuzzleException
      * @return string
      */
-    public function getPlaylists(): string {
-        return $this->client->fetch("GET", "/v1/me/playlists", [
-            "query" => $this->parameters["query"]
-        ]);
+    public function getUserProfile(string $id): string
+    {
+        return $this->client->fetch( "GET", "/v1/users/$id");
     }
 }

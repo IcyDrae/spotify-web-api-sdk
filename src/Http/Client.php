@@ -142,17 +142,18 @@ class Client extends GuzzleClient
     }
 
     /**
-     * This method is built to be as reusable as possible, used as a base request method for resources.
+     * Base request method for all API resources. Sets base headers such as the access token, content type and accept type.
      *
-     * @param $method
-     * @param $uri
-     * @param array $options
-     * @return ResponseInterface|string
+     * @param string $method The Http method
+     * @param string $path The request path
+     * @param array $options The request parameters
+     * @return string Json response
      * @throws GuzzleException
      */
-    public function fetch($method,
-                          $uri,
-                          array $options = []) {
+    public function fetch(string $method,
+                          string $path,
+                          array $options = []): string
+    {
         $response = $this->getResponse();
         $accessToken = $this->headers["Access-Token"] ?? '';
 
@@ -161,7 +162,7 @@ class Client extends GuzzleClient
         }
 
         # Set default headers for a typical user request. Includes the access token
-        # Append to possibly existing values
+        # Mix with possibly existing values
         $options["headers"] = array_merge($options["headers"], [
             "Accept" => $this->parameters["headers"]["accept"],
             "Content-Type" => $this->parameters["headers"]["ctype_json"],
@@ -169,7 +170,7 @@ class Client extends GuzzleClient
         ]);
 
         try {
-            $request = parent::request($method, $uri, $options);
+            $request = parent::request($method, $path, $options);
 
             $body = $request->getBody();
             $body = json_decode($body);
