@@ -148,13 +148,16 @@ class Client extends GuzzleClient
         $accessToken = $this->headers["Access-Token"] ?? '';
 
         # Set default headers for a typical user request. Includes the access token
-        if (empty($options["headers"])) {
-            $options["headers"] = [
-                "Accept" => $this->parameters["headers"]["accept"],
-                "Content-Type" => $this->parameters["headers"]["ctype_json"],
-                "Authorization" => sprintf("Bearer %s",  $accessToken)
-            ];
+        if (!isset($options["headers"])) {
+            $options["headers"] = [];
         }
+
+        # Append to possibly existing values
+        $options["headers"] = array_merge($options["headers"], [
+            "Accept" => $this->parameters["headers"]["accept"],
+            "Content-Type" => $this->parameters["headers"]["ctype_json"],
+            "Authorization" => sprintf("Bearer %s",  $accessToken)
+        ]);
 
         try {
             $request = parent::request($method, $uri, $options);
