@@ -9,7 +9,6 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
-use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 
 /**
  * Responsible for
@@ -59,7 +58,7 @@ class Authorization {
         $this->sdk = $sdk;
 
         $this->client = new Client($sdk, [
-            "base_uri" => SecretsCollection::$baseUri,
+            "base_uri" => SdkConstants::ACCOUNTS_URL,
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]
         ]);
@@ -83,7 +82,7 @@ class Authorization {
                 "scope" => $this->parameters["scope"]
             ];
 
-            $url = SecretsCollection::$baseUri . "/authorize?" . http_build_query($options, null, "&");
+            $url = SdkConstants::ACCOUNTS_URL . "/authorize?" . http_build_query($options, null, "&");
 
             return $this->response->json([
                 "data" => [

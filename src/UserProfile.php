@@ -6,14 +6,14 @@ namespace Gjoni\SpotifyWebApiSdk;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
-use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
- * Contains basic user resource requests(profile, playlists et cetera)
+ * Responsible for communicating with the Users Profile API.
  *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
+ * @link https://developer.spotify.com/documentation/web-api/reference-beta/#category-users-profile
  */
 class UserProfile
 {
@@ -52,7 +52,7 @@ class UserProfile
     public function __construct(SdkInterface $sdk)
     {
         $this->client = new Client($sdk , [
-            "base_uri" => SecretsCollection::$apiUri,
+            "base_uri" => SdkConstants::API_URL,
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]
         ]);
@@ -65,16 +65,28 @@ class UserProfile
     /**
      * Fetches the current users' profile.
      *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
      * @throws GuzzleException
      * @return string
      */
     public function me(): string
     {
-        return $this->client->fetch( "GET", "/v1/me");
+        return $this->client->fetch( "GET", SdkConstants::ME);
     }
 
     /**
      * Fetches a users' public profile.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
+     * Path Parameter:
+     * - required
+     *      - {user_id}(string): The user’s Spotify user ID.
      *
      * @param string $id The user id
      * @throws GuzzleException
@@ -82,6 +94,6 @@ class UserProfile
      */
     public function getUserProfile(string $id): string
     {
-        return $this->client->fetch( "GET", "/v1/users/$id");
+        return $this->client->fetch( "GET", SdkConstants::USERS . "/$id");
     }
 }
