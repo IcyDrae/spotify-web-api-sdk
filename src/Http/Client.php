@@ -9,7 +9,6 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
-use Psr\Http\Message\ResponseInterface;
 
 /**
  * Serves as a boilerplate with client and request parameters for our specific needs

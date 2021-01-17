@@ -14,6 +14,11 @@ use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 class Sdk implements SdkInterface
 {
     /**
+     * @var array $scopes
+     */
+    private array $scopes;
+
+    /**
      * @var string $clientId
      */
     private string $clientId;
@@ -29,7 +34,7 @@ class Sdk implements SdkInterface
     private string $accessToken;
 
     /**
-     * @var string $refreshToken Long lived refresh token; used to fetch a new access token
+     * @var string $refreshToken
      */
     private string $refreshToken;
 
@@ -42,6 +47,24 @@ class Sdk implements SdkInterface
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setScopes(array $scopes): SdkInterface
+    {
+        $this->scopes = $scopes;
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getScopes(): array
+    {
+        return $this->scopes;
     }
 
     /**
