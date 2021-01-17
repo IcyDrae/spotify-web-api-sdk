@@ -110,7 +110,7 @@ class Playlists
     }
 
     /**
-     * Gets a users' playlists.
+     * Creates a playlist for a user.
      *
      *
      * Header:
