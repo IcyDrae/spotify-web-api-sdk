@@ -79,7 +79,7 @@ class Authorization {
                 "response_type" => $this->parameters["response_type"],
                 "client_id" => $this->sdk->getClientId(),
                 "redirect_uri" => $this->parameters["redirect_uri"],
-                "scope" => $this->parameters["scope"]
+                "scope" => $this->sdk->getScopes()
             ];
 
             $url = SdkConstants::ACCOUNTS_URL . "/authorize?" . http_build_query($options, null, "&");

@@ -40,13 +40,16 @@ class Sdk implements SdkInterface
 
     /**
      * Sdk constructor.
+     *
      * @param string $clientId The client id of the third party app that will use the API
-     * @param string $clientSecret It's corresponding secret
+     * @param string $clientSecret Its corresponding secret
+     * @param array $scopes The scopes the app needs
      */
-    public function __construct(string $clientId, string $clientSecret)
+    public function __construct(string $clientId, string $clientSecret, array $scopes)
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
+        $this->scopes = $scopes;
     }
 
     /**
@@ -62,9 +65,9 @@ class Sdk implements SdkInterface
     /**
      * @inheritDoc
      */
-    public function getScopes(): array
+    public function getScopes(): string
     {
-        return $this->scopes;
+        return implode(" ", $this->scopes);
     }
 
     /**

@@ -21,11 +21,11 @@ interface SdkInterface
     public function setScopes(array $scopes): SdkInterface;
 
     /**
-     * Returns the scopes.
+     * Returns the scopes as a space-separated string.
      *
-     * @return array
+     * @return string
      */
-    public function getScopes(): array;
+    public function getScopes(): string;
 
     /**
      * Sets the client id.

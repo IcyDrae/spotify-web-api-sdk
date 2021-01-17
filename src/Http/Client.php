@@ -68,7 +68,6 @@ class Client extends GuzzleClient
             "client_id" => $this->sdk->getClientId(),
             "response_type" => "code",
             "redirect_uri" => SecretsCollection::$frontend,
-            "scope" => "user-read-private user-read-email playlist-read-private", // add other scopes
             "grant_type" => "authorization_code",
             "headers" => [
                 "accept" => "application/json",
