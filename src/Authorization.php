@@ -49,7 +49,7 @@ class Authorization {
     /**
      * Authorization constructor.
      *
-     * Initializes the SDK object, client, response, headers and client config
+     * Initializes the SDK object, client, response, headers and client config.
      *
      * @param SdkInterface $sdk An SDK object
      */
@@ -69,7 +69,7 @@ class Authorization {
     }
 
     /**
-     * Builds the URL the user will be redirected to for authorization
+     * Builds the URL the user will be redirected to for authorization.
      *
      * @return string
      */
@@ -97,18 +97,17 @@ class Authorization {
     }
 
     /**
-     * Using an authorization code from the client(as a header), will request an access token.
+     * Using an authorization code, will request an access & refresh token.
      *
      * If successful, returns:
-     *  (1) access token
-     *  (2) refresh token
-     *  (3) expiry timestamp for the access token
+     *  1. access token
+     *  2. refresh token
+     *  3. expiry timestamp for the access token
      *
+     * @param string $authCode The recently obtained authorization code.
      * @return string
      */
-    public function requestAccessToken(): string {
-        $authCode = $this->headers["Auth-Code"] ?? '';
-
+    public function requestAccessToken(string $authCode): string {
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
@@ -147,13 +146,12 @@ class Authorization {
     }
 
     /**
-     * This method requests a new access token based on the refresh token
+     * This method requests a new access token based on the refresh token.
      *
+     * @param string $refreshToken The refresh token needed for the exchange.
      * @return string
      */
-    public function refreshAccessToken(): string {
-        $refreshToken = $this->headers["Refresh-Token"] ?? '';
-
+    public function refreshAccessToken(string $refreshToken): string {
         try {
             $request = $this->client->post("/api/token", [
                 "headers" => [
