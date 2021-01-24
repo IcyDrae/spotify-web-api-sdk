@@ -6,6 +6,12 @@ namespace Gjoni\SpotifyWebApiSdk;
 
 use Exception;
 
+/**
+ * Class containing all the constants such as urls, endpoints etc.
+ *
+ * @package Gjoni\SpotifyWebApiSdk
+ * @author Reard Gjoni <gjoni-r@hotmail.com>
+ */
 final class SdkConstants
 {
     /**

@@ -8,6 +8,7 @@ namespace Gjoni\SpotifyWebApiSdk\Interfaces;
  * into each entity.
  *
  * @package Gjoni\SpotifyWebApiSdk\Interfaces
+ * @author Reard Gjoni <gjoni-r@hotmail.com>
  */
 interface SdkInterface
 {
