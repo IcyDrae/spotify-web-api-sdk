@@ -153,7 +153,12 @@ class Client extends GuzzleClient
                           array $options = []): string
     {
         $response = $this->getResponse();
-        $accessToken = $this->sdk->getAccessToken() ?? '';
+
+        if (!$accessToken = $this->sdk->getAccessToken()) {
+            return $this->response->json([
+                "error" => "Access token was not set."
+            ]);
+        }
 
         if (!isset($options["headers"])) {
             $options["headers"] = [];

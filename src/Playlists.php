@@ -228,4 +228,42 @@ class Playlists
     public function changePlaylistDetails(string $id, array $options = []): string {
         return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id", $options);
     }
+
+    /**
+     * Get full details of the items of a playlist owned by a Spotify user.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Query parameter:
+     * - required
+     *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking. For episodes, if a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter. Note: If neither market or user country are provided, the episode is considered unavailable for the client.
+     *
+     * - optional
+     *      - fields(string): Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the total number of items and the request limit: fields=total,limit A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: fields=items(added_at,added_by.id) Use multiple parentheses to drill down into nested objects, for example: fields=items(track(name,href,album(name,href))) Fields can be excluded by prefixing them with an exclamation mark, for example: fields=items.track.album(!external_urls,images)
+     *      - limit(integer): The maximum number of items to return. Default: 100. Minimum: 1. Maximum: 100.
+     *      - offset(integer): The index of the first item to return. Default: 0 (the first object).
+     *      - additional_types(string): A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.
+     *
+     * Response:
+     *
+     * On success, the response body contains an array of track objects and episode objects (depends on the additional_types parameter),
+     * wrapped in a paging object in JSON format and the HTTP status code in the response header is 200 OK.
+     * If an episode is unavailable in the given market, its information will not be included in the response.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden.
+     *
+     * @param string $id
+     * @param array $options
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getPlaylistItems(string $id, array $options = []): string {
+        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+    }
 }
