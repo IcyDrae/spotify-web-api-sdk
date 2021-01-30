@@ -70,7 +70,7 @@ class Playlists
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
      *
-     * Query Parameter:
+     * Query parameter:
      * - optional
      *      - limit(integer): ‘The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50.’
      *      - offset(integer): ‘The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000. Use with limit to get the next set of playlists.’
@@ -91,11 +91,11 @@ class Playlists
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
      *
-     * Path Parameter:
+     * Path parameter:
      * - required
      *      - {user_id}(string): The user’s Spotify user ID.
      *
-     * Query Parameter:
+     * Query parameter:
      * - optional
      *      - limit(integer): ‘The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50.’
      *      - offset(integer): ‘The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000. Use with limit to get the next set of playlists.’
@@ -119,11 +119,11 @@ class Playlists
      * - optional:
      *      - Content-Type(string): The content type of the request body: application/json
      *
-     * Path Parameter:
+     * Path parameter:
      * - required
      *      - {user_id}(string): The users Spotify user ID.
      *
-     * JSON Body Parameter:
+     * JSON body parameter:
      * - required:
      *      - name(string): The name for the new playlist, for example "Your Coolest Playlist" . This name does not need to be unique; a user may have several playlists with the same name.
      * - optional:
@@ -147,7 +147,7 @@ class Playlists
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
      *
-     * Path Parameter:
+     * Path parameter:
      * - required
      *      - {playlist_id}(string): The Spotify ID for the playlist.
      *
@@ -164,5 +164,33 @@ class Playlists
      */
     public function getPlaylist(string $id, array $options = []): string {
         return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id", $options);
+    }
+
+    /**
+     * Change a playlist’s name and public/private state. (The user must, of course, own the playlist.)
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *      - Content-Type(string): The content type of the request body: application/json
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * JSON body parameter:
+     * - optional
+     *      - name(string): The new name for the playlist, for example "My New Playlist Title"
+     *      - public(boolean): If true the playlist will be public, if false it will be private.
+     *      - collaborative(boolean): If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.
+     *      - description(string): Value for playlist description as displayed in Spotify Clients and in the Web API.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function changePlaylistDetails(string $id, array $options = []): string {
+        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id", $options);
     }
 }
