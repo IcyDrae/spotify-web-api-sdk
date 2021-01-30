@@ -63,11 +63,20 @@ class UserProfile
     }
 
     /**
-     * Fetches the current users' profile.
+     * Get detailed profile information about the current user (including the current user’s username).
      *
      * Header:
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     * When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
+     *
+     * Important! If the user-read-email scope is authorized, the returned JSON will include the email address that was
+     * entered when the user created their Spotify account. This email address is unverified; do not assume that the email address belongs to the user.
      *
      * @throws GuzzleException
      * @return string
@@ -78,7 +87,7 @@ class UserProfile
     }
 
     /**
-     * Fetches a users' public profile.
+     * Get public profile information about a Spotify user.
      *
      * Header:
      * - required
@@ -87,6 +96,13 @@ class UserProfile
      * Path Parameter:
      * - required
      *      - {user_id}(string): The user’s Spotify user ID.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * If a user with that user_id doesn't exist, the status code is 404 NOT FOUND.
      *
      * @param string $id The user id
      * @throws GuzzleException

@@ -63,7 +63,7 @@ class Playlists
     }
 
     /**
-     * Gets the current users' playlists.
+     * Get a list of the playlists owned or followed by the current Spotify user.
      *
      *
      * Header:
@@ -75,6 +75,12 @@ class Playlists
      *      - limit(integer): ‘The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50.’
      *      - offset(integer): ‘The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000. Use with limit to get the next set of playlists.’
      *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified
+     * playlist objects (wrapped in a paging object) in JSON format. On error, the header status code is an error code and the
+     * response body contains an error object. Please note that the access token has to be tied to a user.
+     *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
      * @return string
@@ -84,7 +90,7 @@ class Playlists
     }
 
     /**
-     * Gets a users' playlists.
+     * Get a list of the playlists owned or followed by a Spotify user.
      *
      *
      * Header:
@@ -100,6 +106,12 @@ class Playlists
      *      - limit(integer): ‘The maximum number of playlists to return. Default: 20. Minimum: 1. Maximum: 50.’
      *      - offset(integer): ‘The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000. Use with limit to get the next set of playlists.’
      *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified
+     * playlist objects (wrapped in a paging object) in JSON format. On error, the header status code is an error code and the
+     * response body contains an error object.
+     *
      * @param string $id The users' id
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
@@ -110,7 +122,7 @@ class Playlists
     }
 
     /**
-     * Creates a playlist for a user.
+     * Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)
      *
      *
      * Header:
@@ -130,6 +142,14 @@ class Playlists
      *      - public(boolean): Defaults to true . If true the playlist will be public, if false it will be private. To be able to create private playlists, the user must have granted the playlist-modify-private scope
      *      - collaborative(boolean): Defaults to false . If true the playlist will be collaborative. Note that to create a collaborative playlist you must also set public to false . To create collaborative playlists you must have granted playlist-modify-private and playlist-modify-public scopes .
      *      - description(string): value for playlist description as displayed in Spotify Clients and in the Web API.
+     *
+     * Response:
+     *
+     * On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header
+     * is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new playlist.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Trying to create a playlist when you do not have the user’s authorization returns error 403 Forbidden.
      *
      * @param string $id The users' id
      * @param array $options (optional) Request parameters
@@ -156,6 +176,14 @@ class Playlists
      *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking. For episodes, if a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter. Note: If neither market or user country are provided, the episode is considered unavailable for the client.
      *      - fields(string): Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist’’s description and URI: fields=description,uri. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: fields=tracks.items(added_at,added_by.id). Use multiple parentheses to drill down into nested objects, for example: fields=tracks.items(track(name,href,album(name,href))). Fields can be excluded by prefixing them with an exclamation mark, for example: fields=tracks.items(track(name,href,album(!name,href)))
      *      - additional_types(string): A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.
+     *
+     * Response:
+     *
+     * On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK.
+     * If an episode is unavailable in the given market, its information will not be included in the response.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden.
      *
      * @param string $id The playlist id
      * @param array $options (optional) Request parameters
@@ -184,6 +212,13 @@ class Playlists
      *      - public(boolean): If true the playlist will be public, if false it will be private.
      *      - collaborative(boolean): If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.
      *      - description(string): Value for playlist description as displayed in Spotify Clients and in the Web API.
+     *
+     * Response:
+     *
+     * On success the HTTP status code in the response header is 200 OK.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.
      *
      * @param string $id The playlist id
      * @param array $options (optional) Request parameters
