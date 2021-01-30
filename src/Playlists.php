@@ -141,7 +141,7 @@ class Playlists
     }
 
     /**
-     * Fetches a public playlist using the playlist id.
+     * Get a playlist owned by a Spotify user.
      *
      * Header:
      * - required
