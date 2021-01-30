@@ -13,7 +13,7 @@ use GuzzleHttp\Exception\GuzzleException;
  *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
- * @link https://developer.spotify.com/documentation/web-api/reference-beta/#category-playlists
+ * @link https://developer.spotify.com/documentation/web-api/reference/#category-playlists
  */
 class Playlists
 {
@@ -80,7 +80,7 @@ class Playlists
      * @return string
      */
     public function getPlaylists(array $options = []): string {
-        return $this->client->fetch("GET", SdkConstants::ME . "/playlists", $options);
+        return $this->client->delegate("GET", SdkConstants::ME . "/playlists", $options);
     }
 
     /**
@@ -106,7 +106,7 @@ class Playlists
      * @return string
      */
     public function getUserPlaylists(string $id, array $options = []): string {
-        return $this->client->fetch("GET", SdkConstants::USERS . "/$id/playlists", $options);
+        return $this->client->delegate("GET", SdkConstants::USERS . "/$id/playlists", $options);
     }
 
     /**
@@ -121,7 +121,7 @@ class Playlists
      *
      * Path Parameter:
      * - required
-     *      - {user_id}(string): The user’s Spotify user ID.
+     *      - {user_id}(string): The users Spotify user ID.
      *
      * JSON Body Parameter:
      * - required:
@@ -137,6 +137,32 @@ class Playlists
      * @return string
      */
     public function createPlaylist(string $id, array $options = []): string {
-        return $this->client->fetch("POST", SdkConstants::USERS . "/$id/playlists", $options);
+        return $this->client->delegate("POST", SdkConstants::USERS . "/$id/playlists", $options);
+    }
+
+    /**
+     * Fetches a public playlist using the playlist id.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
+     * Path Parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Query parameter:
+     * - optional
+     *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking. For episodes, if a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter. Note: If neither market or user country are provided, the episode is considered unavailable for the client.
+     *      - fields(string): Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist’’s description and URI: fields=description,uri. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: fields=tracks.items(added_at,added_by.id). Use multiple parentheses to drill down into nested objects, for example: fields=tracks.items(track(name,href,album(name,href))). Fields can be excluded by prefixing them with an exclamation mark, for example: fields=tracks.items(track(name,href,album(!name,href)))
+     *      - additional_types(string): A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getPlaylist(string $id, array $options = []): string {
+        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id", $options);
     }
 }

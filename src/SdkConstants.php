@@ -35,6 +35,11 @@ final class SdkConstants
     const USERS = "/v1/users";
 
     /**
+     * The public playlists endpoint.
+     */
+    const PLAYLISTS = "/v1/playlists";
+
+    /**
      * SdkConstants constructor.
      * @throws Exception When instantiated, as it should only be read-only.
      */

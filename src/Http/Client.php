@@ -148,7 +148,7 @@ class Client extends GuzzleClient
      * @return string Json response
      * @throws GuzzleException
      */
-    public function fetch(string $method,
+    public function delegate(string $method,
                           string $path,
                           array $options = []): string
     {
