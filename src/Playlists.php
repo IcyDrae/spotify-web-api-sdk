@@ -235,6 +235,7 @@ class Playlists
      * Header:
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
      * Path parameter:
      * - required
      *      - {playlist_id}(string): The Spotify ID for the playlist.
@@ -258,12 +259,51 @@ class Playlists
      * On error, the header status code is an error code and the response body contains an error object.
      * Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden.
      *
-     * @param string $id
-     * @param array $options
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
      * @throws GuzzleException
      * @return string
      */
     public function getPlaylistItems(string $id, array $options = []): string {
         return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+    }
+
+    /**
+     * Add one or more items to a user’s playlist.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *      - Content-Type(string): Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Query parameter:
+     * - optional
+     *      - position(integer): The position to insert the items, a zero-based index. For example, to insert the items in the first position: position=0; to insert the items in the third position: position=2 . If omitted, the items will be appended to the playlist. Items are added in the order they are listed in the query string or request body.
+     *      - uris(string): A comma-separated list of Spotify URIs to add, can be track or episode URIs. For example: uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ A maximum of 100 items can be added in one request. Note: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below.
+     *
+     * JSON body parameter:
+     * - optional
+     *      - uris(array[string]): A JSON array of the Spotify URIs to add. For example: {"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M", "spotify:episode:512ojhOuo1ktJprKbVcKyQ"]} A maximum of 100 items can be added in one request. Note: if the uris parameter is present in the query string, any URIs listed here in the body will be ignored.
+     *      - position(integer): The position to insert the items, a zero-based index. For example, to insert the items in the first position: position=0 ; to insert the items in the third position: position=2. If omitted, the items will be appended to the playlist. Items are added in the order they appear in the uris array. For example: {"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M"], "position": 3}
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 201 Created.
+     * The response body contains a snapshot_id in JSON format. The snapshot_id can be used to identify your playlist version in future requests.
+     *
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Trying to add an item when you do not have the user’s authorization, or when there are more than 10.000 items in the playlist, returns error 403 Forbidden.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function addItemsToPlaylist(string $id, array $options = []): string {
+        return $this->client->delegate("POST", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 }

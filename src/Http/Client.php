@@ -182,7 +182,7 @@ class Client extends GuzzleClient
                 "data" => [
                     "body" => $body
                 ]
-            ]);
+            ], $request->getStatusCode());
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
                 $request = Message::toString($exception->getRequest());
