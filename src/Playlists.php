@@ -340,12 +340,48 @@ class Playlists
      *
      * On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified. Trying to set an item when you do not have the user’s authorization returns error 403 Forbidden.
      *
-     * @param string $id
-     * @param array $options
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
      * @throws GuzzleException
      * @return string
      */
     public function changePlaylistItems(string $id, array $options = []): string {
         return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+    }
+
+    /**
+     * Remove one or more items from a user’s playlist.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *      - Content-Type(string): Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID
+     *
+     * JSON body parameter:
+     * - required
+     *      - tracks(array[string]): An array of objects containing Spotify URIs of the tracks or episodes to remove. For example: { "tracks": [{ "uri": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh" },{ "uri": "spotify:track:1301WleyT98MSxVHPZCA6M" }] }. A maximum of 100 objects can be sent at once.
+     * - optional
+     *      - snapshot_id(string): The playlist’s snapshot ID against which you want to make the changes. The API will validate that the specified items exist and in the specified positions and make the changes, even if more recent changes have been made to the playlist.
+     *
+     * Response:
+     *
+     * On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK.
+     * The snapshot_id can be used to identify your playlist version in future requests.
+     *
+     * On error, the header status code is an error code and the response body contains an error object. Trying to remove an item when you
+     * do not have the user’s authorization returns error 403 Forbidden. Attempting to use several different ways to remove items returns
+     * 400 Bad Request. Other client errors returning 400 Bad Request include specifying invalid positions.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function removeFromPlaylist(string $id, array $options = []): string {
+        return $this->client->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 }
