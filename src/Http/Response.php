@@ -7,7 +7,7 @@ use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use JsonSerializable;
 
 /**
- * Responsible for serializing data into json and setting headers
+ * Responsible for serializing data into json and setting headers.
  *
  * @package SpotifyAPI\Http
  * @author Reard Gjoni
@@ -28,7 +28,7 @@ class Response implements JsonSerializable
     }
 
     /**
-     * Sets predefined headers & handles preflight OPTIONS requests
+     * Sets predefined headers & handles preflight OPTIONS requests.
      *
      * @return $this
      */
@@ -41,9 +41,10 @@ class Response implements JsonSerializable
         header("Access-Control-Allow-Credentials: true");
 
         /**
-         * Assuming this is a preflight request, this will need to be called at the top of index.php
-         * Set the necessary headers, exit the sequence and continue with the actual request
-         * If it's not a preflight request, the Router will take care of it
+         * Assuming this is a preflight request, this will need to be called at the top of index.php.
+         *
+         * Set the necessary headers, exit the sequence and continue with the actual request.
+         * If it's not a preflight request, the Router will take care of it.
          */
         if($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         {
@@ -57,7 +58,7 @@ class Response implements JsonSerializable
     }
 
     /**
-     * Serializes a given array into JSON and prints it to the client
+     * Serializes a given array into JSON and prints it to the client.
      *
      * @param array $data Content being converted
      * @param int $statusCode Status code
