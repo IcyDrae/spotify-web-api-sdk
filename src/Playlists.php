@@ -306,4 +306,46 @@ class Playlists
     public function addItemsToPlaylist(string $id, array $options = []): string {
         return $this->client->delegate("POST", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
+
+    /**
+     * Either reorder or replace items in a playlist depending on the request’s parameters. To reorder items, include range_start, insert_before, range_length and snapshot_id in the request’s body. To replace items, include uris as either a query parameter or in the request’s body. Replacing items in a playlist will overwrite its existing items. This operation can be used for replacing or clearing items in a playlist.
+     * Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can’t be applied together in a single request.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     * - optional
+     *      - Content-Type(string): Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Query parameter:
+     * - optional
+     *      - uris(string): A comma-separated list of Spotify URIs to set, can be track or episode URIs. For example: uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ A maximum of 100 items can be set in one request.
+     *
+     * JSON body parameter:
+     * - optional
+     *      - uris(array[string])
+     *      - range_start(integer): The position of the first item to be reordered.
+     *      - insert_before(integer): The position where the items should be inserted. To reorder the items to the end of the playlist, simply set insert_before to the position after the last item. Examples: To reorder the first item to the last position in a playlist with 10 items, set range_start to 0, and insert_before to 10. To reorder the last item in a playlist with 10 items to the start of the playlist, set range_start to 9, and insert_before to 0.
+     *      - range_length(integer): The amount of items to be reordered. Defaults to 1 if not set. The range of items to be reordered begins from the range_start position, and includes the range_length subsequent items. Example: To move the items at index 9-10 to the start of the playlist, range_start is set to 9, and range_length is set to 2.
+     *      - snapshot_id(string): The playlist’s snapshot ID against which you want to make the changes.
+     *
+     * Response:
+     *
+     * On a successful reorder operation, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK. The snapshot_id can be used to identify your playlist version in future requests.
+     * On a successful replace operation, the HTTP status code in the response header is 201 Created.
+     *
+     * On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified. Trying to set an item when you do not have the user’s authorization returns error 403 Forbidden.
+     *
+     * @param string $id
+     * @param array $options
+     * @throws GuzzleException
+     * @return string
+     */
+    public function changePlaylistItems(string $id, array $options = []): string {
+        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+    }
 }
