@@ -155,7 +155,7 @@ class Client extends GuzzleClient
         $response = $this->getResponse();
 
         if (!$accessToken = $this->sdk->getAccessToken()) {
-            return $this->response->json([
+            return $response->json([
                 "error" => "Access token was not set."
             ]);
         }
@@ -188,7 +188,7 @@ class Client extends GuzzleClient
                 $request = Message::toString($exception->getRequest());
             }
 
-            return $this->response->json([
+            return $response->json([
                 "error" => $exception->getMessage(),
                 "request" => $request ?? ''
             ], $exception->getCode());
