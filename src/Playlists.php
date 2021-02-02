@@ -156,7 +156,7 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function createPlaylist(string $id, array $options = []): string {
+    public function create(string $id, array $options = []): string {
         return $this->client->delegate("POST", SdkConstants::USERS . "/$id/playlists", $options);
     }
 
@@ -225,7 +225,7 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function changePlaylistDetails(string $id, array $options = []): string {
+    public function changeDetails(string $id, array $options = []): string {
         return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id", $options);
     }
 
@@ -264,7 +264,7 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function getPlaylistItems(string $id, array $options = []): string {
+    public function getItems(string $id, array $options = []): string {
         return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
@@ -303,7 +303,7 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function addItemsToPlaylist(string $id, array $options = []): string {
+    public function addItems(string $id, array $options = []): string {
         return $this->client->delegate("POST", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
@@ -345,7 +345,7 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function changePlaylistItems(string $id, array $options = []): string {
+    public function changeItems(string $id, array $options = []): string {
         return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
@@ -381,7 +381,30 @@ class Playlists
      * @throws GuzzleException
      * @return string
      */
-    public function removeFromPlaylist(string $id, array $options = []): string {
+    public function removeItems(string $id, array $options = []): string {
         return $this->client->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+    }
+
+    /**
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service.
+     *
+     * Path parameter:
+     * - required
+     *      -  {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Response:
+     *
+     * On success, the response body contains a list of image objects in JSON format and the HTTP status code in the response header is 200 OK
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getCoverImage(string $id, array $options = []): string {
+        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/images", $options);
     }
 }
