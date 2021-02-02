@@ -156,7 +156,7 @@ class Client extends GuzzleClient
 
         if (!$accessToken = $this->sdk->getAccessToken()) {
             return $response->json([
-                "error" => "Access token was not set."
+                "error" => "Access token has expired."
             ]);
         }
 
@@ -189,8 +189,12 @@ class Client extends GuzzleClient
             }
 
             return $response->json([
-                "error" => $exception->getMessage(),
-                "request" => $request ?? ''
+                "error" => [
+                    "message" => $exception->getMessage(),
+                    "code" => $exception->getCode(),
+                    "request" => $request ?? '',
+                    "trace" => $exception->getTrace()
+                ]
             ], $exception->getCode());
         }
     }
