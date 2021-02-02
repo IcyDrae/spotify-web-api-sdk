@@ -4,12 +4,11 @@
 namespace Gjoni\SpotifyWebApiSdk;
 
 use Gjoni\SpotifyWebApiSdk\Http\Client;
-use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
- * Responsible for communicating with the Playlists API
+ * Responsible for communicating with the Playlists API.
  *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
@@ -23,26 +22,6 @@ class Playlists
     private Client $client;
 
     /**
-     * @var Response Response object
-     */
-    private Response $response;
-
-    /**
-     * @var array $headers Client headers
-     */
-    private array $headers;
-
-    /**
-     * @var array $parameters Client parameters
-     */
-    private array $parameters;
-
-    /**
-     * @var SdkInterface $sdk Sdk object
-     */
-    private SdkInterface $sdk;
-
-    /**
      * Playlists constructor.
      *
      * Initializes the client object, response, headers and client parameters.
@@ -51,15 +30,11 @@ class Playlists
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk , [
+        $this->client = new Client($sdk, [
             "base_uri" => SdkConstants::API_URL,
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]
         ]);
-
-        $this->response = $this->client->getResponse();
-        $this->headers = $this->client->getHeaders();
-        $this->parameters = $this->client->getParameters();
     }
 
     /**
