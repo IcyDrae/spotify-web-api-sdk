@@ -15,6 +15,11 @@ use Exception;
 final class SdkConstants
 {
     /**
+     * The current Spotify API version, prefixing all endpoints.
+     */
+    const API_VERSION = "/v1";
+
+    /**
      * The base API url where the resources reside.
      */
     const API_URL = "https://api.spotify.com";
@@ -27,17 +32,22 @@ final class SdkConstants
     /**
      * The current users' url.
      */
-    const ME = "/v1/me";
+    const ME = self::API_VERSION . "/me";
 
     /**
      * Reflects another users' resources.
      */
-    const USERS = "/v1/users";
+    const USERS = self::API_VERSION . "/users";
 
     /**
      * The public playlists endpoint.
      */
-    const PLAYLISTS = "/v1/playlists";
+    const PLAYLISTS = self::API_VERSION . "/playlists";
+
+    /**
+     * The artists endpoint.
+     */
+    const ARTISTS = self::API_VERSION . "/artists";
 
     /**
      * SdkConstants constructor.
