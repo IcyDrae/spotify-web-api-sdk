@@ -167,8 +167,8 @@ class Client extends GuzzleClient
         # Set default headers for a typical user request. Includes the access token
         # Mix with possibly existing values
         $options["headers"] = array_merge($options["headers"], [
-            "Accept" => $this->parameters["headers"]["accept"] ?? $options["headers"]["accept"],
-            "Content-Type" => $this->parameters["headers"]["ctype_json"] ?? $options["headers"]["content_type"],
+            "Accept" => $options["headers"]["accept"] ?? $this->parameters["headers"]["accept"],
+            "Content-Type" => $options["headers"]["content_type"] ?? $this->parameters["headers"]["ctype_json"] ,
             "Authorization" => sprintf("Bearer %s",  $accessToken)
         ]);
 
