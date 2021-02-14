@@ -361,6 +361,8 @@ class Playlists
     }
 
     /**
+     * Get the current image associated with a specific playlist.
+     *
      * Header:
      * - required
      *      - Authorization(string): A valid access token from the Spotify Accounts service.
