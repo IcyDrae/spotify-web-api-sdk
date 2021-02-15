@@ -67,4 +67,30 @@ class Artists
         return $this->client->delegate("GET", SdkConstants::ARTISTS . "?ids=$ids", $options);
     }
 
+    /**
+     * Get Spotify catalog information for a single artist identified by their unique Spotify ID.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     * - required
+     *      - {artist_id}(string): The Spotify ID of the artist.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an artist object in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id
+     * @param array $options
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getSingle(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id");
+    }
+
 }
