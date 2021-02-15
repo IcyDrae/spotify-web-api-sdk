@@ -32,8 +32,8 @@ class Playlists
     {
         $this->client = new Client($sdk, [
             "base_uri" => SdkConstants::API_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
+            "timeout" => 0,
+            "allow_redirects" => ["track_redirects" => true],
         ]);
     }
 
@@ -369,7 +369,7 @@ class Playlists
      *
      * Path parameter:
      * - required
-     *      -  {playlist_id}(string): The Spotify ID for the playlist.
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
      *
      * Response:
      *
@@ -383,5 +383,44 @@ class Playlists
      */
     public function getCoverImage(string $id, array $options = []): string {
         return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/images", $options);
+    }
+
+    /**
+     * Replace the image used to represent a specific playlist.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of the user. This access token must be tied to the user who owns the playlist, and must have the scope ugc-image-upload granted. In addition, the token must also contain playlist-modify-public and/or playlist-modify-private, depending the public status of the playlist you want to update . See Using Scopes.
+     *      - Content-Type(string): The content type of the request body: image/jpeg
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID for the playlist.
+     *
+     * Body parameter(or other type of parameter):
+     *  - required
+     *      - binary data(image)(string)
+     *
+     * Response:
+     *
+     * If you get status code 429, it means that you have sent too many requests. If this happens, have a look in the Retry-After header, where you will see a number displayed.
+     * This is the amount of seconds that you need to wait, before you can retry sending your requests.
+     *
+     * <br>
+     * Notes:
+     *
+     * The request should contain a Base64 encoded JPEG image data, maximum payload size is 256 KB.
+     * Rate Limiting: If you get status code 429, it means that you have sent too many requests. If this happens, have a look in the Retry-After header, where you will see a number displayed.
+     * This is the amount of seconds that you need to wait, before you can retry sending your requests.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function changeCoverImage(string $id, array $options = []): string {
+        $options["headers"]["content_type"] = "image/jpeg";
+
+        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/images", $options);
     }
 }
