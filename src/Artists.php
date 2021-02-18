@@ -83,14 +83,48 @@ class Artists
      * On success, the HTTP status code in the response header is 200 OK and the response body contains an artist object in JSON format.
      * On error, the header status code is an error code and the response body contains an error object.
      *
-     * @param string $id
-     * @param array $options
+     * @param string $id The artist id
+     * @param array $options (optional) Request parameters
      * @throws GuzzleException
      * @return string
      */
     public function getSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id");
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id", $options);
+    }
+
+    /**
+     * Get Spotify catalog information about an artist’s top tracks by country.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     *  - required
+     *      - {id}(string): The Spotify ID for the artist
+     *
+     * Query parameter:
+     *  - required
+     *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Synonym for country.
+     *
+     * If no country code is passed, the string 'from_token' will automatically be used.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The artist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getTopTracks(string $id, array $options = []): string
+    {
+        $market = $options["market"] ?? 'from_token';
+
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks?market=$market", $options);
     }
 
 }

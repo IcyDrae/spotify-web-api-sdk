@@ -150,7 +150,7 @@ class Client extends GuzzleClient
      */
     public function delegate(string $method,
                           string $path,
-                          array $options = []): string
+                          array $options): string
     {
         $response = $this->getResponse();
 
