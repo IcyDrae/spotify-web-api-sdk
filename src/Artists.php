@@ -127,4 +127,29 @@ class Artists
         return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks?market=$market", $options);
     }
 
+    /**
+     * Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community’s listening history.
+     *
+     * Header:
+     *  - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     *  - required
+     *      - {id}(string): The Spotify ID for the artist
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is "artists" and whose value is an array of up to 20 artist objects in JSON format. On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The artist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getRelatedArtists(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/related-artists", $options);
+    }
+
 }
