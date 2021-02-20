@@ -55,6 +55,11 @@ final class SdkConstants
     const BROWSE = self::API_VERSION . "/browse";
 
     /**
+     * The albums endpoint.
+     */
+    const ALBUMS = self::API_VERSION . "/albums";
+
+    /**
      * SdkConstants constructor.
      * @throws Exception When instantiated, as it should only be read-only.
      */

@@ -55,16 +55,13 @@ class Artists
      * Duplicate ids in the query will result in duplicate objects in the response.
      * On error, the header status code is an error code and the response body contains an error object.
      *
-     * @param array $ids An array containing indexed artist id's. Ex: ["0oSGxfWSnnOXhD2fKuz2Gy", "4BgFW9XAMsJMkMZQJ6lGD9"]
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
      * @return string
      */
-    public function getMultiple(array $ids, array $options = []): string
+    public function getMultiple(array $options = []): string
     {
-        $ids = implode(",", $ids);
-
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "?ids=$ids", $options);
+        return $this->client->delegate("GET", SdkConstants::ARTISTS, $options);
     }
 
     /**
@@ -122,9 +119,7 @@ class Artists
      */
     public function getTopTracks(string $id, array $options = []): string
     {
-        $market = $options["market"] ?? 'from_token';
-
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks?market=$market", $options);
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks", $options);
     }
 
     /**
