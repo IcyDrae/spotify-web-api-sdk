@@ -50,6 +50,11 @@ final class SdkConstants
     const ARTISTS = self::API_VERSION . "/artists";
 
     /**
+     * The browse endpoint.
+     */
+    const BROWSE = self::API_VERSION . "/browse";
+
+    /**
      * SdkConstants constructor.
      * @throws Exception When instantiated, as it should only be read-only.
      */
