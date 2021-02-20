@@ -125,24 +125,26 @@ class Browse
     }
 
     /**
-     * Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
+     * Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
      *
      * Header:
      * - required
      *      - Authorization(string): A valid user access token or your client credentials.
      *
+     * Path parameter:
+     *  - required
+     *      - {category_id}(string): The Spotify category ID for the category.
+     *
      * Query parameter:
      * - optional
      *      - country(string): A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.
      *      - locale(string): The desired language, consisting of a lowercase ISO 639-1 language code and an uppercase ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. Provide this parameter if you want the results returned in a particular language (where available). Note that, if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.
-     *      - limit(integer): The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
-     *      - offset(integer): The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.
      *
      * Response:
      *
-     * On success, the HTTP status code in the response header is 200 OK and the response body contains an object with a categories field, with an array of category objects (wrapped in a paging object) in JSON format.
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a category object in JSON format.
      * On error, the header status code is an error code and the response body contains an error object.
-     * Once you have retrieved the list, you can use Get a Category to drill down further.
+     * Once you have retrieved the category, you can use Get a Category’s Playlists to drill down further.
      *
      * @param string $id The category id
      * @param array $options (optional) Request parameters
@@ -152,6 +154,39 @@ class Browse
     public function getCategory(string $id, array $options = []): string
     {
         return $this->client->delegate("GET", SdkConstants::BROWSE . "/categories/$id", $options);
+    }
+
+    /**
+     * Get a list of Spotify playlists tagged with a particular category.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     *  - required
+     *      - {category_id}(string): The Spotify category ID for the category.
+     *
+     * Query parameter:
+     * - optional
+     *      - country(string): A country: an ISO 3166-1 alpha-2 country code. Provide this parameter to ensure that the category exists for a particular country.
+     *      - limit(integer): The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     *      - offset(integer): The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified playlist objects (wrapped in a paging object) in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Once you have retrieved the list, you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
+     *
+     * @param string $id The category id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getCategoryPlaylists(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::BROWSE . "/categories/$id/playlists", $options);
     }
 
 }
