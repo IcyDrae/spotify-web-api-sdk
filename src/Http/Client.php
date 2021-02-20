@@ -188,9 +188,7 @@ class Client extends GuzzleClient
             $body = json_decode($body);
 
             return $response->json([
-                "data" => [
-                    "body" => $body
-                ]
+                "data" => $body
             ], $request->getStatusCode());
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
