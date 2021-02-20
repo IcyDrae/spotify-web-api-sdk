@@ -22,7 +22,7 @@ class Artists
     private Client $client;
 
     /**
-     * Playlists constructor.
+     * Artists constructor.
      *
      * Initializes the client object, response, headers and client parameters.
      *
