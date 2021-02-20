@@ -144,7 +144,7 @@ class Client extends GuzzleClient
      *
      * @param string $method The Http method
      * @param string $path The request path
-     * @param array $options The request parameters.
+     * @param array $options The request parameters. <br>
      * Use <b>$options['query_params']</b> for optional query parameters such as limit, offset etc.
      * @return string Json response
      * @throws GuzzleException

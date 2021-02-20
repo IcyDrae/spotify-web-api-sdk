@@ -152,4 +152,37 @@ class Artists
         return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/related-artists", $options);
     }
 
+    /**
+     * Get Spotify catalog information about an artist’s albums.
+     *
+     * Header:
+     *  - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     *  - required
+     *      - {id}(string): The Spotify ID for the artist.
+     *
+     * Query parameter:
+     *  - optional
+     *      - include_groups(string): A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. Valid values are: album, single, appears_on, compilation. For example: include_groups=album,single.
+     *      - market(string): Synonym for country. An ISO 3166-1 alpha-2 country code or the string from_token. Supply this parameter to limit the response to one particular geographical market. For example, for albums available in Sweden: market=SE. If not given, results will be returned for all markets and you are likely to get duplicate results per album, one for each market in which the album is available!
+     *      - limit(integer): The number of album objects to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2
+     *      - offset(integer): The index of the first album to return. Default: 0 (i.e., the first album). Use with limit to get the next set of albums.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified album objects (wrapped in a paging object) in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The artist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getAlbums(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/albums", $options);
+    }
+
 }
