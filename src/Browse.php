@@ -263,4 +263,24 @@ class Browse
         return $this->client->delegate("GET", SdkConstants::API_VERSION . "/recommendations", $options);
     }
 
+    /**
+     * Retrieve a list of available genres seed parameter values for recommendations.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a recommendations response object in JSON format.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getRecommendationGenres(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/recommendations/available-genre-seeds", $options);
+    }
+
 }
