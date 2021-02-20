@@ -144,7 +144,8 @@ class Client extends GuzzleClient
      *
      * @param string $method The Http method
      * @param string $path The request path
-     * @param array $options The request parameters
+     * @param array $options The request parameters.
+     * Use <b>$options['query_params']</b> for optional query parameters such as limit, offset etc.
      * @return string Json response
      * @throws GuzzleException
      */
@@ -171,6 +172,14 @@ class Client extends GuzzleClient
             "Content-Type" => $options["headers"]["content_type"] ?? $this->parameters["headers"]["ctype_json"] ,
             "Authorization" => sprintf("Bearer %s",  $accessToken)
         ]);
+
+        # Take care of optional query parameters
+        if (isset($options["query_params"])) {
+            $params = http_build_query($options["query_params"], "", "&",  PHP_QUERY_RFC3986);
+
+            $path .= "/?" . $params;
+            unset($options["query_params"]);
+        }
 
         try {
             $request = parent::request($method, $path, $options);
