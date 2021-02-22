@@ -12,7 +12,7 @@ use GuzzleHttp\Exception\GuzzleException;
  *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
- * @link https://developer.spotify.com/documentation/web-api/reference/#category-artists
+ * @link https://developer.spotify.com/documentation/web-api/reference/#category-albums
  */
 class Albums
 {
