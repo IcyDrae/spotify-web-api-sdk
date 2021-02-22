@@ -79,7 +79,7 @@ class Albums
      *
      * Query parameter:
      * - optional
-     *      - market(string): The market you’d like to request. Synonym for country
+     *      - market(string): The market you’d like to request. Synonym for country.
      *
      * Response:
      *
@@ -94,6 +94,38 @@ class Albums
     public function getSingle(string $id, array $options = []): string
     {
         return $this->client->delegate("GET", SdkConstants::ALBUMS . "/$id", $options);
+    }
+
+    /**
+     * Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials.
+     *
+     * Path parameter:
+     *  - required:
+     *      - {id}(string): The Spotify ID of the album.
+     *
+     * Query parameter:
+     * - optional
+     *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
+     *      - limit(integer): The maximum number of tracks to return. Default: 20. Minimum: 1. Maximum: 50.
+     *      - offset(integer): The index of the first track to return. Default: 0 (the first object). Use with limit to get the next set of tracks.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an album object in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The album id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getTracks(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::ALBUMS . "/$id/tracks", $options);
     }
 
 }

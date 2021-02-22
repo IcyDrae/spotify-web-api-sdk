@@ -61,6 +61,7 @@ final class SdkConstants
 
     /**
      * SdkConstants constructor.
+     *
      * @throws Exception When instantiated, as it should only be read-only.
      */
     public function __construct()
