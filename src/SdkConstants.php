@@ -60,6 +60,11 @@ final class SdkConstants
     const ALBUMS = self::API_VERSION . "/albums";
 
     /**
+     * The episodes endpoint.
+     */
+    const EPISODES = self::API_VERSION . "/episodes";
+
+    /**
      * SdkConstants constructor.
      *
      * @throws Exception When instantiated, as it should only be read-only.
