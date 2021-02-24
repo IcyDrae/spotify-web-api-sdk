@@ -6,7 +6,7 @@ namespace Gjoni\SpotifyWebApiSdk;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 
 /**
- * An implementation of the main Sdk interface
+ * An implementation of the main Sdk interface.
  *
  * @package Gjoni\SpotifyWebApiSdk
  * @author Reard Gjoni <gjoni-r@hotmail.com>
