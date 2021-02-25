@@ -94,4 +94,34 @@ class Follow
         return $this->client->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/followers", $options);
     }
 
+    /**
+     * Check to see if one or more Spotify users are following a specified playlist.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials. Requires the playlist-read-private scope if a private playlist is requested.
+     *
+     * Path parameter:
+     * - required
+     *      - {playlist_id}(string): The Spotify ID of the playlist.
+     *
+     * Query parameter:
+     *  - required
+     *      - ids(string): A comma-separated list of Spotify User IDs ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a JSON array of true or false values, in the same order in which the ids were specified.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param string $id The playlist id
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function usersFollowPlaylist(string $id, array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/followers/contains", $options);
+    }
+
 }
