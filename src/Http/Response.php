@@ -28,6 +28,18 @@ class Response implements JsonSerializable
     }
 
     /**
+     * Sets a custom header to the response.
+     *
+     * @param int $statusCode The status code
+     * @param string $header The header string, defaults at application/json
+     * @return void
+     */
+    public function setHeader(int $statusCode, string $header = "Content-Type: application/json; charset=utf-8")
+    {
+        header($header, true, $statusCode);
+    }
+
+    /**
      * Sets predefined headers & handles preflight OPTIONS requests.
      *
      * @return $this
@@ -67,7 +79,7 @@ class Response implements JsonSerializable
     public function json(array $data, $statusCode = 200): string {
         $this->data = $data;
 
-        header("Content-Type: application/json; charset=utf-8", true, $statusCode);
+        $this->setHeader($statusCode);
 
         $data = json_encode($data);
 

@@ -151,7 +151,7 @@ class Client extends GuzzleClient
      */
     public function delegate(string $method,
                           string $path,
-                          array $options): string
+                          array $options): ?string
     {
         $response = $this->getResponse();
 
@@ -183,6 +183,11 @@ class Client extends GuzzleClient
 
         try {
             $request = parent::request($method, $path, $options);
+
+            if ($request->getStatusCode() === 204) {
+                $this->response->setHeader(204);
+                return null;
+            }
 
             $body = $request->getBody();
             $body = json_decode($body);
