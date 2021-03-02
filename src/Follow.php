@@ -124,4 +124,32 @@ class Follow
         return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/followers/contains", $options);
     }
 
+    /**
+     * Get the current user’s followed artists.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials. Requires the user-follow-read scope.
+     *
+     * Query parameter:
+     *  - required
+     *      - type(string): The ID type: currently only artist is supported.
+     *  - optional
+     *      - after(string): The last artist ID retrieved from the previous request.
+     *      - limit(integer): The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an artists object. The artists object in turn contains a cursor-based paging object of Artists.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getFollowing(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::ME . "/following", $options);
+    }
+
 }

@@ -84,7 +84,7 @@ class UserProfile
      */
     public function me($options = []): string
     {
-        return $this->client->delegate( "GET", SdkConstants::ME, $options);
+        return $this->client->delegate("GET", SdkConstants::ME, $options);
     }
 
     /**
@@ -112,6 +112,6 @@ class UserProfile
      */
     public function getUserProfile(string $id, $options = []): string
     {
-        return $this->client->delegate( "GET", SdkConstants::USERS . "/$id", $options);
+        return $this->client->delegate("GET", SdkConstants::USERS . "/$id", $options);
     }
 }
