@@ -177,11 +177,43 @@ class Follow
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function follow(array $options = []): ?string
     {
         return $this->client->delegate("PUT", SdkConstants::ME . "/following", $options);
+    }
+
+    /**
+     * Remove the current user as a follower of one or more artists or other Spotify users.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials. Requires the user-follow-modify scope.
+     * - optional
+     *      - Content-Type(string): Required if IDs are passed in the request body, otherwise ignored. The content type of the request body: application/json.
+     *
+     * Query parameter:
+     *  - required
+     *      - type(string): The ID type: either artist or user.
+     *      - ids(string): A comma-separated list of the artist or the user Spotify IDs. For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.
+     *
+     * JSON body parameter:
+     *  - optional
+     *      - ids(array[string]): A JSON array of the artist or user Spotify IDs. For example: {ids:["74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q"]}. A maximum of 50 IDs can be sent in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 204 No Content and the response body is empty.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string|null
+     */
+    public function unfollow(array $options = []): ?string
+    {
+        return $this->client->delegate("DELETE", SdkConstants::ME . "/following", $options);
     }
 
 }
