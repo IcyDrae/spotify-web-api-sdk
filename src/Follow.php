@@ -216,4 +216,32 @@ class Follow
         return $this->client->delegate("DELETE", SdkConstants::ME . "/following", $options);
     }
 
+    /**
+     * Get Following State for Artists/Users
+     *
+     * Check to see if the current user is following one or more artists or other Spotify users.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid user access token or your client credentials. Requires the user-follow-read scope.
+     *
+     * Query parameter:
+     *  - required
+     *      - type(string): The ID type: either artist or user.
+     *      - ids(string): A comma-separated list of the artist or the user Spotify IDs to check. For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a JSON array of true or false values, in the same order in which the ids were specified.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string|null
+     */
+    public function followingState(array $options = []): ?string
+    {
+        return $this->client->delegate("GET", SdkConstants::ME . "/following/contains", $options);
+    }
+
 }
