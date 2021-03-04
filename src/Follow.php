@@ -22,7 +22,7 @@ class Follow
     private Client $client;
 
     /**
-     * Episodes constructor.
+     * Follow constructor.
      *
      * Initializes the client object, response, headers and client parameters.
      *

@@ -65,6 +65,15 @@ final class SdkConstants
     const EPISODES = self::API_VERSION . "/episodes";
 
     /**
+     * The Library endpoints, containing the albums, tracks and shows respectively.
+     */
+    const LIBRARY = [
+        "ALBUMS" => self::ME . "/albums",
+        "TRACKS" => self::ME . "/tracks",
+        "SHOWS" => self::ME . "/shows"
+    ];
+
+    /**
      * SdkConstants constructor.
      *
      * @throws Exception When instantiated, as it should only be read-only.

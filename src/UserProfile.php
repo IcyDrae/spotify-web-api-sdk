@@ -43,7 +43,7 @@ class UserProfile
     private SdkInterface $sdk;
 
     /**
-     * UserController constructor.
+     * UserProfile constructor.
      *
      * Initializes the client object, response, headers and client parameters.
      *
