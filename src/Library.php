@@ -245,4 +245,31 @@ class Library
         return $this->client->delegate("DELETE", SdkConstants::LIBRARY["TRACKS"], $options);
     }
 
+    /**
+     * Check if one or more tracks is already saved in the current Spotify user’s ‘Your Music’ library.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The user-library-read scope must have been authorized by the user.
+     * - optional
+     *      - Content-Type(string): Required if the IDs are passed in the request body, otherwise ignored. The content type of the request body: application/json
+     *
+     * Query parameter:
+     * - required
+     *      - ids(string): A comma-separated list of the Spotify IDs. For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a JSON array of true or false values, in the same order in which the ids were specified.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function checkSavedTracks(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::LIBRARY["TRACKS"] . "/contains", $options);
+    }
+
 }
