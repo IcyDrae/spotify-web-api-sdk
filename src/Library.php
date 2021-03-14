@@ -335,4 +335,37 @@ class Library
         return $this->client->delegate("PUT", SdkConstants::LIBRARY["EPISODES"], $options);
     }
 
+    /**
+     * Remove one or more episodes from the current user’s library.
+     * This API endpoint is in beta and could change without warning.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. Modification of the current user’s collection requires authorization of the user-library-modify scope.
+     * - optional
+     *      - Content-Type(string): Required if the IDs are passed in the request body, otherwise ignored. The content type of the request body: application/json
+     *
+     * Query parameter:
+     * - required
+     *      - ids(string): A comma-separated list of the Spotify IDs. For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
+     *
+     * JSON body parameter:
+     * - optional
+     *      - ids(array[string]): A JSON array of the Spotify IDs. For example: ["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"] A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 Success.
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Trying to remove an episode when you do not have the user’s authorization returns error 403 Forbidden.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function removeEpisodes(array $options = []): string
+    {
+        return $this->client->delegate("DELETE", SdkConstants::LIBRARY["EPISODES"], $options);
+    }
+
 }
