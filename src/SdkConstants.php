@@ -70,6 +70,7 @@ final class SdkConstants
     const LIBRARY = [
         "ALBUMS" => self::ME . "/albums",
         "TRACKS" => self::ME . "/tracks",
+        "EPISODES" => self::ME . "/episodes",
         "SHOWS" => self::ME . "/shows"
     ];
 
