@@ -272,4 +272,34 @@ class Library
         return $this->client->delegate("GET", SdkConstants::LIBRARY["TRACKS"] . "/contains", $options);
     }
 
+    /**
+     * Get a list of the episodes saved in the current Spotify user’s library.
+     * This API endpoint is in beta and could change without warning.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The user-library-read scope must have been authorized by the user.
+     *
+     * Query parameter:
+     * - optional
+     *      - market(string): An ISO 3166-1 alpha-2 country code. If a country code is specified, only episodes that are available in that market will be returned. If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter. Note: If neither market or user country are provided, the content is considered unavailable for the client. Users can view the country that is associated with their account in the account settings.
+     *      - limit(integer): The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
+     *      - offset(integer): The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of saved episode objects (wrapped in a paging object) in JSON format.
+     * On error, the header status code is an error code and the response body contains an error object.
+     * Trying to get more than 2000 episodes for a user will return results for 2000 episodes.
+     * Only the 2000 returned episodes are sorted. This limitation will be removed in the near future.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getSavedEpisodes(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::LIBRARY["EPISODES"], $options);
+    }
+
 }
