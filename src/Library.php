@@ -445,4 +445,57 @@ class Library
         return $this->client->delegate("PUT", SdkConstants::LIBRARY["SHOWS"], $options);
     }
 
+    /**
+     * Delete one or more shows from current Spotify user’s library.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of the user. The user-library-modify scope must have been authorized by the user.
+     *
+     * Query parameter:
+     * - required
+     *      - ids(string): A comma-separated list of the Spotify IDs. For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
+     *
+     * - optional
+     *      - market(string): An ISO 3166-1 alpha-2 country code. If a country code is specified, only shows that are available in that market will be removed. If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter. Note: If neither market or user country are provided, the content is considered unavailable for the client. Users can view the country that is associated with their account in the account settings.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object.
+     * A 403 Forbidden while trying to add a show when you do not have the user’s authorisation.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function removeShows(array $options = []): string
+    {
+        return $this->client->delegate("DELETE", SdkConstants::LIBRARY["SHOWS"], $options);
+    }
+
+    /**
+     * Check if one or more shows is already saved in the current Spotify user’s library.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been isued on behalf of the user. The user-libary-read scope must have been authorised by the user.
+     *
+     * Query parameter:
+     * - required
+     *      - ids(string): A comma-separated list of the Spotify IDs. For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains a JSON array of trueor false values, in the same order in which the ids were specified.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function checkSavedShows(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::LIBRARY["SHOWS"] . "/contains", $options);
+    }
+
 }
