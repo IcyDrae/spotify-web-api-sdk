@@ -391,4 +391,32 @@ class Library
         return $this->client->delegate("GET", SdkConstants::LIBRARY["EPISODES"] . "/contains", $options);
     }
 
+    /**
+     * Get a list of shows saved in the current Spotify user’s library. Optional parameters can be used to limit the number of shows returned.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been isued on behalf of the user. The user-libary-read scope must have been authorised by the user.
+     *
+     * Query parameter:
+     * - optional
+     *      - limit(integer): The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
+     *      - offset(integer): The index of the first show to return. Default: 0 (the first object). Use with limit to get the next set of shows.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of saved show objects (wrapped in a paging object) in JSON format.
+     * If the current user has no shows saved, the response will be an empty array. If a show is unavailable in the given market it is filtered out.
+     * The total field in the paging object represents the number of all items, filtered or not, and thus might be larger than the actual total number of observable items.
+     * On error, the header status code is an error code and the response body contains an error object.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getSavedShows(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::LIBRARY["SHOWS"], $options);
+    }
+
 }
