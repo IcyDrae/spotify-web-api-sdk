@@ -75,6 +75,11 @@ final class SdkConstants
     ];
 
     /**
+     * The markets endpoint.
+     */
+    const MARKETS = self::API_VERSION . "/markets";
+
+    /**
      * SdkConstants constructor.
      *
      * @throws Exception When instantiated, as it should only be read-only.
