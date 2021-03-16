@@ -65,7 +65,7 @@ final class SdkConstants
     const EPISODES = self::API_VERSION . "/episodes";
 
     /**
-     * The Library endpoints, containing the albums, tracks and shows respectively.
+     * The library endpoints, containing the albums, tracks and shows respectively.
      */
     const LIBRARY = [
         "ALBUMS" => self::ME . "/albums",
@@ -78,6 +78,11 @@ final class SdkConstants
      * The markets endpoint.
      */
     const MARKETS = self::API_VERSION . "/markets";
+
+    /**
+     * The player endpoint.
+     */
+    const PLAYER = self::ME . "/player";
 
     /**
      * SdkConstants constructor.
