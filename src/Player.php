@@ -38,7 +38,7 @@ class Player
     }
 
     /**
-     * Get the current user’s top artists or tracks based on calculated affinity.
+     * Get information about the user’s current playback state, including track or episode, progress, and active device.
      *
      * Header:
      * - required
@@ -65,7 +65,7 @@ class Player
     }
 
     /**
-     * Get the current user’s top artists or tracks based on calculated affinity.
+     * Transfer playback to a new device and determine if it should start playing.
      *
      * Header:
      * - required
@@ -95,7 +95,7 @@ class Player
     }
 
     /**
-     * Get the current user’s top artists or tracks based on calculated affinity.
+     * Get information about a user’s available devices.
      *
      * Header:
      * - required
@@ -113,6 +113,35 @@ class Player
     public function getAvailableDevices(array $options = []): string
     {
         return $this->client->delegate("GET", SdkConstants::PLAYER . "/devices", $options);
+    }
+
+    /**
+     * Get the object currently being played on the user’s Spotify account.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-read-currently-playing and/or user-read-playback-state scope authorized in order to read information.
+     *
+     * Query parameter:
+     * - required
+     *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
+     * - optional
+     *      - additional_types: A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the currently_playing_type field.
+     *
+     * Response:
+     *
+     * A successful request will return a 200 OK response code with a json payload that contains information about the currently playing track or episode and its context (see below). The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback.
+     * When no available devices are found, the request will return a 200 OK response but with no data populated.
+     * When no track is currently playing, the request will return a 204 NO CONTENT response with no payload.
+     * If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getCurrentlyPlaying(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::PLAYER . "/currently-playing", $options);
     }
 
 }
