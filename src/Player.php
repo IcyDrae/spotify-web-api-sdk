@@ -64,4 +64,55 @@ class Player
         return $this->client->delegate("GET", SdkConstants::PLAYER, $options);
     }
 
+    /**
+     * Get the current user’s top artists or tracks based on calculated affinity.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-modify-playback-state scope authorized in order to control playback.
+     *
+     * JSON body parameter:
+     *
+     * - required
+     *      - device_ids(array[string]): A JSON array containing the ID of the device on which playback should be started/transferred. For example:{device_ids:["74ASZWbe4lXaubB36ztrGX"]} Note: Although an array is accepted, only a single device_id is currently supported. Supplying more than one will return 400 Bad Request
+     * - optional
+     *      - play(boolean): true: ensure playback happens on new device. false or not provided: keep the current playback state.
+     *
+     * Response:
+     *
+     * A completed request will return a 204 NO CONTENT response code, and then issue the command to the player.
+     * Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player.
+     * If the device is not found, the request will return 404 NOT FOUND response code.
+     * If the user making the request is non-premium, a 403 FORBIDDEN response code will be returned.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function transferPlayback(array $options = []): string
+    {
+        return $this->client->delegate("PUT", SdkConstants::PLAYER, $options);
+    }
+
+    /**
+     * Get the current user’s top artists or tracks based on calculated affinity.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-read-playback-state scope authorized in order to read information.
+     *
+     * Response:
+     *
+     * A successful request will return a 200 OK response code with a json payload that contains the device objects (see below).
+     * When no available devices are found, the request will return a 200 OK response with an empty devices list.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getAvailableDevices(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::PLAYER . "/devices", $options);
+    }
+
 }
