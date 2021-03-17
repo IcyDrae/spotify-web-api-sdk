@@ -205,4 +205,31 @@ class Player
         return $this->client->delegate("PUT", SdkConstants::PLAYER . "/pause", $options);
     }
 
+    /**
+     * Skips to next track in the user’s queue.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-modify-playback-state scope authorized in order to control playback.
+     *
+     * Query parameter:
+     * - optional
+     *      - device_id(string): The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.
+     *
+     * Response:
+     *
+     * A completed request will return a 204 NO CONTENT response code, and then issue the command to the player.
+     * Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player.
+     * If the device is not found, the request will return 404 NOT FOUND response code.
+     * If the user making the request is non-premium, a 403 FORBIDDEN response code will be returned.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function skipPlayback(array $options = []): string
+    {
+        return $this->client->delegate("POST", SdkConstants::PLAYER . "/next", $options);
+    }
+
 }
