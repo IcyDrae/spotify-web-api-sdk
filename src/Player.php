@@ -126,7 +126,7 @@ class Player
      * - required
      *      - market(string): An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
      * - optional
-     *      - additional_types: A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the currently_playing_type field.
+     *      - additional_types(string): A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field. Note: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the currently_playing_type field.
      *
      * Response:
      *
@@ -142,6 +142,40 @@ class Player
     public function getCurrentlyPlaying(array $options = []): string
     {
         return $this->client->delegate("GET", SdkConstants::PLAYER . "/currently-playing", $options);
+    }
+
+    /**
+     * Start a new context or resume current playback on the user’s active device.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-modify-playback-state scope authorized in order to control playback.
+     *
+     * Query parameter:
+     * - optional
+     *      - device_id(string): The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.
+     *
+     * JSON body parameter:
+     * - optional
+     *      - context_uri(string): string
+     *      - uris(array[string]): Array of URIs
+     *      - offset(object): object
+     *      - position_ms(integer): integer
+     *
+     * Response:
+     *
+     * A completed request will return a 204 NO CONTENT response code, and then issue the command to the player.
+     * Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player.
+     * If the device is not found, the request will return 404 NOT FOUND response code.
+     * If the user making the request is non-premium, a 403 FORBIDDEN response code will be returned.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function startPlayback(array $options = []): string
+    {
+        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/play", $options);
     }
 
 }
