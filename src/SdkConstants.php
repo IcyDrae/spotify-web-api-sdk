@@ -17,57 +17,57 @@ final class SdkConstants
     /**
      * The current Spotify API version, prefixing all endpoints.
      */
-    const API_VERSION = "/v1";
+    public const API_VERSION = "/v1";
 
     /**
      * The base API url where the resources reside.
      */
-    const API_URL = "https://api.spotify.com";
+    public const API_URL = "https://api.spotify.com";
 
     /**
      *  The accounts url, used for authorization.
      */
-    const ACCOUNTS_URL = "https://accounts.spotify.com";
+    public const ACCOUNTS_URL = "https://accounts.spotify.com";
 
     /**
      * The current users' url.
      */
-    const ME = self::API_VERSION . "/me";
+    public const ME = self::API_VERSION . "/me";
 
     /**
      * Reflects another users' resources.
      */
-    const USERS = self::API_VERSION . "/users";
+    public const USERS = self::API_VERSION . "/users";
 
     /**
      * The public playlists endpoint.
      */
-    const PLAYLISTS = self::API_VERSION . "/playlists";
+    public const PLAYLISTS = self::API_VERSION . "/playlists";
 
     /**
      * The artists endpoint.
      */
-    const ARTISTS = self::API_VERSION . "/artists";
+    public const ARTISTS = self::API_VERSION . "/artists";
 
     /**
      * The browse endpoint.
      */
-    const BROWSE = self::API_VERSION . "/browse";
+    public const BROWSE = self::API_VERSION . "/browse";
 
     /**
      * The albums endpoint.
      */
-    const ALBUMS = self::API_VERSION . "/albums";
+    public const ALBUMS = self::API_VERSION . "/albums";
 
     /**
      * The episodes endpoint.
      */
-    const EPISODES = self::API_VERSION . "/episodes";
+    public const EPISODES = self::API_VERSION . "/episodes";
 
     /**
      * The library endpoints, containing the albums, tracks and shows respectively.
      */
-    const LIBRARY = [
+    public const LIBRARY = [
         "ALBUMS" => self::ME . "/albums",
         "TRACKS" => self::ME . "/tracks",
         "EPISODES" => self::ME . "/episodes",
@@ -77,12 +77,12 @@ final class SdkConstants
     /**
      * The markets endpoint.
      */
-    const MARKETS = self::API_VERSION . "/markets";
+    public const MARKETS = self::API_VERSION . "/markets";
 
     /**
      * The player endpoint.
      */
-    const PLAYER = self::ME . "/player";
+    public const PLAYER = self::ME . "/player";
 
     /**
      * SdkConstants constructor.
