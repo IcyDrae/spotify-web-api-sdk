@@ -347,4 +347,33 @@ class Player
         return $this->client->delegate("PUT", SdkConstants::PLAYER . "/shuffle", $options);
     }
 
+    /**
+     * Get tracks from the current user’s recently played tracks. Note: Currently doesn’t support podcast episodes.
+     *
+     * Header:
+     * - required
+     *      - Authorization(string): A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of a user. The access token must have the user-read-recently-played scope authorized in order to read the user’’s recently played track.’
+     *
+     * Query parameter:
+     * - optional
+     *      - limit(integer): The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     *      - after(integer): A Unix timestamp in milliseconds. Returns all items after (but not including) this cursor position. If after is specified, before must not be specified.
+     *      - before(integer): A Unix timestamp in milliseconds. Returns all items before (but not including) this cursor position. If before is specified, after must not be specified.
+     *
+     * Response:
+     *
+     * On success, the HTTP status code in the response header is 200 OK and the response body contains an array of play history objects (wrapped in a cursor-based paging object) in JSON format.
+     * The play history items each contain the context the track was played from (e.g. playlist, album), the date and time the track was played, and a track object (simplified).
+     * On error, the header status code is an error code and the response body contains an error object.
+     * If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
+     *
+     * @param array $options (optional) Request parameters
+     * @throws GuzzleException
+     * @return string
+     */
+    public function getRecentlyPlayed(array $options = []): string
+    {
+        return $this->client->delegate("GET", SdkConstants::PLAYER . "/recently-played", $options);
+    }
+
 }
