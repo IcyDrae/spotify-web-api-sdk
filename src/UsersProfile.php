@@ -15,7 +15,7 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference-beta/#category-users-profile
  */
-class UserProfile
+class UsersProfile
 {
     /**
      * @var Client $client Custom client object
@@ -23,27 +23,7 @@ class UserProfile
     private Client $client;
 
     /**
-     * @var Response Response object
-     */
-    private Response $response;
-
-    /**
-     * @var array $headers Client headers
-     */
-    private array $headers;
-
-    /**
-     * @var array $parameters Client parameters
-     */
-    private array $parameters;
-
-    /**
-     * @var SdkInterface $sdk Sdk object
-     */
-    private SdkInterface $sdk;
-
-    /**
-     * UserProfile constructor.
+     * UsersProfile constructor.
      *
      * Initializes the client object, response, headers and client parameters.
      *
@@ -56,10 +36,6 @@ class UserProfile
             "timeout" => 1,
             "allow_redirects" => ["track_redirects" => true]
         ]);
-
-        $this->response = $this->client->getResponse();
-        $this->headers = $this->client->getHeaders();
-        $this->parameters = $this->client->getParameters();
     }
 
     /**
