@@ -90,6 +90,11 @@ final class SdkConstants
     public const SEARCH = self::API_VERSION . "/search";
 
     /**
+     * The search endpoint.
+     */
+    public const SHOWS = self::API_VERSION . "/shows";
+
+    /**
      * SdkConstants constructor.
      *
      * @throws Exception When instantiated, as it should only be read-only.
