@@ -90,9 +90,14 @@ final class SdkConstants
     public const SEARCH = self::API_VERSION . "/search";
 
     /**
-     * The search endpoint.
+     * The shows endpoint.
      */
     public const SHOWS = self::API_VERSION . "/shows";
+
+    /**
+     * The tracks endpoint.
+     */
+    public const TRACKS = self::API_VERSION . "/tracks";
 
     /**
      * SdkConstants constructor.
