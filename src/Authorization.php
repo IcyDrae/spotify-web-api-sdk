@@ -69,6 +69,43 @@ class Authorization {
     }
 
     /**
+     * Creates a high-entropy random string with a minimum length of 43 and maximum length of 128 characters.
+     *
+     * @throws Exception
+     * @return string
+     */
+    public function generateCodeVerifier(): string
+    {
+        $length = random_int(43, 128);
+
+        $codeVerifier = random_bytes($length);
+
+        return bin2hex($codeVerifier);
+    }
+
+    /**
+     * Generates a code challenge based on a given code verifier.
+     * The code challenge can either be SHA256 encrypted and base64 URL encoded or plain(the same as the given code verifier).
+     *
+     * @param string $verifier
+     * @param string $method
+     * @return string
+     */
+    public function generateCodeChallenge(string $verifier, string $method = "sha256"): string
+    {
+        if ($method === "plain") {
+            return $verifier;
+        }
+
+        $challenge = hash($method, $verifier);
+        $challenge = base64_encode($challenge);
+        $challenge = strtr($challenge, "+/", "-_");
+        $challenge = rtrim($challenge, "=");
+
+        return $challenge;
+    }
+
+    /**
      * Builds the URL the user will be redirected to for authorization.
      *
      * @return string
