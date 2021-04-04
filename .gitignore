@@ -2,3 +2,4 @@
 /.idea
 config/SecretsCollection.php
 public/api.bucket
+.phpunit.result.cache
