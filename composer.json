@@ -21,5 +21,8 @@
         "ext-http": "*",
         "guzzlehttp/guzzle": "^6.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
     "minimum-stability": "stable"
 }
