@@ -3,3 +3,6 @@
 config/SecretsCollection.php
 public/api.bucket
 .phpunit.result.cache
+.phpunit-coverage-cache
+coverage/*
+!coverage/.gitkeep

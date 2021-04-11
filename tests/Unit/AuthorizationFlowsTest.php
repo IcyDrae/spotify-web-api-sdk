@@ -5,7 +5,7 @@ namespace Gjoni\SpotifyWebApiSdk\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
-class AuthorizationTest extends TestCase
+class AuthorizationFlowsTest extends TestCase
 {
 
     public function test_1()
@@ -22,8 +22,18 @@ class AuthorizationTest extends TestCase
         $this->assertSame(1, 1);
     }
 
-    public function test_3()
+    public function testExpectFooActualFoo(): void
     {
-        return true;
+        $this->expectOutputString('foo');
+
+        print 'foo';
     }
+
+    public function testExpectBazActualBaz(): void
+    {
+        $this->expectOutputString('baz');
+
+        print 'baz';
+    }
+
 }

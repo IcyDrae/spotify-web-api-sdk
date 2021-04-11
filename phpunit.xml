@@ -1,0 +1,24 @@
+<phpunit cacheResult="true"
+         cacheResultFile="./.phpunit.result.cache"
+         colors="true">
+    <testsuites>
+        <testsuite name="client_creation">
+            <file>tests/Unit/ClientCreationTest.php</file>
+        </testsuite>
+        <testsuite name="authorization_flows">
+            <file>tests/Unit/AuthorizationFlowsTest.php</file>
+        </testsuite>
+    </testsuites>
+    <coverage cacheDirectory=".phpunit-coverage-cache">
+        <report>
+            <html outputDirectory="coverage"/>
+        </report>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+    <php>
+        <cookie name="access_token_phpunit" value="value_xml"/>
+        <cookie name="refresh_token_phpunit" value="value_xml"/>
+    </php>
+</phpunit>
