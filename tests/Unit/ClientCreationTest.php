@@ -21,21 +21,41 @@ class ClientCreationTest extends TestCase
      */
     protected Client $client;
 
-    public function testCreateClientInstance()
+    public function testCreateSdkInstance()
     {
-        $this->sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
             "user-read-private",
         ]);
 
-        $this->sdk
-            ->setAccessToken($_COOKIE["access_token"] ?? '')
-            ->setRefreshToken($_COOKIE["refresh_token"] ?? '');
+        $this->assertIsObject($sdk);
+        $this->assertIsString($sdk->getClientId());
+        $this->assertIsString($sdk->getClientSecret());
+        $this->assertIsString($sdk->getScopes());
+    }
 
-        $this->client = new Client($this->sdk, [
-            "base_uri" => SecretsCollection::$apiUri,
-            "timeout" => 1,
+    public function testSetAccessToken()
+    {
+        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+            "user-read-private",
         ]);
 
-        $this->assertIsObject($this->client);
+        $sdk->setAccessToken("some-access-token");
+
+        $accessToken = $sdk->getAccessToken();
+
+        $this->assertIsString($accessToken);
+    }
+
+    public function testSetRefreshToken()
+    {
+        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+            "user-read-private",
+        ]);
+
+        $sdk->setRefreshToken("some-refresh-token");
+
+        $refreshToken = $sdk->getRefreshToken();
+
+        $this->assertIsString($refreshToken);
     }
 }
