@@ -55,16 +55,6 @@ class Sdk implements SdkInterface
     /**
      * @inheritDoc
      */
-    public function setScopes(array $scopes): SdkInterface
-    {
-        $this->scopes = $scopes;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function getScopes(): string
     {
         return implode(" ", $this->scopes);
@@ -73,29 +63,9 @@ class Sdk implements SdkInterface
     /**
      * @inheritDoc
      */
-    public function setClientId(string $id): Sdk
-    {
-        $this->clientId = $id;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function getClientId(): string
     {
         return $this->clientId;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setClientSecret(string $secret): Sdk
-    {
-        $this->clientSecret = $secret;
-
-        return $this;
     }
 
     /**

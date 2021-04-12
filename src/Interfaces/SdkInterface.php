@@ -13,15 +13,6 @@ namespace Gjoni\SpotifyWebApiSdk\Interfaces;
 interface SdkInterface
 {
     /**
-     * Sets the scopes the using app needs.
-     *
-     * @param array $scopes The scopes
-     * @return SdkInterface
-     * @link https://developer.spotify.com/documentation/general/guides/scopes/
-     */
-    public function setScopes(array $scopes): SdkInterface;
-
-    /**
      * Returns the scopes as a space-separated string.
      *
      * @return string
@@ -29,27 +20,11 @@ interface SdkInterface
     public function getScopes(): string;
 
     /**
-     * Sets the client id.
-     *
-     * @param string $id The id a third party app uses to identify oneself against the Spotify Web API
-     * @return SdkInterface
-     */
-    public function setClientId(string $id): SdkInterface;
-
-    /**
      * Returns the client id.
      *
      * @return string
      */
     public function getClientId(): string;
-
-    /**
-     * Sets the client secret.
-     *
-     * @param string $secret The secret a third party app uses to identify oneself against the Spotify Web API
-     * @return SdkInterface
-     */
-    public function setClientSecret(string $secret): SdkInterface;
 
     /**
      * Returns the client secret.
