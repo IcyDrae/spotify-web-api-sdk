@@ -17,7 +17,7 @@ use GuzzleHttp\Psr7\Message;
  * @package SpotifyAPI\Http
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  */
-abstract class Client extends GuzzleClient
+class Client extends GuzzleClient
 {
     /**
      * @var array $parameters Base Guzzle client parameters
