@@ -4,26 +4,14 @@
 namespace Gjoni\SpotifyWebApiSdk\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Config\SecretsCollection;
-use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\Sdk;
-use Gjoni\SpotifyWebApiSdk\Http\Client;
 
 class SdkCreationTest extends TestCase
 {
-    /**
-     * @var SdkInterface $sdk
-     */
-    protected SdkInterface $sdk;
-
-    /**
-     * @var Client $client
-     */
-    protected Client $client;
 
     public function testCreateSdkInstance()
     {
-        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
             "user-read-private",
         ]);
 
@@ -35,7 +23,7 @@ class SdkCreationTest extends TestCase
 
     public function testSetAccessToken()
     {
-        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
             "user-read-private",
         ]);
 
@@ -48,7 +36,7 @@ class SdkCreationTest extends TestCase
 
     public function testSetRefreshToken()
     {
-        $sdk = new Sdk(SecretsCollection::$appClientId, SecretsCollection::$appClientSecret, [
+        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
             "user-read-private",
         ]);
 
