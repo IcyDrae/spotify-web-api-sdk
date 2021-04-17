@@ -1,14 +1,11 @@
 <phpunit cacheResult="true"
          cacheResultFile="./.phpunit.result.cache"
-         colors="true">
+         colors="true"
+         stderr="true">
     <testsuites>
-        <testsuite name="sdk_creation">
+        <testsuite name="Spotify Web API SDK Unit Tests">
             <file>tests/Unit/SdkCreationTest.php</file>
-        </testsuite>
-        <testsuite name="client_creation">
             <file>tests/Unit/ClientCreationTest.php</file>
-        </testsuite>
-        <testsuite name="authorization_flows">
             <file>tests/Unit/AuthorizationFlowsTest.php</file>
         </testsuite>
     </testsuites>
