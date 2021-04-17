@@ -6,16 +6,22 @@ namespace Gjoni\SpotifyWebApiSdk\Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use Gjoni\SpotifyWebApiSdk\Sdk;
 
-class SdkCreationTest extends TestCase
+class SdkTest extends TestCase
 {
+    /**
+     * Fake secrets
+     */
+    private string $clientId = "ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q";
+    private string $clientSecret = "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q";
+    private array $scopes = [
+        "user-read-private",
+        "user-follow-modify",
+        "some-other-scope"
+    ];
 
     public function testCreateSdkInstance()
     {
-        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
-            "user-read-private",
-            "user-follow-modify",
-            "some-other-scope"
-        ]);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
 
         $this->assertIsObject($sdk);
         $this->assertIsString($sdk->getClientId());
@@ -32,9 +38,7 @@ class SdkCreationTest extends TestCase
 
     public function testSetAccessToken()
     {
-        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
-            "user-read-private",
-        ]);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
 
         $sdk->setAccessToken("some-access-token");
 
@@ -45,9 +49,7 @@ class SdkCreationTest extends TestCase
 
     public function testSetRefreshToken()
     {
-        $sdk = new Sdk("ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", "YHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q", [
-            "user-read-private",
-        ]);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
 
         $sdk->setRefreshToken("some-refresh-token");
 

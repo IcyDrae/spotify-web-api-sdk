@@ -4,8 +4,7 @@
          stderr="true">
     <testsuites>
         <testsuite name="Spotify Web API SDK Unit Tests">
-            <file>tests/Unit/SdkCreationTest.php</file>
-            <file>tests/Unit/ClientCreationTest.php</file>
+            <file>tests/Unit/SdkTest.php</file>
             <file>tests/Unit/AuthorizationFlowsTest.php</file>
         </testsuite>
     </testsuites>
