@@ -50,9 +50,10 @@ class Client extends GuzzleClient
     {
         $this->sdk = $sdk;
 
-        $this->setParameters();
-        $this->setHeaders(getallheaders());
-        $this->setResponse(new Response());
+        $this
+            ->setParameters()
+            ->setHeaders(getallheaders())
+            ->setResponse(new Response());
 
         parent::__construct($options);
     }
