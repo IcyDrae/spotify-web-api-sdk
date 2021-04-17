@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-tracks
  */
-class Tracks
+class Tracks extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Tracks constructor.
      *
@@ -30,11 +25,7 @@ class Tracks
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 2,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -62,7 +53,7 @@ class Tracks
      */
     public function getMultiple(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::TRACKS, $options);
+        return $this->delegate("GET", SdkConstants::TRACKS, $options);
     }
 
     /**
@@ -92,7 +83,7 @@ class Tracks
      */
     public function getSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::TRACKS . "/$id", $options);
+        return $this->delegate("GET", SdkConstants::TRACKS . "/$id", $options);
     }
 
     /**
@@ -119,7 +110,7 @@ class Tracks
      */
     public function getAudioFeaturesForMultiple(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/audio-features", $options);
+        return $this->delegate("GET", SdkConstants::API_VERSION . "/audio-features", $options);
     }
 
     /**
@@ -145,7 +136,7 @@ class Tracks
      */
     public function getAudioFeaturesForSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/audio-features/$id", $options);
+        return $this->delegate("GET", SdkConstants::API_VERSION . "/audio-features/$id", $options);
     }
 
     /**
@@ -171,7 +162,7 @@ class Tracks
      */
     public function getAudioAnalysisForSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/audio-analysis/$id", $options);
+        return $this->delegate("GET", SdkConstants::API_VERSION . "/audio-analysis/$id", $options);
     }
 
 }

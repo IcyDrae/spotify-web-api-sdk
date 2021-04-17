@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-follow
  */
-class Follow
+class Follow extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Follow constructor.
      *
@@ -30,11 +25,7 @@ class Follow
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -65,7 +56,7 @@ class Follow
      */
     public function followPlaylist(string $id, array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/followers", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/followers", $options);
     }
 
     /**
@@ -91,7 +82,7 @@ class Follow
      */
     public function unfollowPlaylist(string $id, array $options = []): string
     {
-        return $this->client->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/followers", $options);
+        return $this->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/followers", $options);
     }
 
     /**
@@ -121,7 +112,7 @@ class Follow
      */
     public function usersFollowPlaylist(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/followers/contains", $options);
+        return $this->delegate("GET", SdkConstants::PLAYLISTS . "/$id/followers/contains", $options);
     }
 
     /**
@@ -149,7 +140,7 @@ class Follow
      */
     public function getFollowing(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ME . "/following", $options);
+        return $this->delegate("GET", SdkConstants::ME . "/following", $options);
     }
 
     /**
@@ -181,7 +172,7 @@ class Follow
      */
     public function follow(array $options = []): ?string
     {
-        return $this->client->delegate("PUT", SdkConstants::ME . "/following", $options);
+        return $this->delegate("PUT", SdkConstants::ME . "/following", $options);
     }
 
     /**
@@ -213,7 +204,7 @@ class Follow
      */
     public function unfollow(array $options = []): ?string
     {
-        return $this->client->delegate("DELETE", SdkConstants::ME . "/following", $options);
+        return $this->delegate("DELETE", SdkConstants::ME . "/following", $options);
     }
 
     /**
@@ -241,7 +232,7 @@ class Follow
      */
     public function followingState(array $options = []): ?string
     {
-        return $this->client->delegate("GET", SdkConstants::ME . "/following/contains", $options);
+        return $this->delegate("GET", SdkConstants::ME . "/following/contains", $options);
     }
 
 }

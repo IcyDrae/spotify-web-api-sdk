@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-shows
  */
-class Shows
+class Shows extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Shows constructor.
      *
@@ -30,11 +25,7 @@ class Shows
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 2,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -63,7 +54,7 @@ class Shows
      */
     public function getMultiple(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::SHOWS, $options);
+        return $this->delegate("GET", SdkConstants::SHOWS, $options);
     }
 
     /**
@@ -94,7 +85,7 @@ class Shows
      */
     public function getSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::SHOWS . "/$id", $options);
+        return $this->delegate("GET", SdkConstants::SHOWS . "/$id", $options);
     }
 
     /**
@@ -128,7 +119,7 @@ class Shows
      */
     public function getEpisodes(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::SHOWS . "/$id/episodes", $options);
+        return $this->delegate("GET", SdkConstants::SHOWS . "/$id/episodes", $options);
     }
 
 }

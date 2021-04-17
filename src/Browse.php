@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-browse
  */
-class Browse
+class Browse extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Browse constructor.
      *
@@ -30,11 +25,7 @@ class Browse
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -62,7 +53,7 @@ class Browse
      */
     public function getNewReleases(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::BROWSE . "/new-releases", $options);
+        return $this->delegate("GET", SdkConstants::BROWSE . "/new-releases", $options);
     }
 
     /**
@@ -92,7 +83,7 @@ class Browse
      */
     public function getFeaturedPlaylists(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::BROWSE . "/featured-playlists", $options);
+        return $this->delegate("GET", SdkConstants::BROWSE . "/featured-playlists", $options);
     }
 
     /**
@@ -121,7 +112,7 @@ class Browse
      */
     public function getCategories(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::BROWSE . "/categories", $options);
+        return $this->delegate("GET", SdkConstants::BROWSE . "/categories", $options);
     }
 
     /**
@@ -153,7 +144,7 @@ class Browse
      */
     public function getCategory(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::BROWSE . "/categories/$id", $options);
+        return $this->delegate("GET", SdkConstants::BROWSE . "/categories/$id", $options);
     }
 
     /**
@@ -186,7 +177,7 @@ class Browse
      */
     public function getCategoryPlaylists(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::BROWSE . "/categories/$id/playlists", $options);
+        return $this->delegate("GET", SdkConstants::BROWSE . "/categories/$id/playlists", $options);
     }
 
     /**
@@ -260,7 +251,7 @@ class Browse
      */
     public function getRecommendations(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/recommendations", $options);
+        return $this->delegate("GET", SdkConstants::API_VERSION . "/recommendations", $options);
     }
 
     /**
@@ -280,7 +271,7 @@ class Browse
      */
     public function getRecommendationGenres(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::API_VERSION . "/recommendations/available-genre-seeds", $options);
+        return $this->delegate("GET", SdkConstants::API_VERSION . "/recommendations/available-genre-seeds", $options);
     }
 
 }

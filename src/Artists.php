@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-artists
  */
-class Artists
+class Artists extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Artists constructor.
      *
@@ -30,11 +25,7 @@ class Artists
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -61,7 +52,7 @@ class Artists
      */
     public function getMultiple(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS, $options);
+        return $this->delegate("GET", SdkConstants::ARTISTS, $options);
     }
 
     /**
@@ -87,7 +78,7 @@ class Artists
      */
     public function getSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id", $options);
+        return $this->delegate("GET", SdkConstants::ARTISTS . "/$id", $options);
     }
 
     /**
@@ -119,7 +110,7 @@ class Artists
      */
     public function getTopTracks(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks", $options);
+        return $this->delegate("GET", SdkConstants::ARTISTS . "/$id/top-tracks", $options);
     }
 
     /**
@@ -144,7 +135,7 @@ class Artists
      */
     public function getRelatedArtists(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/related-artists", $options);
+        return $this->delegate("GET", SdkConstants::ARTISTS . "/$id/related-artists", $options);
     }
 
     /**
@@ -177,7 +168,7 @@ class Artists
      */
     public function getAlbums(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ARTISTS . "/$id/albums", $options);
+        return $this->delegate("GET", SdkConstants::ARTISTS . "/$id/albums", $options);
     }
 
 }

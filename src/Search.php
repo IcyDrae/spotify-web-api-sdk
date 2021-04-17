@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-search
  */
-class Search
+class Search extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Search constructor.
      *
@@ -30,11 +25,7 @@ class Search
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 2,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -105,7 +96,7 @@ class Search
      */
     public function get(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::SEARCH, $options);
+        return $this->delegate("GET", SdkConstants::SEARCH, $options);
     }
 
 }

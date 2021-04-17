@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-player
  */
-class Player
+class Player extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Player constructor.
      *
@@ -30,11 +25,7 @@ class Player
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 2,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -61,7 +52,7 @@ class Player
      */
     public function getCurrentPlayback(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::PLAYER, $options);
+        return $this->delegate("GET", SdkConstants::PLAYER, $options);
     }
 
     /**
@@ -91,7 +82,7 @@ class Player
      */
     public function transferPlayback(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER, $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER, $options);
     }
 
     /**
@@ -112,7 +103,7 @@ class Player
      */
     public function getAvailableDevices(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::PLAYER . "/devices", $options);
+        return $this->delegate("GET", SdkConstants::PLAYER . "/devices", $options);
     }
 
     /**
@@ -141,7 +132,7 @@ class Player
      */
     public function getCurrentlyPlaying(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::PLAYER . "/currently-playing", $options);
+        return $this->delegate("GET", SdkConstants::PLAYER . "/currently-playing", $options);
     }
 
     /**
@@ -175,7 +166,7 @@ class Player
      */
     public function startPlayback(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/play", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/play", $options);
     }
 
     /**
@@ -202,7 +193,7 @@ class Player
      */
     public function pausePlayback(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/pause", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/pause", $options);
     }
 
     /**
@@ -229,7 +220,7 @@ class Player
      */
     public function skipPlayback(array $options = []): string
     {
-        return $this->client->delegate("POST", SdkConstants::PLAYER . "/next", $options);
+        return $this->delegate("POST", SdkConstants::PLAYER . "/next", $options);
     }
 
     /**
@@ -258,7 +249,7 @@ class Player
      */
     public function seekTrackPosition(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/seek", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/seek", $options);
     }
 
     /**
@@ -286,7 +277,7 @@ class Player
      */
     public function setRepeatMode(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/repeat", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/repeat", $options);
     }
 
     /**
@@ -315,7 +306,7 @@ class Player
      */
     public function setVolume(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/volume", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/volume", $options);
     }
 
     /**
@@ -344,7 +335,7 @@ class Player
      */
     public function toggleShuffle(array $options = []): string
     {
-        return $this->client->delegate("PUT", SdkConstants::PLAYER . "/shuffle", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYER . "/shuffle", $options);
     }
 
     /**
@@ -373,7 +364,7 @@ class Player
      */
     public function getRecentlyPlayed(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::PLAYER . "/recently-played", $options);
+        return $this->delegate("GET", SdkConstants::PLAYER . "/recently-played", $options);
     }
 
     /**
@@ -402,7 +393,7 @@ class Player
      */
     public function addToQueue(array $options = []): string
     {
-        return $this->client->delegate("POST", SdkConstants::PLAYER . "/queue", $options);
+        return $this->delegate("POST", SdkConstants::PLAYER . "/queue", $options);
     }
 
 }

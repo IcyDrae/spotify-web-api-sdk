@@ -7,7 +7,6 @@ use Exception;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
-use Gjoni\SpotifyWebApiSdk\Http\Response;
 use Gjoni\SpotifyWebApiSdk\Http\Client;
 
 /**
@@ -20,27 +19,7 @@ use Gjoni\SpotifyWebApiSdk\Http\Client;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  *
  */
-class Authorization {
-    /**
-     * @var Client $client Client object
-     */
-    private Client $client;
-
-    /**
-     * @var Response $response Response object
-     */
-    private Response $response;
-
-    /**
-     * @var array $headers Client headers
-     */
-    private array $headers;
-
-    /**
-     * @var array $parameters Client parameters
-     */
-    private array $parameters;
-
+class Authorization extends Client {
     /**
      * @var SdkInterface $sdk Sdk object
      */
@@ -57,15 +36,7 @@ class Authorization {
     {
         $this->sdk = $sdk;
 
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::ACCOUNTS_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
-
-        $this->response = $this->client->getResponse();
-        $this->headers = $this->client->getHeaders();
-        $this->parameters = $this->client->getParameters();
+        parent::__construct($this->sdk, SdkConstants::ACCOUNTS_URL);
     }
 
     /**
@@ -146,7 +117,7 @@ class Authorization {
      */
     public function requestAccessToken(string $authCode): string {
         try {
-            $request = $this->client->post("/api/token", [
+            $request = $this->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->parameters["headers"]["authorization_access"],
                     "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
@@ -190,7 +161,7 @@ class Authorization {
      */
     public function refreshAccessToken(string $refreshToken): string {
         try {
-            $request = $this->client->post("/api/token", [
+            $request = $this->post("/api/token", [
                 "headers" => [
                     "Authorization" => $this->parameters["headers"]["authorization_access"],
                     "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]

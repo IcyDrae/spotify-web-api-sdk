@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-playlists
  */
-class Playlists
+class Playlists extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Playlists constructor.
      *
@@ -30,11 +25,7 @@ class Playlists
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 0,
-            "allow_redirects" => ["track_redirects" => true],
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -61,7 +52,7 @@ class Playlists
      * @return string
      */
     public function getPlaylists(array $options = []): string {
-        return $this->client->delegate("GET", SdkConstants::ME . "/playlists", $options);
+        return $this->delegate("GET", SdkConstants::ME . "/playlists", $options);
     }
 
     /**
@@ -93,7 +84,7 @@ class Playlists
      * @return string
      */
     public function getUserPlaylists(string $id, array $options = []): string {
-        return $this->client->delegate("GET", SdkConstants::USERS . "/$id/playlists", $options);
+        return $this->delegate("GET", SdkConstants::USERS . "/$id/playlists", $options);
     }
 
     /**
@@ -132,7 +123,7 @@ class Playlists
      * @return string
      */
     public function create(string $id, array $options = []): string {
-        return $this->client->delegate("POST", SdkConstants::USERS . "/$id/playlists", $options);
+        return $this->delegate("POST", SdkConstants::USERS . "/$id/playlists", $options);
     }
 
     /**
@@ -166,7 +157,7 @@ class Playlists
      * @return string
      */
     public function getPlaylist(string $id, array $options = []): string {
-        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id", $options);
+        return $this->delegate("GET", SdkConstants::PLAYLISTS . "/$id", $options);
     }
 
     /**
@@ -201,7 +192,7 @@ class Playlists
      * @return string
      */
     public function changeDetails(string $id, array $options = []): string {
-        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYLISTS . "/$id", $options);
     }
 
     /**
@@ -240,7 +231,7 @@ class Playlists
      * @return string
      */
     public function getItems(string $id, array $options = []): string {
-        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+        return $this->delegate("GET", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
     /**
@@ -279,7 +270,7 @@ class Playlists
      * @return string
      */
     public function addItems(string $id, array $options = []): string {
-        return $this->client->delegate("POST", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+        return $this->delegate("POST", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
     /**
@@ -321,7 +312,7 @@ class Playlists
      * @return string
      */
     public function changeItems(string $id, array $options = []): string {
-        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
     /**
@@ -357,7 +348,7 @@ class Playlists
      * @return string
      */
     public function removeItems(string $id, array $options = []): string {
-        return $this->client->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
+        return $this->delegate("DELETE", SdkConstants::PLAYLISTS . "/$id/tracks", $options);
     }
 
     /**
@@ -382,7 +373,7 @@ class Playlists
      * @return string
      */
     public function getCoverImage(string $id, array $options = []): string {
-        return $this->client->delegate("GET", SdkConstants::PLAYLISTS . "/$id/images", $options);
+        return $this->delegate("GET", SdkConstants::PLAYLISTS . "/$id/images", $options);
     }
 
     /**
@@ -421,6 +412,6 @@ class Playlists
     public function changeCoverImage(string $id, array $options = []): string {
         $options["headers"]["content_type"] = "image/jpeg";
 
-        return $this->client->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/images", $options);
+        return $this->delegate("PUT", SdkConstants::PLAYLISTS . "/$id/images", $options);
     }
 }

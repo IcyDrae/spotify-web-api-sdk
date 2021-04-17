@@ -14,13 +14,8 @@ use GuzzleHttp\Exception\GuzzleException;
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  * @link https://developer.spotify.com/documentation/web-api/reference/#category-albums
  */
-class Albums
+class Albums extends Client
 {
-    /**
-     * @var Client $client Custom client object
-     */
-    private Client $client;
-
     /**
      * Albums constructor.
      *
@@ -30,11 +25,7 @@ class Albums
      */
     public function __construct(SdkInterface $sdk)
     {
-        $this->client = new Client($sdk, [
-            "base_uri" => SdkConstants::API_URL,
-            "timeout" => 1,
-            "allow_redirects" => ["track_redirects" => true]
-        ]);
+        parent::__construct($sdk);
     }
 
     /**
@@ -63,7 +54,7 @@ class Albums
      */
     public function getMultiple(array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ALBUMS, $options);
+        return $this->delegate("GET", SdkConstants::ALBUMS, $options);
     }
 
     /**
@@ -93,7 +84,7 @@ class Albums
      */
     public function getSingle(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ALBUMS . "/$id", $options);
+        return $this->delegate("GET", SdkConstants::ALBUMS . "/$id", $options);
     }
 
     /**
@@ -125,7 +116,7 @@ class Albums
      */
     public function getTracks(string $id, array $options = []): string
     {
-        return $this->client->delegate("GET", SdkConstants::ALBUMS . "/$id/tracks", $options);
+        return $this->delegate("GET", SdkConstants::ALBUMS . "/$id/tracks", $options);
     }
 
 }
