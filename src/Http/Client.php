@@ -20,19 +20,34 @@ use GuzzleHttp\Psr7\Message;
 class Client extends GuzzleClient
 {
     /**
-     * @var array $parameters Base Guzzle client parameters
+     * @var array $parameters Base Guzzle client parameters.
      */
     protected array $parameters;
 
     /**
-     * @var array $headers Request headers
+     * @var array $headers Request headers.
      */
     protected array $headers;
 
     /**
-     * @var Response $response Response object
+     * @var Response $response Response object.
      */
     protected Response $response;
+
+    /**
+     * @var mixed|array $data The response data.
+     */
+    protected mixed $data = [];
+
+    /**
+     * @var array $error The response error.
+     */
+    protected array $error = [];
+
+    /**
+     * @var int $statusCode The response status code.
+     */
+    protected int $statusCode = 200;
 
     /**
      * @var SdkInterface $sdk Sdk object
@@ -93,9 +108,10 @@ class Client extends GuzzleClient
                           array $options): ?string
     {
         if (!$accessToken = $this->sdk->getAccessToken()) {
-            return $this->response->json([
-                "error" => "Access token has expired."
-            ]);
+            return $this->response->json(
+                new Output($this->data, ["message" => "Access token has expired."]),
+                401
+            );
         }
 
         if (!isset($options["headers"])) {
@@ -129,22 +145,25 @@ class Client extends GuzzleClient
             $body = $request->getBody();
             $body = json_decode($body);
 
-            return $this->response->json([
-                "data" => $body
-            ], $request->getStatusCode());
+            $this->data = $body;
+            $this->statusCode = $request->getStatusCode();
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
                 $request = Message::toString($exception->getRequest());
             }
 
-            return $this->response->json([
-                "error" => [
-                    "message" => $exception->getMessage(),
-                    "code" => $exception->getCode(),
-                    "request" => $request ?? '',
-                    "trace" => $exception->getTrace()
-                ]
-            ], $exception->getCode());
+            $this->error = [
+                "message" => $exception->getMessage(),
+                "code" => $exception->getCode(),
+                "request" => $request ?? '',
+                "trace" => $exception->getTrace()
+            ];
+            $this->statusCode = $exception->getCode();
         }
+
+        return $this->response->json(
+            new Output($this->data, $this->error),
+            $this->statusCode
+        );
     }
 }

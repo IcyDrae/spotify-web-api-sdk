@@ -4,6 +4,7 @@
 namespace Gjoni\SpotifyWebApiSdk;
 
 use Exception;
+use Gjoni\SpotifyWebApiSdk\Http\Output;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
@@ -82,26 +83,22 @@ class Authorization extends Client {
      * @return string
      */
     public function buildUrl(): string {
-        try {
-            $options = [
-                "response_type" => $this->parameters["response_type"],
-                "client_id" => $this->sdk->getClientId(),
-                "redirect_uri" => $this->parameters["redirect_uri"],
-                "scope" => $this->sdk->getScopes()
-            ];
+        $options = [
+            "response_type" => $this->parameters["response_type"],
+            "client_id" => $this->sdk->getClientId(),
+            "redirect_uri" => $this->parameters["redirect_uri"],
+            "scope" => $this->sdk->getScopes()
+        ];
 
-            $url = SdkConstants::ACCOUNTS_URL . "/authorize?" . http_build_query($options, null, "&");
+        $url = SdkConstants::ACCOUNTS_URL . "/authorize?" . http_build_query($options, null, "&");
 
-            return $this->response->json([
-                "data" => [
-                    "url" => $url,
-                ]
-            ]);
-        } catch (Exception $exception) {
-            return $this->response->json([
-                "error" => $exception->getMessage()
-            ]);
-        }
+        $this->data = [
+            "url" => $url
+        ];
+
+        return $this->response->json(
+            new Output($this->data, $this->error),
+        );
     }
 
     /**
@@ -116,18 +113,20 @@ class Authorization extends Client {
      * @return string
      */
     public function requestAccessToken(string $authCode): string {
+        $options = [
+            "headers" => [
+                "Authorization" => $this->parameters["headers"]["authorization_access"],
+                "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
+            ],
+            "form_params" => [
+                "grant_type" => $this->parameters["grant_type"],
+                "code" => $authCode,
+                "redirect_uri" => $this->parameters["redirect_uri"],
+            ],
+        ];
+
         try {
-            $request = $this->post("/api/token", [
-                "headers" => [
-                    "Authorization" => $this->parameters["headers"]["authorization_access"],
-                    "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
-                ],
-                "form_params" => [
-                    "grant_type" => $this->parameters["grant_type"],
-                    "code" => $authCode,
-                    "redirect_uri" => $this->parameters["redirect_uri"],
-                ],
-            ]);
+            $request = $this->post("/api/token", $options);
 
             $body = $request->getBody();
 
@@ -136,21 +135,24 @@ class Authorization extends Client {
 
             $body["expires_in"] = $timestamp;
 
-            return $this->response->json([
-                "data" => [
-                    "body" => $body,
-                ]
-            ]);
+            $this->data = $body;
+            $this->statusCode = $request->getStatusCode();
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
                 $request = Message::toString($exception->getRequest());
             }
 
-            return $this->response->json([
-                "error" => $exception->getMessage(),
+            $this->error = [
+                "message" => $exception->getMessage(),
                 "request" => $request ?? ''
-            ], $exception->getCode());
+            ];
+            $this->statusCode = $exception->getCode();
         }
+
+        return $this->response->json(
+            new Output($this->data, $this->error),
+            $this->statusCode
+        );
     }
 
     /**
@@ -160,17 +162,19 @@ class Authorization extends Client {
      * @return string
      */
     public function refreshAccessToken(string $refreshToken): string {
+        $options = [
+            "headers" => [
+                "Authorization" => $this->parameters["headers"]["authorization_access"],
+                "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
+            ],
+            "form_params" => [
+                "grant_type" => "refresh_token",
+                "refresh_token" => $refreshToken
+            ],
+        ];
+
         try {
-            $request = $this->post("/api/token", [
-                "headers" => [
-                    "Authorization" => $this->parameters["headers"]["authorization_access"],
-                    "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
-                ],
-                "form_params" => [
-                    "grant_type" => "refresh_token",
-                    "refresh_token" => $refreshToken
-                ],
-            ]);
+            $request = $this->post("/api/token", $options);
 
             $body = $request->getBody();
 
@@ -180,20 +184,23 @@ class Authorization extends Client {
 
             $body["expires_in"] = $timestamp;
 
-            return $this->response->json([
-                "data" => [
-                    "body" => $body
-                ]
-            ]);
+            $this->data = $body;
+            $this->statusCode = $request->getStatusCode();
         } catch (RequestException $exception) {
             if ($exception->hasResponse()) {
                 $request = Message::toString($exception->getRequest());
             }
 
-            return $this->response->json([
-                "error" => $exception->getMessage(),
+            $this->error = [
+                "message" => $exception->getMessage(),
                 "request" => $request ?? ''
-            ], $exception->getCode());
+            ];
+            $this->statusCode = $exception->getCode();
         }
+
+        return $this->response->json(
+            new Output($this->data, $this->error),
+            $this->statusCode
+        );
     }
 }
