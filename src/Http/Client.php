@@ -3,8 +3,8 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
+use Dotenv\Dotenv;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
-use Gjoni\SpotifyWebApiSdk\Config\SecretsCollection;
 use Gjoni\SpotifyWebApiSdk\SdkConstants;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
@@ -66,10 +66,13 @@ class Client extends GuzzleClient
     {
         $this->sdk = $sdk;
 
+        $dotenv = Dotenv::createImmutable(getcwd());
+        $dotenv->safeLoad();
+
         $this->parameters = [
             "client_id" => $this->sdk->getClientId(),
             "response_type" => "code",
-            "redirect_uri" => SecretsCollection::$frontend,
+            "redirect_uri" => $_ENV["FRONTEND"],
             "grant_type" => "authorization_code",
             "headers" => [
                 "accept" => "application/json",
