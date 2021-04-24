@@ -29,6 +29,11 @@ class Sdk implements SdkInterface
     private string $clientSecret;
 
     /**
+     * @var string $redirectUri
+     */
+    private string $redirectUri;
+
+    /**
      * @var string $accessToken
      */
     private string $accessToken;
@@ -45,11 +50,12 @@ class Sdk implements SdkInterface
      * @param string $clientSecret Its corresponding secret
      * @param array $scopes The scopes the app needs
      */
-    public function __construct(string $clientId, string $clientSecret, array $scopes)
+    public function __construct(string $clientId, string $clientSecret, array $scopes, $redirectUri)
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
         $this->scopes = $scopes;
+        $this->redirectUri = $redirectUri;
     }
 
     /**
@@ -74,6 +80,14 @@ class Sdk implements SdkInterface
     public function getClientSecret(): string
     {
         return $this->clientSecret;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRedirectUri(): string
+    {
+        return $this->redirectUri;
     }
 
     /**

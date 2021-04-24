@@ -72,7 +72,7 @@ class Client extends GuzzleClient
         $this->parameters = [
             "client_id" => $this->sdk->getClientId(),
             "response_type" => "code",
-            "redirect_uri" => $_ENV["FRONTEND"],
+            "redirect_uri" => $this->sdk->getRedirectUri(),
             "grant_type" => "authorization_code",
             "headers" => [
                 "accept" => "application/json",

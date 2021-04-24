@@ -34,6 +34,13 @@ interface SdkInterface
     public function getClientSecret(): string;
 
     /**
+     * Returns the redirect uri.
+     *
+     * @return string
+     */
+    public function getRedirectUri(): string;
+
+    /**
      * Sets the access token.
      *
      * @param string $accessToken A short-lived token used to authorize the app to consume the Spotify Web API on behalf of a user
