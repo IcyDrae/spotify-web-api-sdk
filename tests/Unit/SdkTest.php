@@ -18,15 +18,17 @@ class SdkTest extends TestCase
         "user-follow-modify",
         "some-other-scope"
     ];
+    private string $redirectUri = "https://some.uri.com";
 
     public function testCreateSdkInstance()
     {
-        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes, $this->redirectUri);
 
         $this->assertIsObject($sdk);
         $this->assertIsString($sdk->getClientId());
         $this->assertIsString($sdk->getClientSecret());
         $this->assertIsString($sdk->getScopes());
+        $this->assertIsString($sdk->getRedirectUri());
 
         # Test the format of the scopes as described in the SdkInterface
         $this->assertEquals(
@@ -38,7 +40,7 @@ class SdkTest extends TestCase
 
     public function testSetAccessToken()
     {
-        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes, $this->redirectUri);
 
         $sdk->setAccessToken("some-access-token");
 
@@ -49,7 +51,7 @@ class SdkTest extends TestCase
 
     public function testSetRefreshToken()
     {
-        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes);
+        $sdk = new Sdk($this->clientId, $this->clientSecret, $this->scopes, $this->redirectUri);
 
         $sdk->setRefreshToken("some-refresh-token");
 
