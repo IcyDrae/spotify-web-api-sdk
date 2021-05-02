@@ -1,7 +1,5 @@
-/.idea
-/vendor/*
+.idea/
+vendor/
+coverage/
+.phpunit-coverage-cache/
 .phpunit.result.cache
-.phpunit-coverage-cache
-coverage/*
-!coverage/.gitkeep
-.env
