@@ -1,0 +1,6 @@
+{
+  "access_token": "BQC6xk-yyLSqqwMOfN2qLjl9kvursB1OcqGZm5LA1fOVd7IAezHlA8l8znMOIrHDkgEUsdKpdBivsa29cBhCGR3JF4GrKSm0HiOuXZ2iHqUtjrHeNmE_aJswbJ-OU1ZPc8deXJSPjdHH67AbN3zClrYMnMFQtfqRWo0HiBMTe4c4w68mbW-L0DwWXa_XF5WSzCOdBTxxrHgl5zoSvRZ_-WpnMhwrgvNMmoLAVw",
+  "token_type": "Bearer",
+  "expires_in": 1619963798,
+  "scope": "playlist-read-private ugc-image-upload user-follow-read"
+}

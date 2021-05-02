@@ -1,0 +1,7 @@
+{
+  "access_token": "BQAfOwk2AqlyL_6aq6NjqFIX8QZliv5SR6JiEyYND71j22EIUckKFsGecdhRpitef1kXIniIOSdA5xldw_j8b4YBCy8fqYVxLFvV7EetsNS3yg6ZKVspSe7heFGpXzPOqVjxx-gP_rEupnETb1XTj3HoGCAklJOydLylKnSpI0Iz2IQF7chHFcT1E6T8",
+  "token_type": "Bearer",
+  "expires_in":	1619964698,
+  "refresh_token": "AQAPrzsm-7XCBTTILKvAKLOsniJBP-DlGlB8owYgqSHqUP9lDAmrJt561quzJJ7lq_zXA",
+  "scope": "playlist-read-private ugc-image-upload user-follow-read playlist-modify-private user-read-email user-read-private user-modify-playback-state user-library-read user-library-modify playlist-modify-public"
+}
