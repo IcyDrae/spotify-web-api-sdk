@@ -69,7 +69,8 @@ class Client extends GuzzleClient
             "client_id" => $this->sdk->getClientId(),
             "response_type" => "code",
             "redirect_uri" => $this->sdk->getRedirectUri(),
-            "grant_type" => "authorization_code",
+            "grant_type_access" => "authorization_code",
+            "grant_type_refresh" => "refresh_token",
             "headers" => [
                 "accept" => "application/json",
                 "ctype_json" => "application/json",

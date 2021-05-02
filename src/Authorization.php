@@ -119,40 +119,13 @@ class Authorization extends Client {
                 "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
             ],
             "form_params" => [
-                "grant_type" => $this->parameters["grant_type"],
+                "grant_type" => $this->parameters["grant_type_access"],
                 "code" => $authCode,
                 "redirect_uri" => $this->parameters["redirect_uri"],
             ],
         ];
 
-        try {
-            $request = $this->post("/api/token", $options);
-
-            $body = $request->getBody();
-
-            $body = json_decode($body, true);
-            $timestamp = time() + $body["expires_in"];
-
-            $body["expires_in"] = $timestamp;
-
-            $this->data = $body;
-            $this->statusCode = $request->getStatusCode();
-        } catch (RequestException $exception) {
-            if ($exception->hasResponse()) {
-                $request = Message::toString($exception->getRequest());
-            }
-
-            $this->error = [
-                "message" => $exception->getMessage(),
-                "request" => $request ?? ''
-            ];
-            $this->statusCode = $exception->getCode();
-        }
-
-        return $this->response->json(
-            new Output($this->data, $this->error),
-            $this->statusCode
-        );
+        return $this->authorizeRequest($options);
     }
 
     /**
@@ -168,18 +141,26 @@ class Authorization extends Client {
                 "Content-Type" => $this->parameters["headers"]["ctype_urlencoded"]
             ],
             "form_params" => [
-                "grant_type" => "refresh_token",
+                "grant_type" => $this->parameters["grant_type_refresh"],
                 "refresh_token" => $refreshToken
             ],
         ];
 
+        return $this->authorizeRequest($options);
+    }
+
+    /**
+     * @param array $options
+     * @return string
+     */
+    private function authorizeRequest(array $options): string
+    {
         try {
             $request = $this->post("/api/token", $options);
 
             $body = $request->getBody();
 
             $body = json_decode($body, true);
-
             $timestamp = time() + $body["expires_in"];
 
             $body["expires_in"] = $timestamp;
