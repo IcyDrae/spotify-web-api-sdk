@@ -3,7 +3,6 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
-use Dotenv\Dotenv;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\SdkConstants;
 use GuzzleHttp\Client as GuzzleClient;
@@ -65,9 +64,6 @@ class Client extends GuzzleClient
     public function __construct (SdkInterface $sdk, string $url = SdkConstants::API_URL)
     {
         $this->sdk = $sdk;
-
-        $dotenv = Dotenv::createImmutable(getcwd());
-        $dotenv->safeLoad();
 
         $this->parameters = [
             "client_id" => $this->sdk->getClientId(),
