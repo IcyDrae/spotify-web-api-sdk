@@ -19,16 +19,6 @@ use GuzzleHttp\Psr7\Message;
 class Client extends GuzzleClient
 {
     /**
-     * @var array $parameters Base Guzzle client parameters.
-     */
-    protected array $parameters;
-
-    /**
-     * @var array $headers Request headers.
-     */
-    protected array $headers;
-
-    /**
      * @var Response $response Response object.
      */
     protected Response $response;
@@ -49,14 +39,14 @@ class Client extends GuzzleClient
     protected int $statusCode = 200;
 
     /**
-     * @var SdkInterface $sdk Sdk object
+     * @var SdkInterface $sdk Sdk object.
      */
-    private SdkInterface $sdk;
+    protected SdkInterface $sdk;
 
     /**
      * Client constructor.
      *
-     * Initializes the Sdk object, Guzzle Client, parameters, headers and the response object.
+     * Initializes the Sdk object, Guzzle Client and the Response object.
      *
      * @param SdkInterface $sdk
      * @param string $url
@@ -65,24 +55,6 @@ class Client extends GuzzleClient
     {
         $this->sdk = $sdk;
 
-        $this->parameters = [
-            "client_id" => $this->sdk->getClientId(),
-            "response_type" => "code",
-            "redirect_uri" => $this->sdk->getRedirectUri(),
-            "grant_type_access" => "authorization_code",
-            "grant_type_refresh" => "refresh_token",
-            "headers" => [
-                "accept" => "application/json",
-                "ctype_json" => "application/json",
-                "ctype_urlencoded" => "application/x-www-form-urlencoded",
-                "authorization_access" => sprintf("Basic %s", base64_encode($this->sdk->getClientId() . ":" . $this->sdk->getClientSecret())),
-            ],
-            "query" => [
-                "limit" => 25,
-            ],
-        ];
-
-        $this->headers = getallheaders();
         $this->response = new Response();
 
         $options = [
@@ -121,8 +93,8 @@ class Client extends GuzzleClient
         # Set default headers for a typical user request. Includes the access token
         # Mix with possibly existing values
         $options["headers"] = array_merge($options["headers"], [
-            "Accept" => $options["headers"]["accept"] ?? $this->parameters["headers"]["accept"],
-            "Content-Type" => $options["headers"]["content_type"] ?? $this->parameters["headers"]["ctype_json"] ,
+            "Accept" => $options["headers"]["accept"] ?? "application/json",
+            "Content-Type" => $options["headers"]["content_type"] ?? "application/json" ,
             "Authorization" => sprintf("Bearer %s",  $accessToken)
         ]);
 
