@@ -136,7 +136,7 @@ class AuthorizationCodePKCE extends AbstractAuthorization
     public function generateCodeChallenge(string $verifier, string $method = "sha256"): string
     {
         if ($method === "plain") {
-            return $method;
+            return $verifier;
         }
 
         $challenge = hash($method, $verifier, true);
