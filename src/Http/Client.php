@@ -3,6 +3,10 @@
 
 namespace Gjoni\SpotifyWebApiSdk\Http;
 
+use function array_merge;
+use function sprintf;
+use function http_build_query;
+use function json_decode;
 use Gjoni\SpotifyWebApiSdk\Interfaces\SdkInterface;
 use Gjoni\SpotifyWebApiSdk\SdkConstants;
 use GuzzleHttp\Client as GuzzleClient;
