@@ -28,9 +28,9 @@ class Client extends GuzzleClient
     protected Response $response;
 
     /**
-     * @var mixed|array $data The response data.
+     * @var array $data The response data.
      */
-    protected mixed $data = [];
+    protected array $data = [];
 
     /**
      * @var array $error The response error.
@@ -119,7 +119,7 @@ class Client extends GuzzleClient
             }
 
             $body = $request->getBody();
-            $body = json_decode($body);
+            $body = json_decode($body, true);
 
             $this->data = $body;
             $this->statusCode = $request->getStatusCode();
