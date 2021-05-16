@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Gjoni\SpotifyWebApiSdk\Tests\Unit;
+namespace Gjoni\SpotifyWebApiSdk\Tests\Unit\Http;
 
 use Gjoni\SpotifyWebApiSdk\Http\Output;
 use Gjoni\SpotifyWebApiSdk\Http\Response;
