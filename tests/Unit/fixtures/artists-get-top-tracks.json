@@ -1,0 +1,764 @@
+{
+  "tracks": [
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4I5zzKYd2SKDgZ9DRf5LVk"
+        },
+        "href": "https://api.spotify.com/v1/albums/4I5zzKYd2SKDgZ9DRf5LVk",
+        "id": "4I5zzKYd2SKDgZ9DRf5LVk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273bc1c63a5b66ab9ac3ea21672",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02bc1c63a5b66ab9ac3ea21672",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851bc1c63a5b66ab9ac3ea21672",
+            "width": 64
+          }
+        ],
+        "name": "\"Heroes\" (2017 Remaster)",
+        "release_date": "1977",
+        "release_date_precision": "year",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:4I5zzKYd2SKDgZ9DRf5LVk"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 371413,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11700005"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7Jh1bpe76CNTCgdgAdBw4Z",
+      "id": "7Jh1bpe76CNTCgdgAdBw4Z",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Heroes - 2017 Remaster",
+      "popularity": 75,
+      "preview_url": "https://p.scdn.co/mp3-preview/92caa5df4a00974b3065c2db0bb284dae528f62a?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:7Jh1bpe76CNTCgdgAdBw4Z"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/72mfhbEsMtXR6s7v9UhKe3"
+        },
+        "href": "https://api.spotify.com/v1/albums/72mfhbEsMtXR6s7v9UhKe3",
+        "id": "72mfhbEsMtXR6s7v9UhKe3",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ad22c83a6e1567f8453c32b3",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ad22c83a6e1567f8453c32b3",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ad22c83a6e1567f8453c32b3",
+            "width": 64
+          }
+        ],
+        "name": "Diamond Dogs (2016 Remaster)",
+        "release_date": "1974-05-24",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:72mfhbEsMtXR6s7v9UhKe3"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 274746,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11600006"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2EC9IJj7g0mN1Q5VrZkiYY"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2EC9IJj7g0mN1Q5VrZkiYY",
+      "id": "2EC9IJj7g0mN1Q5VrZkiYY",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Rebel Rebel - 2016 Remaster",
+      "popularity": 75,
+      "preview_url": "https://p.scdn.co/mp3-preview/392a6a4c64a5129a088460dc6257c1ef740b54ab?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:2EC9IJj7g0mN1Q5VrZkiYY"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/48D1hRORqJq52qsnUYZX56"
+        },
+        "href": "https://api.spotify.com/v1/albums/48D1hRORqJq52qsnUYZX56",
+        "id": "48D1hRORqJq52qsnUYZX56",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c41f4e1133b0e6c5fcf58680",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c41f4e1133b0e6c5fcf58680",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c41f4e1133b0e6c5fcf58680",
+            "width": 64
+          }
+        ],
+        "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+        "release_date": "1972-06-06",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:48D1hRORqJq52qsnUYZX56"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 254293,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11200004"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0pQskrTITgmCMyr85tb9qq",
+      "id": "0pQskrTITgmCMyr85tb9qq",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Starman - 2012 Remaster",
+      "popularity": 73,
+      "preview_url": "https://p.scdn.co/mp3-preview/aeba0bb4e8ddbc1b44f4ed3dff624ad0aa2a8617?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:0pQskrTITgmCMyr85tb9qq"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1ay9Z4R5ZYI2TY7WiDhNYQ"
+        },
+        "href": "https://api.spotify.com/v1/albums/1ay9Z4R5ZYI2TY7WiDhNYQ",
+        "id": "1ay9Z4R5ZYI2TY7WiDhNYQ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733395f3e809dfbc2b1101d464",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023395f3e809dfbc2b1101d464",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513395f3e809dfbc2b1101d464",
+            "width": 64
+          }
+        ],
+        "name": "David Bowie (aka Space Oddity) [2015 Remaster]",
+        "release_date": "1969-11-04",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "type": "album",
+        "uri": "spotify:album:1ay9Z4R5ZYI2TY7WiDhNYQ"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 318026,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11500173"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/72Z17vmmeQKAg8bptWvpVG"
+      },
+      "href": "https://api.spotify.com/v1/tracks/72Z17vmmeQKAg8bptWvpVG",
+      "id": "72Z17vmmeQKAg8bptWvpVG",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Space Oddity - 2015 Remaster",
+      "popularity": 73,
+      "preview_url": "https://p.scdn.co/mp3-preview/c44d8c4979152c4e248cf672d357cf4b02ffaec7?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:72Z17vmmeQKAg8bptWvpVG"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4NwG11AsDJluT732lSjMrV"
+        },
+        "href": "https://api.spotify.com/v1/albums/4NwG11AsDJluT732lSjMrV",
+        "id": "4NwG11AsDJluT732lSjMrV",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273db0917ddd4139153bc1d1a1a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02db0917ddd4139153bc1d1a1a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851db0917ddd4139153bc1d1a1a",
+            "width": 64
+          }
+        ],
+        "name": "Let's Dance (2018 Remaster)",
+        "release_date": "1983-04-14",
+        "release_date_precision": "day",
+        "total_tracks": 8,
+        "type": "album",
+        "uri": "spotify:album:4NwG11AsDJluT732lSjMrV"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 457675,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11700482"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3ix6K4wZY29bCujrSznwFZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3ix6K4wZY29bCujrSznwFZ",
+      "id": "3ix6K4wZY29bCujrSznwFZ",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Let's Dance - 2018 Remaster",
+      "popularity": 72,
+      "preview_url": "https://p.scdn.co/mp3-preview/1d3275edcfb6ebd3b0c25c8cf2d5c83da74fd43a?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:3ix6K4wZY29bCujrSznwFZ"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6fQElzBNTiEMGdIeY0hy5l"
+        },
+        "href": "https://api.spotify.com/v1/albums/6fQElzBNTiEMGdIeY0hy5l",
+        "id": "6fQElzBNTiEMGdIeY0hy5l",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c657af8d545b4dcf432ace76",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c657af8d545b4dcf432ace76",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c657af8d545b4dcf432ace76",
+            "width": 64
+          }
+        ],
+        "name": "Hunky Dory (2015 Remaster)",
+        "release_date": "1971-12-17",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:6fQElzBNTiEMGdIeY0hy5l"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 235986,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11500131"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3ZE3wv8V3w2T2f7nOCjV0N",
+      "id": "3ZE3wv8V3w2T2f7nOCjV0N",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Life on Mars? - 2015 Remaster",
+      "popularity": 71,
+      "preview_url": "https://p.scdn.co/mp3-preview/8ec3a4b322c0df167ad409a668ceaa704fcbd1c0?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:3ZE3wv8V3w2T2f7nOCjV0N"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/48D1hRORqJq52qsnUYZX56"
+        },
+        "href": "https://api.spotify.com/v1/albums/48D1hRORqJq52qsnUYZX56",
+        "id": "48D1hRORqJq52qsnUYZX56",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c41f4e1133b0e6c5fcf58680",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c41f4e1133b0e6c5fcf58680",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c41f4e1133b0e6c5fcf58680",
+            "width": 64
+          }
+        ],
+        "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+        "release_date": "1972-06-06",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:48D1hRORqJq52qsnUYZX56"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 279693,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11200003"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6mib3N4E8PZHAGQ3xy7bho"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6mib3N4E8PZHAGQ3xy7bho",
+      "id": "6mib3N4E8PZHAGQ3xy7bho",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Moonage Daydream - 2012 Remaster",
+      "popularity": 68,
+      "preview_url": "https://p.scdn.co/mp3-preview/9013a7bcbc6396bc39c1bcd457f8b130ed8222f0?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:6mib3N4E8PZHAGQ3xy7bho"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4NwG11AsDJluT732lSjMrV"
+        },
+        "href": "https://api.spotify.com/v1/albums/4NwG11AsDJluT732lSjMrV",
+        "id": "4NwG11AsDJluT732lSjMrV",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273db0917ddd4139153bc1d1a1a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02db0917ddd4139153bc1d1a1a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851db0917ddd4139153bc1d1a1a",
+            "width": 64
+          }
+        ],
+        "name": "Let's Dance (2018 Remaster)",
+        "release_date": "1983-04-14",
+        "release_date_precision": "day",
+        "total_tracks": 8,
+        "type": "album",
+        "uri": "spotify:album:4NwG11AsDJluT732lSjMrV"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 288339,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11700480"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3gxEZXUjrNbl3TlSrTGbR5"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3gxEZXUjrNbl3TlSrTGbR5",
+      "id": "3gxEZXUjrNbl3TlSrTGbR5",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Modern Love - 2018 Remaster",
+      "popularity": 68,
+      "preview_url": "https://p.scdn.co/mp3-preview/4ed645d4c2a804d8c43e811a0bace45e14baf8df?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3gxEZXUjrNbl3TlSrTGbR5"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6fQElzBNTiEMGdIeY0hy5l"
+        },
+        "href": "https://api.spotify.com/v1/albums/6fQElzBNTiEMGdIeY0hy5l",
+        "id": "6fQElzBNTiEMGdIeY0hy5l",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c657af8d545b4dcf432ace76",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c657af8d545b4dcf432ace76",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c657af8d545b4dcf432ace76",
+            "width": 64
+          }
+        ],
+        "name": "Hunky Dory (2015 Remaster)",
+        "release_date": "1971-12-17",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:6fQElzBNTiEMGdIeY0hy5l"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 217746,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT11500128"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0LrwgdLsFaWh9VXIjBRe8t"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0LrwgdLsFaWh9VXIjBRe8t",
+      "id": "0LrwgdLsFaWh9VXIjBRe8t",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Changes - 2015 Remaster",
+      "popularity": 67,
+      "preview_url": "https://p.scdn.co/mp3-preview/ef2d676da4cb7c7468bd9cc198885e20fb22acb2?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:0LrwgdLsFaWh9VXIjBRe8t"
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+            },
+            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+            "name": "David Bowie",
+            "type": "artist",
+            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5FDIw0ifQrQp63uhTelMVJ"
+        },
+        "href": "https://api.spotify.com/v1/albums/5FDIw0ifQrQp63uhTelMVJ",
+        "id": "5FDIw0ifQrQp63uhTelMVJ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d706bf752d9d31845b80d1e8",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d706bf752d9d31845b80d1e8",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d706bf752d9d31845b80d1e8",
+            "width": 64
+          }
+        ],
+        "name": "Let's Dance",
+        "release_date": "1983",
+        "release_date_precision": "year",
+        "total_tracks": 2,
+        "type": "album",
+        "uri": "spotify:album:5FDIw0ifQrQp63uhTelMVJ"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 247600,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USJT10200038"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4cVHMHgmWgudD399ZdhQ3L"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4cVHMHgmWgudD399ZdhQ3L",
+      "id": "4cVHMHgmWgudD399ZdhQ3L",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Let's Dance - 2002 Remaster",
+      "popularity": 65,
+      "preview_url": "https://p.scdn.co/mp3-preview/57bef4d4409bf29a5c4003a728e7fac1682f7bdf?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:4cVHMHgmWgudD399ZdhQ3L"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "message": "Mach's dir gemütlich",
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/featured-playlists?country=DE&locale=de_de&timestamp=2021-05-16T17%3A49%3A36&offset=0&limit=5",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Wenn die Tage länger werden und die Luft wärmer - Diese Tracks begleiten dich in den Frühling.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXaIrEwuQ3hyy"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaIrEwuQ3hyy",
+        "id": "37i9dQZF1DXaIrEwuQ3hyy",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000039c005a4319ce92deebf6ece7",
+            "width": null
+          }
+        ],
+        "name": "Frühlings Chillout",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYyMTE4NzM3MywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaIrEwuQ3hyy/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXaIrEwuQ3hyy"
+      },
+      {
+        "collaborative": false,
+        "description": "New music off the beaten track. Cover: Monolink",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX07Bg0Q5GozA"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX07Bg0Q5GozA",
+        "id": "37i9dQZF1DX07Bg0Q5GozA",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000354379da5c28218e07c352fc4",
+            "width": null
+          }
+        ],
+        "name": "OFF POP",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYyMDk0MzIwMCwwMDAwMDE1NjAwMDAwMTc5NjdiZTVmZmEwMDAwMDE3OTY1YWQ4ODRk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX07Bg0Q5GozA/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX07Bg0Q5GozA"
+      },
+      {
+        "collaborative": false,
+        "description": "Diese Songs zaubern dir ein Grinsen ins Gesicht.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWM6GBnxtToT"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWM6GBnxtToT",
+        "id": "37i9dQZF1DWWM6GBnxtToT",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000039969177bbaebfd2b5c3fcb05",
+            "width": null
+          }
+        ],
+        "name": "Feelgood Indie",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYyMTE4NzM3MSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWM6GBnxtToT/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWM6GBnxtToT"
+      },
+      {
+        "collaborative": false,
+        "description": "Diese Beats machen garantiert gute Laune!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX4uPi2roRUwU"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4uPi2roRUwU",
+        "id": "37i9dQZF1DX4uPi2roRUwU",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003babfc85e1c4b67da7766e883",
+            "width": null
+          }
+        ],
+        "name": "Happy Dance",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYyMTE4NzM3NSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4uPi2roRUwU/tracks",
+          "total": 60
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX4uPi2roRUwU"
+      },
+      {
+        "collaborative": false,
+        "description": "Ready für den Sommer? Mit diesen Tracks bestimmt.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWX7rdRjOECPW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWX7rdRjOECPW",
+        "id": "37i9dQZF1DWX7rdRjOECPW",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000032f8798776ac0e85619573c99",
+            "width": null
+          }
+        ],
+        "name": "Sommerhits 2021",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYyMDc0MjUxOCwwMDAwMDBhNDAwMDAwMTc5NWJjODM3NDYwMDAwMDE3OGI2ZGE0OTM1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWX7rdRjOECPW/tracks",
+          "total": 66
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWX7rdRjOECPW"
+      }
+    ],
+    "limit": 5,
+    "next": "https://api.spotify.com/v1/browse/featured-playlists?country=DE&locale=de_de&timestamp=2021-05-16T17%3A49%3A36&offset=5&limit=5",
+    "offset": 0,
+    "previous": null,
+    "total": 10
+  }
+}

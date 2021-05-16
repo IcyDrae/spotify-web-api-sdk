@@ -1,0 +1,271 @@
+{
+  "href": "https://api.spotify.com/v1/albums/7eMXWxMOHtAoliVQfVpdpl/tracks?offset=0&limit=20&market=RU",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 241813,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0uLKtWsxyodrknEWOPeSaP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0uLKtWsxyodrknEWOPeSaP",
+      "id": "0uLKtWsxyodrknEWOPeSaP",
+      "is_local": false,
+      "is_playable": true,
+      "name": "The Man Who Sold The World - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/a410dd4f0e42a3f4c4d834941c6878ece9ba3c10?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:0uLKtWsxyodrknEWOPeSaP"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 214266,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2vphQ7xz0V3CQosp2oDwfs"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2vphQ7xz0V3CQosp2oDwfs",
+      "id": "2vphQ7xz0V3CQosp2oDwfs",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Aladdin Sane - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/9a5a7b779bcc1594b646a8cd705ac27e98312359?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:2vphQ7xz0V3CQosp2oDwfs"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 223213,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3b6RbXzIq7cIbJVBQ1KMAh"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3b6RbXzIq7cIbJVBQ1KMAh",
+      "id": "3b6RbXzIq7cIbJVBQ1KMAh",
+      "is_local": false,
+      "is_playable": true,
+      "name": "White Light/White Heat - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/4bd30161a0f8e3d52c348cd88537d47cf1f83be7?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:3b6RbXzIq7cIbJVBQ1KMAh"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 211200,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1CtbX3fHwcTabE9pgkj93v"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1CtbX3fHwcTabE9pgkj93v",
+      "id": "1CtbX3fHwcTabE9pgkj93v",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Shopping For Girls - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/dc5692c7d77e3d6c13757800db6dfa33ed0a1b98?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:1CtbX3fHwcTabE9pgkj93v"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 212320,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5Ek6g3ljGYIIzWMnEIUECi"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5Ek6g3ljGYIIzWMnEIUECi",
+      "id": "5Ek6g3ljGYIIzWMnEIUECi",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Lady Stardust - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/df16d5b2171feec1aa9ba835e48a0f83f7cb3276?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:5Ek6g3ljGYIIzWMnEIUECi"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 192986,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3sJKU2sndnk9g8UqTY3liV"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3sJKU2sndnk9g8UqTY3liV",
+      "id": "3sJKU2sndnk9g8UqTY3liV",
+      "is_local": false,
+      "is_playable": true,
+      "name": "The Supermen - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/7e5d8090f004d0dd9cd6f092d49231a5a731435f?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:3sJKU2sndnk9g8UqTY3liV"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 181840,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1p6XT74smh8T4JqZdUV4ML"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1p6XT74smh8T4JqZdUV4ML",
+      "id": "1p6XT74smh8T4JqZdUV4ML",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Repetition - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/e93095e346174f7f8ee1725f51d592b18705d03e?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:1p6XT74smh8T4JqZdUV4ML"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 155360,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0x2w4Mbp31hclRpgoGohVA"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0x2w4Mbp31hclRpgoGohVA",
+      "id": "0x2w4Mbp31hclRpgoGohVA",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Andy Warhol - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/e0f10d77b7be6505093c7e3374efd95888031b0e?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:0x2w4Mbp31hclRpgoGohVA"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+          },
+          "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+          "name": "David Bowie",
+          "type": "artist",
+          "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 286960,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6QfJ8deoNjRa24FHwFEZGA"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6QfJ8deoNjRa24FHwFEZGA",
+      "id": "6QfJ8deoNjRa24FHwFEZGA",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Quicksand - ChangesNowBowie Version",
+      "preview_url": "https://p.scdn.co/mp3-preview/5a3fb2c9bafef268b217faa91af34edad1b013be?cid=245e791001d540acab1ad004562326b4",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:6QfJ8deoNjRa24FHwFEZGA"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 9
+}

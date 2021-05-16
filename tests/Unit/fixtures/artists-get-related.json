@@ -1,0 +1,922 @@
+{
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/42TFhl7WlMRXiNqzSrnzPL"
+      },
+      "followers": {
+        "href": null,
+        "total": 1331914
+      },
+      "genres": [
+        "art rock",
+        "classic rock",
+        "glam rock",
+        "permanent wave",
+        "psychedelic rock",
+        "rock",
+        "singer-songwriter"
+      ],
+      "href": "https://api.spotify.com/v1/artists/42TFhl7WlMRXiNqzSrnzPL",
+      "id": "42TFhl7WlMRXiNqzSrnzPL",
+      "images": [
+        {
+          "height": 1006,
+          "url": "https://i.scdn.co/image/2e1e9a6fe696b536a1f9e6a27fc1ed23d2c97099",
+          "width": 1000
+        },
+        {
+          "height": 644,
+          "url": "https://i.scdn.co/image/49b8173759e47ed5e74d1c7c11a932e4dc6a91f9",
+          "width": 640
+        },
+        {
+          "height": 201,
+          "url": "https://i.scdn.co/image/bb3e155f456d2f3533b753417cf586408c00fff0",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/cf74e6ba4644f8f5a552060f40d3864aeb6a4311",
+          "width": 64
+        }
+      ],
+      "name": "Lou Reed",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:42TFhl7WlMRXiNqzSrnzPL"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3dBVyJ7JuOMt4GE9607Qin"
+      },
+      "followers": {
+        "href": null,
+        "total": 694222
+      },
+      "genres": [
+        "album rock",
+        "art rock",
+        "classic rock",
+        "folk rock",
+        "glam rock",
+        "protopunk",
+        "psychedelic rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3dBVyJ7JuOMt4GE9607Qin",
+      "id": "3dBVyJ7JuOMt4GE9607Qin",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a407bfe380d97f16351a8e01a10f8bd8a0775d95",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/b144cb48c967cb1e1c4221bc5ada89bc91664486",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/d831588e2ccf6d4831b23a15707eec92059151fc",
+          "width": 160
+        }
+      ],
+      "name": "T. Rex",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:3dBVyJ7JuOMt4GE9607Qin"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3fhOTtm0LBJ3Ojn4hIljLo"
+      },
+      "followers": {
+        "href": null,
+        "total": 661934
+      },
+      "genres": [
+        "album rock",
+        "art rock",
+        "classic rock",
+        "glam rock",
+        "melancholia",
+        "mellow gold",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "rock",
+        "soft rock",
+        "sophisti-pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3fhOTtm0LBJ3Ojn4hIljLo",
+      "id": "3fhOTtm0LBJ3Ojn4hIljLo",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/00a2066e2104137e034dd55f05ee8a8887d98728",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cc24162856d8c3bf092834f2d142a488f4bbf625",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/18c8164e0c262f32020e91e4f94bdc663ba3a55f",
+          "width": 160
+        }
+      ],
+      "name": "Roxy Music",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:3fhOTtm0LBJ3Ojn4hIljLo"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/33EUXrFKGjpUSGacqEHhU4"
+      },
+      "followers": {
+        "href": null,
+        "total": 1167402
+      },
+      "genres": [
+        "alternative rock",
+        "art rock",
+        "classic rock",
+        "glam rock",
+        "new wave",
+        "permanent wave",
+        "post-punk",
+        "protopunk",
+        "punk",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/33EUXrFKGjpUSGacqEHhU4",
+      "id": "33EUXrFKGjpUSGacqEHhU4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/4ad7f961423843597bc7d6c6691c9988883dd794",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/47cf73dad488cbed81ad64ad160c4b1195f25518",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/e2c6ed182e3aed01042f5fe1e63d7325c37a89d6",
+          "width": 160
+        }
+      ],
+      "name": "Iggy Pop",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:33EUXrFKGjpUSGacqEHhU4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2x9SpqnPi8rlE9pjHBwmSC"
+      },
+      "followers": {
+        "href": null,
+        "total": 1570880
+      },
+      "genres": [
+        "art punk",
+        "art rock",
+        "dance rock",
+        "funk rock",
+        "new wave",
+        "permanent wave",
+        "post-punk",
+        "rock",
+        "zolo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2x9SpqnPi8rlE9pjHBwmSC",
+      "id": "2x9SpqnPi8rlE9pjHBwmSC",
+      "images": [
+        {
+          "height": 500,
+          "url": "https://i.scdn.co/image/e4c5b04fce8706c87663357b1f78522a3a5c641b",
+          "width": 500
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/60bfd4ad01d8d9142d88c3c0b73cea36bf327ea7",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/4056b1eaa81255de0865ebe4fdbe61246205153c",
+          "width": 64
+        }
+      ],
+      "name": "Talking Heads",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:2x9SpqnPi8rlE9pjHBwmSC"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7MSUfLeTdDEoZiJPDSBXgi"
+      },
+      "followers": {
+        "href": null,
+        "total": 509165
+      },
+      "genres": [
+        "ambient",
+        "art pop",
+        "art rock",
+        "compositional ambient",
+        "experimental",
+        "experimental ambient",
+        "fourth world",
+        "glam rock",
+        "minimalism"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7MSUfLeTdDEoZiJPDSBXgi",
+      "id": "7MSUfLeTdDEoZiJPDSBXgi",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/1068dadfb18122d709253d8aac9a10e2b1ad08d7",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/15950a42b222b2d095bf24b5e80aadb408e76fd6",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/25eee4798e7a33ac662ab5ac48b50a4ce936d266",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/8e9c5379343aa3822aadcaa233477457f05b3224",
+          "width": 64
+        }
+      ],
+      "name": "Brian Eno",
+      "popularity": 65,
+      "type": "artist",
+      "uri": "spotify:artist:7MSUfLeTdDEoZiJPDSBXgi"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+      },
+      "followers": {
+        "href": null,
+        "total": 34065456
+      },
+      "genres": [
+        "classic rock",
+        "glam rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+      "id": "1dfeR4HaWDbWqFHLkxsg1d",
+      "images": [
+        {
+          "height": 806,
+          "url": "https://i.scdn.co/image/b040846ceba13c3e9c125d68389491094e7f2982",
+          "width": 999
+        },
+        {
+          "height": 516,
+          "url": "https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42",
+          "width": 640
+        },
+        {
+          "height": 161,
+          "url": "https://i.scdn.co/image/c06971e9ff81696699b829484e3be165f4e64368",
+          "width": 200
+        },
+        {
+          "height": 52,
+          "url": "https://i.scdn.co/image/6dd0ffd270903d1884edf9058c49f58b03db893d",
+          "width": 64
+        }
+      ],
+      "name": "Queen",
+      "popularity": 90,
+      "type": "artist",
+      "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1nJvji2KIlWSseXRSlNYsC"
+      },
+      "followers": {
+        "href": null,
+        "total": 1332461
+      },
+      "genres": [
+        "alternative rock",
+        "art rock",
+        "classic rock",
+        "folk rock",
+        "melancholia",
+        "permanent wave",
+        "protopunk",
+        "psychedelic rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1nJvji2KIlWSseXRSlNYsC",
+      "id": "1nJvji2KIlWSseXRSlNYsC",
+      "images": [
+        {
+          "height": 1236,
+          "url": "https://i.scdn.co/image/d69c2cf10323bf08443c7d122f3a1824a760ab57",
+          "width": 1000
+        },
+        {
+          "height": 791,
+          "url": "https://i.scdn.co/image/24e7531935f88f55744cc8c9ed2528f466cba276",
+          "width": 640
+        },
+        {
+          "height": 247,
+          "url": "https://i.scdn.co/image/fedcb6f64de6571e2c208a21fc16b9e05e38cf2f",
+          "width": 200
+        },
+        {
+          "height": 79,
+          "url": "https://i.scdn.co/image/0fda1f46337398e35d5c7c672ddc77beb68a8f93",
+          "width": 64
+        }
+      ],
+      "name": "The Velvet Underground",
+      "popularity": 70,
+      "type": "artist",
+      "uri": "spotify:artist:1nJvji2KIlWSseXRSlNYsC"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1SQRv42e4PjEYfPhS0Tk9E"
+      },
+      "followers": {
+        "href": null,
+        "total": 1857952
+      },
+      "genres": [
+        "album rock",
+        "art rock",
+        "british invasion",
+        "classic rock",
+        "folk rock",
+        "glam rock",
+        "mellow gold",
+        "protopunk",
+        "psychedelic rock",
+        "rock",
+        "roots rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1SQRv42e4PjEYfPhS0Tk9E",
+      "id": "1SQRv42e4PjEYfPhS0Tk9E",
+      "images": [
+        {
+          "height": 1203,
+          "url": "https://i.scdn.co/image/b2e933a1a7ae670aa2e217c79710fe2f18ebad3d",
+          "width": 1000
+        },
+        {
+          "height": 770,
+          "url": "https://i.scdn.co/image/e1a06bdd4859a12c4d68b13c24aedb926a11f624",
+          "width": 640
+        },
+        {
+          "height": 241,
+          "url": "https://i.scdn.co/image/a182af94cb50cee61692e8ef867daa869dafad39",
+          "width": 200
+        },
+        {
+          "height": 77,
+          "url": "https://i.scdn.co/image/46546858cdeed01b9d88ee02d61249b860edf9ac",
+          "width": 64
+        }
+      ],
+      "name": "The Kinks",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:1SQRv42e4PjEYfPhS0Tk9E"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0RUEHcBiENFEqxgicqS2ig"
+      },
+      "followers": {
+        "href": null,
+        "total": 390180
+      },
+      "genres": [
+        "art rock",
+        "glam rock",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "post-punk",
+        "protopunk",
+        "pub rock",
+        "punk",
+        "rock",
+        "ska",
+        "synthpop",
+        "zolo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0RUEHcBiENFEqxgicqS2ig",
+      "id": "0RUEHcBiENFEqxgicqS2ig",
+      "images": [
+        {
+          "height": 1041,
+          "url": "https://i.scdn.co/image/78818fca4278bc7f51042910b40a2f95df682f59",
+          "width": 1000
+        },
+        {
+          "height": 666,
+          "url": "https://i.scdn.co/image/bffee2124711c8816252f01cfacf840d8b27a04d",
+          "width": 640
+        },
+        {
+          "height": 208,
+          "url": "https://i.scdn.co/image/d153761a4f0305f8e92ea35e545eb8fff08755aa",
+          "width": 200
+        },
+        {
+          "height": 67,
+          "url": "https://i.scdn.co/image/5ad73e15987e9e35d600446c3f67769b8e743e59",
+          "width": 64
+        }
+      ],
+      "name": "The Stranglers",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:0RUEHcBiENFEqxgicqS2ig"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/432R46LaYsJZV2Gmc4jUV5"
+      },
+      "followers": {
+        "href": null,
+        "total": 1643499
+      },
+      "genres": [
+        "alternative rock",
+        "art rock",
+        "madchester",
+        "new wave",
+        "post-punk",
+        "rock",
+        "uk post-punk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/432R46LaYsJZV2Gmc4jUV5",
+      "id": "432R46LaYsJZV2Gmc4jUV5",
+      "images": [
+        {
+          "height": 658,
+          "url": "https://i.scdn.co/image/5eeddd733170399db794d2c430a8d2cde7ae1425",
+          "width": 1000
+        },
+        {
+          "height": 421,
+          "url": "https://i.scdn.co/image/d3c6bcb07a5ecddf86e791fa901bf3792fe6e6c7",
+          "width": 640
+        },
+        {
+          "height": 132,
+          "url": "https://i.scdn.co/image/d384ebd3d3fda0ad219fed6b9014a59e65fbb385",
+          "width": 200
+        },
+        {
+          "height": 42,
+          "url": "https://i.scdn.co/image/1b5195d5e9b5aac07fb0c801deb1926138222036",
+          "width": 64
+        }
+      ],
+      "name": "Joy Division",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:432R46LaYsJZV2Gmc4jUV5"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0vYkHhJ48Bs3jWcvZXvOrP"
+      },
+      "followers": {
+        "href": null,
+        "total": 752516
+      },
+      "genres": [
+        "art punk",
+        "art rock",
+        "folk rock",
+        "permanent wave",
+        "protopunk",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0vYkHhJ48Bs3jWcvZXvOrP",
+      "id": "0vYkHhJ48Bs3jWcvZXvOrP",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/20e52d0b168541016f901d9ec6d4f2a0e41f193b",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/44012cfc4fedcbe92ac5e14178061fd3a872417f",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/aa17c9e1d458bd250232535b54796a037572295d",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/74fa24a25326188ab23618d9a8acaaa34a61d894",
+          "width": 64
+        }
+      ],
+      "name": "Patti Smith",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:0vYkHhJ48Bs3jWcvZXvOrP"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0GByy3DcfbQwDvXGCWmzv9"
+      },
+      "followers": {
+        "href": null,
+        "total": 990687
+      },
+      "genres": [
+        "album rock",
+        "art rock",
+        "classic rock",
+        "folk",
+        "folk rock",
+        "lilith",
+        "mellow gold",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "permanent wave",
+        "pop rock",
+        "rock",
+        "soft rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0GByy3DcfbQwDvXGCWmzv9",
+      "id": "0GByy3DcfbQwDvXGCWmzv9",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/b65e8ef3f06ef30e130cbc4532e4b9d8fd024704",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/54fb0683bf9c137962272d663b9f7a89f2898a42",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0c10734b6fb52fd624233acc0cd29df8e8354c18",
+          "width": 160
+        }
+      ],
+      "name": "Pretenders",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:0GByy3DcfbQwDvXGCWmzv9"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0fgYKF9Avljex0L9Wt5b8Z"
+      },
+      "followers": {
+        "href": null,
+        "total": 600505
+      },
+      "genres": [
+        "alternative rock",
+        "art rock",
+        "dream pop",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "permanent wave",
+        "post-punk",
+        "punk",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0fgYKF9Avljex0L9Wt5b8Z",
+      "id": "0fgYKF9Avljex0L9Wt5b8Z",
+      "images": [
+        {
+          "height": 1281,
+          "url": "https://i.scdn.co/image/397489fba8899aa52cadb0f62662603f96065446",
+          "width": 1000
+        },
+        {
+          "height": 820,
+          "url": "https://i.scdn.co/image/93b9b2907fa17e00c5eb860031f79ddcd9aaffe8",
+          "width": 640
+        },
+        {
+          "height": 256,
+          "url": "https://i.scdn.co/image/2bff77f9ef0e1bbb46d40607f15893e4f09403d5",
+          "width": 200
+        },
+        {
+          "height": 82,
+          "url": "https://i.scdn.co/image/a14a676ee9c59bb591a97743970fe613eb53b86f",
+          "width": 64
+        }
+      ],
+      "name": "Echo & the Bunnymen",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:0fgYKF9Avljex0L9Wt5b8Z"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3RGLhK1IP9jnYFH4BRFJBS"
+      },
+      "followers": {
+        "href": null,
+        "total": 2107521
+      },
+      "genres": [
+        "classic rock",
+        "permanent wave",
+        "punk",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3RGLhK1IP9jnYFH4BRFJBS",
+      "id": "3RGLhK1IP9jnYFH4BRFJBS",
+      "images": [
+        {
+          "height": 676,
+          "url": "https://i.scdn.co/image/ab470b275daa38351810a1eb91d107ebdb821302",
+          "width": 1000
+        },
+        {
+          "height": 433,
+          "url": "https://i.scdn.co/image/9061b7dad3306249408403d72a410a62c26e794c",
+          "width": 640
+        },
+        {
+          "height": 135,
+          "url": "https://i.scdn.co/image/4befb6b7cf4c3d6b7fda1f71b717203d90adf897",
+          "width": 200
+        },
+        {
+          "height": 43,
+          "url": "https://i.scdn.co/image/7575ab17620ee9b273885bd35980a020cf4d38f9",
+          "width": 64
+        }
+      ],
+      "name": "The Clash",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:3RGLhK1IP9jnYFH4BRFJBS"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/36E7oYfz3LLRto6l2WmDcD"
+      },
+      "followers": {
+        "href": null,
+        "total": 637506
+      },
+      "genres": [
+        "alternative rock",
+        "art rock",
+        "britpop",
+        "indie rock",
+        "modern rock",
+        "new wave",
+        "permanent wave",
+        "pop rock",
+        "rock",
+        "sheffield indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/36E7oYfz3LLRto6l2WmDcD",
+      "id": "36E7oYfz3LLRto6l2WmDcD",
+      "images": [
+        {
+          "height": 1248,
+          "url": "https://i.scdn.co/image/274a6b04d4086699f74f761b7932adf122c5619e",
+          "width": 1000
+        },
+        {
+          "height": 799,
+          "url": "https://i.scdn.co/image/ec898afde4a75ca38803ac0233d804db067ff2b2",
+          "width": 640
+        },
+        {
+          "height": 250,
+          "url": "https://i.scdn.co/image/51de13e6f54f873c958960c63d4fb19ba453f7b1",
+          "width": 200
+        },
+        {
+          "height": 80,
+          "url": "https://i.scdn.co/image/3cac52324bbef70cc4b9f0e730cc25f718619290",
+          "width": 64
+        }
+      ],
+      "name": "Pulp",
+      "popularity": 65,
+      "type": "artist",
+      "uri": "spotify:artist:36E7oYfz3LLRto6l2WmDcD"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0yNLKJebCb8Aueb54LYya3"
+      },
+      "followers": {
+        "href": null,
+        "total": 1470843
+      },
+      "genres": [
+        "art rock",
+        "dance rock",
+        "madchester",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "permanent wave",
+        "post-punk",
+        "rock",
+        "synthpop",
+        "uk post-punk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0yNLKJebCb8Aueb54LYya3",
+      "id": "0yNLKJebCb8Aueb54LYya3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/45c02cbba9e991c4edc03f856a92f94bc3984f08",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/5cd9a0a5a6550933f6072b32fa9be38f4faa4a9e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/7563d2c9a74f27964eae9720460ee63d18881ce0",
+          "width": 160
+        }
+      ],
+      "name": "New Order",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:0yNLKJebCb8Aueb54LYya3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7FIoB5PHdrMZVC3q2HE5MS"
+      },
+      "followers": {
+        "href": null,
+        "total": 1833477
+      },
+      "genres": [
+        "album rock",
+        "beatlesque",
+        "classic rock",
+        "folk rock",
+        "mellow gold",
+        "psychedelic rock",
+        "rock",
+        "roots rock",
+        "soft rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7FIoB5PHdrMZVC3q2HE5MS",
+      "id": "7FIoB5PHdrMZVC3q2HE5MS",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8d1b36f226245c6c6d5f9fa1d020f95a5e0d3253",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/f00aa2a0bbeec665b9abe0d6b63399284e0ecf50",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a10910e67b10a62eec462f5c46cebe149a860e6a",
+          "width": 160
+        }
+      ],
+      "name": "George Harrison",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:7FIoB5PHdrMZVC3q2HE5MS"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4tpUmLEVLCGFr93o8hFFIB"
+      },
+      "followers": {
+        "href": null,
+        "total": 927349
+      },
+      "genres": [
+        "candy pop",
+        "new wave",
+        "new wave pop",
+        "permanent wave",
+        "power pop",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4tpUmLEVLCGFr93o8hFFIB",
+      "id": "4tpUmLEVLCGFr93o8hFFIB",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/dbd371b220a054a542279f499fc024044bece495",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/26f481afa2992180b0188168aca1aa6b24c09368",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a296a8eccdb6af8f0f254452a6090b60f61746af",
+          "width": 160
+        }
+      ],
+      "name": "Blondie",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:4tpUmLEVLCGFr93o8hFFIB"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+      },
+      "followers": {
+        "href": null,
+        "total": 3952903
+      },
+      "genres": [
+        "album rock",
+        "art rock",
+        "blues rock",
+        "british invasion",
+        "classic rock",
+        "folk rock",
+        "hard rock",
+        "mellow gold",
+        "rock",
+        "roots rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+      "id": "67ea9eGLXYMsO2eYQRui3w",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/9cd709cabb4a614b4f1dd9ec256a5f30e21f0150",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e70c8cbc5eb682b35da8dbc90c5c3631f4df9e23",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/4d7d0709054a22a2f67ecc139fec046b1f4cc880",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/d2607544c5d6ad7a77571f704621a038a947243a",
+          "width": 64
+        }
+      ],
+      "name": "The Who",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+    }
+  ]
+}
