@@ -42,7 +42,7 @@ class ClientTest extends TestCase
         $mock
             ->expects($this->once())
             ->method($methodName)
-            ->with()
+            ->withAnyParameters()
             ->willReturn($returnValue);
 
         return $mock;
@@ -73,8 +73,5 @@ class ClientTest extends TestCase
         self::assertJson($returnValue);
 
         $this->assertIsArray($returnValueDecoded);
-        $this->assertIsString($returnValueDecoded["access_token"]);
-        $this->assertIsString($returnValueDecoded["token_type"]);
-        $this->assertIsInt($returnValueDecoded["expires_in"]);
     }
 }
