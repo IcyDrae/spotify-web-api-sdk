@@ -49,9 +49,9 @@ class   BrowseTest extends TestCase
 
     public function testCreateBrowseInstance()
     {
-        $client = new Browse($this->sdk);
+        $browse = new Browse($this->sdk);
 
-        $this->assertIsObject($client);
+        $this->assertIsObject($browse);
     }
 
     public function testGetNewReleases()

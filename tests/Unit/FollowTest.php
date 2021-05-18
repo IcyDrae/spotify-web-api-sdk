@@ -50,9 +50,9 @@ class FollowTest extends TestCase
 
     public function testCreateFollowInstance()
     {
-        $client = new Follow($this->sdk);
+        $follow = new Follow($this->sdk);
 
-        $this->assertIsObject($client);
+        $this->assertIsObject($follow);
     }
 
     public function testFollowPlaylist()

@@ -49,9 +49,9 @@ class AlbumsTest extends TestCase
 
     public function testCreateAlbumsInstance()
     {
-        $client = new Albums($this->sdk);
+        $albums = new Albums($this->sdk);
 
-        $this->assertIsObject($client);
+        $this->assertIsObject($albums);
     }
 
     public function testGetMultiple()

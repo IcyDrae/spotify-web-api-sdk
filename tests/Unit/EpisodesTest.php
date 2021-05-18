@@ -49,9 +49,9 @@ class EpisodesTest extends TestCase
 
     public function testCreateEpisodesInstance()
     {
-        $client = new Episodes($this->sdk);
+        $episodes = new Episodes($this->sdk);
 
-        $this->assertIsObject($client);
+        $this->assertIsObject($episodes);
     }
 
     public function testGetMultiple()

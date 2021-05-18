@@ -49,9 +49,9 @@ class ArtistsTest extends TestCase
 
     public function testCreateAlbumsInstance()
     {
-        $client = new Artists($this->sdk);
+        $artists = new Artists($this->sdk);
 
-        $this->assertIsObject($client);
+        $this->assertIsObject($artists);
     }
 
     public function testGetMultiple()
