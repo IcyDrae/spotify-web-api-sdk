@@ -28,9 +28,9 @@ class Client extends GuzzleClient
     protected Response $response;
 
     /**
-     * @var array $data The response data.
+     * @var array|null $data The response data.
      */
-    protected array $data = [];
+    protected ?array $data = [];
 
     /**
      * @var array $error The response error.

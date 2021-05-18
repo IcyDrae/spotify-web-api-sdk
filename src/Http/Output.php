@@ -24,10 +24,10 @@ class Output implements \JsonSerializable
     /**
      * Output constructor.
      *
-     * @param array $data
+     * @param array|null $data
      * @param array $error
      */
-    public function __construct(array $data, array $error)
+    public function __construct(?array $data, array $error)
     {
         $this->data = $data;
         $this->error = $error;
