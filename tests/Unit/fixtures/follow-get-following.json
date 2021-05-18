@@ -1,0 +1,749 @@
+{
+  "data": {
+    "artists": {
+      "items": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/03r4iKL2g2442PT9n2UKsx"
+          },
+          "followers": {
+            "href": null,
+            "total": 1940725
+          },
+          "genres": [
+            "alternative rock",
+            "east coast hip hop",
+            "golden age hip hop",
+            "hip hop",
+            "old school hip hop",
+            "rap",
+            "rap rock"
+          ],
+          "href": "https://api.spotify.com/v1/artists/03r4iKL2g2442PT9n2UKsx",
+          "id": "03r4iKL2g2442PT9n2UKsx",
+          "images": [
+            {
+              "height": 771,
+              "url": "https://i.scdn.co/image/705bcd56dc5dbf9ebc578a3ba8094e6d622862c2",
+              "width": 1000
+            },
+            {
+              "height": 494,
+              "url": "https://i.scdn.co/image/060ef251f0e12353057c36fe94724b688b963dac",
+              "width": 640
+            },
+            {
+              "height": 154,
+              "url": "https://i.scdn.co/image/eb9a69f247e84b9e9ce8b03f1ab5cca399b49cbc",
+              "width": 200
+            },
+            {
+              "height": 49,
+              "url": "https://i.scdn.co/image/b6fafee2c4c169dadf039c2066ab77beb4c82b3e",
+              "width": 64
+            }
+          ],
+          "name": "Beastie Boys",
+          "popularity": 74,
+          "type": "artist",
+          "uri": "spotify:artist:03r4iKL2g2442PT9n2UKsx"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/07XSN3sPlIlB2L2XNcTwJw"
+          },
+          "followers": {
+            "href": null,
+            "total": 5836728
+          },
+          "genres": [
+            "album rock",
+            "classic rock",
+            "glam rock",
+            "hard rock",
+            "metal",
+            "rock"
+          ],
+          "href": "https://api.spotify.com/v1/artists/07XSN3sPlIlB2L2XNcTwJw",
+          "id": "07XSN3sPlIlB2L2XNcTwJw",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/74925968b2f76706c62bed18af92ef43241e7756",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/052ab4e57e4f0d9d75f3d1f6d00a9dd31b456c42",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/ed0b1f0b79105b0ea5518faab948b9f5882d5f1e",
+              "width": 160
+            }
+          ],
+          "name": "KISS",
+          "popularity": 77,
+          "type": "artist",
+          "uri": "spotify:artist:07XSN3sPlIlB2L2XNcTwJw"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0A2YaO4tUFeJVNn5Hvjfxa"
+          },
+          "followers": {
+            "href": null,
+            "total": 91209
+          },
+          "genres": [
+            "dutch metal",
+            "folk metal",
+            "power metal",
+            "viking metal"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0A2YaO4tUFeJVNn5Hvjfxa",
+          "id": "0A2YaO4tUFeJVNn5Hvjfxa",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/e49a024129e272ceb978e615cbc62a4b9645b45c",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/bd2d2df23af786326ba95691d500138b4105eb7c",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/1bb89a710636d9bf121ead265f73498225485088",
+              "width": 160
+            }
+          ],
+          "name": "Heidevolk",
+          "popularity": 45,
+          "type": "artist",
+          "uri": "spotify:artist:0A2YaO4tUFeJVNn5Hvjfxa"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0BmLNz4nSLfoWYW1cYsElL"
+          },
+          "followers": {
+            "href": null,
+            "total": 319314
+          },
+          "genres": [
+            "dance pop",
+            "post-teen pop",
+            "romanian pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0BmLNz4nSLfoWYW1cYsElL",
+          "id": "0BmLNz4nSLfoWYW1cYsElL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/41f5bb049e85c82a5725936da5d56e84c90beff7",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/3d7cde3337aba7d16406ec3f42f39a47a6e217fa",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/9ab1cebb82e20b0e721efd3ec8eca4c9511c236f",
+              "width": 160
+            }
+          ],
+          "name": "Alexandra Stan",
+          "popularity": 67,
+          "type": "artist",
+          "uri": "spotify:artist:0BmLNz4nSLfoWYW1cYsElL"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0CbeG1224FS58EUx4tPevZ"
+          },
+          "followers": {
+            "href": null,
+            "total": 787112
+          },
+          "genres": [
+            "australian dance",
+            "big room",
+            "edm",
+            "melbourne bounce",
+            "melbourne bounce international",
+            "pop dance"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0CbeG1224FS58EUx4tPevZ",
+          "id": "0CbeG1224FS58EUx4tPevZ",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/19f3fac006358960cd5ded1fcdb93847c5a8c7be",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/0eb82b475cff60ea739f90d755b0b92cfe90d80a",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/59b2f123cd2c0e9491f8ef26c7a1a426fde9d9b0",
+              "width": 160
+            }
+          ],
+          "name": "Timmy Trumpet",
+          "popularity": 79,
+          "type": "artist",
+          "uri": "spotify:artist:0CbeG1224FS58EUx4tPevZ"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Drtu4mUobfWQrsl4nCkYD"
+          },
+          "followers": {
+            "href": null,
+            "total": 794
+          },
+          "genres": [
+            "albanian pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0Drtu4mUobfWQrsl4nCkYD",
+          "id": "0Drtu4mUobfWQrsl4nCkYD",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2732e49dd3ea1199e4632d74ec5",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e022e49dd3ea1199e4632d74ec5",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048512e49dd3ea1199e4632d74ec5",
+              "width": 64
+            }
+          ],
+          "name": "Stine",
+          "popularity": 27,
+          "type": "artist",
+          "uri": "spotify:artist:0Drtu4mUobfWQrsl4nCkYD"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Dvx6p8JDyzeOPGmaCIH1L"
+          },
+          "followers": {
+            "href": null,
+            "total": 1306381
+          },
+          "genres": [
+            "german hip hop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0Dvx6p8JDyzeOPGmaCIH1L",
+          "id": "0Dvx6p8JDyzeOPGmaCIH1L",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/5aba4f952b6dfcef0d1b964eaef1a4f857df9952",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/c9c1464da28318c239c1b6fbbccd38974d13fd2d",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/920abb7ceddd21b20b5d20d520e919fb5c923fe3",
+              "width": 160
+            }
+          ],
+          "name": "RAF Camora",
+          "popularity": 77,
+          "type": "artist",
+          "uri": "spotify:artist:0Dvx6p8JDyzeOPGmaCIH1L"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0FEJqmeLRzsXj8hgcZaAyB"
+          },
+          "followers": {
+            "href": null,
+            "total": 530964
+          },
+          "genres": [
+            "french pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0FEJqmeLRzsXj8hgcZaAyB",
+          "id": "0FEJqmeLRzsXj8hgcZaAyB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/c133119615054ff014873c547af89b5b9faff053",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/1c915845c79aee632442daef5bf1dac254bf0129",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/e6996fa1081ca9d7a030f0dc18cfdf4f220abcc8",
+              "width": 160
+            }
+          ],
+          "name": "Indila",
+          "popularity": 67,
+          "type": "artist",
+          "uri": "spotify:artist:0FEJqmeLRzsXj8hgcZaAyB"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Fke3hlNt8LMt07Y8SBd0F"
+          },
+          "followers": {
+            "href": null,
+            "total": 1330
+          },
+          "genres": [
+            "tarantella"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0Fke3hlNt8LMt07Y8SBd0F",
+          "id": "0Fke3hlNt8LMt07Y8SBd0F",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273467d71d4ad94523722642068",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02467d71d4ad94523722642068",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851467d71d4ad94523722642068",
+              "width": 64
+            }
+          ],
+          "name": "Ambrogio Sparagna & Orchestra Popolare Italiana dell'Auditorium Parco della Musica",
+          "popularity": 5,
+          "type": "artist",
+          "uri": "spotify:artist:0Fke3hlNt8LMt07Y8SBd0F"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+          },
+          "followers": {
+            "href": null,
+            "total": 2938959
+          },
+          "genres": [
+            "francoton",
+            "french hip hop",
+            "rap conscient"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0GOx72r5AAEKRGQFn3xqXK",
+          "id": "0GOx72r5AAEKRGQFn3xqXK",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/b4be3d6c031ac605fbec7a36d754efcd060c6889",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/ae12fc3a0b4f0d2e02b71f1f6335b65eb7aae0d6",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/c75abdbfaf5981ee1728f38db6430ba945aa8790",
+              "width": 160
+            }
+          ],
+          "name": "GIMS",
+          "popularity": 77,
+          "type": "artist",
+          "uri": "spotify:artist:0GOx72r5AAEKRGQFn3xqXK"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0HF1E6fW7z1OOHWayK2tQU"
+          },
+          "followers": {
+            "href": null,
+            "total": 22
+          },
+          "genres": [],
+          "href": "https://api.spotify.com/v1/artists/0HF1E6fW7z1OOHWayK2tQU",
+          "id": "0HF1E6fW7z1OOHWayK2tQU",
+          "images": [],
+          "name": "Gerta Heta",
+          "popularity": 1,
+          "type": "artist",
+          "uri": "spotify:artist:0HF1E6fW7z1OOHWayK2tQU"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0HSc7yUdNSosxRb2UJnXlz"
+          },
+          "followers": {
+            "href": null,
+            "total": 558510
+          },
+          "genres": [
+            "german pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0HSc7yUdNSosxRb2UJnXlz",
+          "id": "0HSc7yUdNSosxRb2UJnXlz",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/c98abb66f1d5a09f37d8f54d0adff5914a2d8c8e",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/54783a3f4433366bb4f2ca4e5ddac02cb2fc3574",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/255e15b57a7a4a5147f2f08cae5e246078e26c51",
+              "width": 160
+            }
+          ],
+          "name": "Namika",
+          "popularity": 58,
+          "type": "artist",
+          "uri": "spotify:artist:0HSc7yUdNSosxRb2UJnXlz"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0HlxL5hisLf59ETEPM3cUA"
+          },
+          "followers": {
+            "href": null,
+            "total": 563507
+          },
+          "genres": [
+            "eurodance",
+            "europop",
+            "german techno",
+            "hamburg electronic",
+            "happy hardcore"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0HlxL5hisLf59ETEPM3cUA",
+          "id": "0HlxL5hisLf59ETEPM3cUA",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/bb5c3368ae0a3daef3866319e2648ace56397d42",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/f4ec4832eb9a53fcdd240b00640598c261505255",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/a8455e3f575a92d0b753dda5f06f043400db9a83",
+              "width": 160
+            }
+          ],
+          "name": "Scooter",
+          "popularity": 73,
+          "type": "artist",
+          "uri": "spotify:artist:0HlxL5hisLf59ETEPM3cUA"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0LhHRmSd1EYM5QdNeNnCoQ"
+          },
+          "followers": {
+            "href": null,
+            "total": 134875
+          },
+          "genres": [
+            "eurodance",
+            "europop",
+            "finnish edm"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0LhHRmSd1EYM5QdNeNnCoQ",
+          "id": "0LhHRmSd1EYM5QdNeNnCoQ",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/e212d17a89ac095b8e6a246b4b0325afd3bdfa50",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/1a796ceafe8e6f55ee2205ef0435943b432045ff",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/6ba11f81b048c9db3f3fade3d5a8f79fc1f46605",
+              "width": 160
+            }
+          ],
+          "name": "Darude",
+          "popularity": 64,
+          "type": "artist",
+          "uri": "spotify:artist:0LhHRmSd1EYM5QdNeNnCoQ"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0LnHdW6HMPoOlNdhG3DHjE"
+          },
+          "followers": {
+            "href": null,
+            "total": 1109886
+          },
+          "genres": [
+            "afghan pop",
+            "arab pop",
+            "belly dance",
+            "lebanese pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0LnHdW6HMPoOlNdhG3DHjE",
+          "id": "0LnHdW6HMPoOlNdhG3DHjE",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/850b592270955fbe6fc2b0252c7088c375484b68",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/1e01577b8c72732a2035fa1ca4509502d45cab94",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/5678c87b8110c8b2c4e030fb2bcfb37f0c0d59c5",
+              "width": 160
+            }
+          ],
+          "name": "Nancy Ajram",
+          "popularity": 60,
+          "type": "artist",
+          "uri": "spotify:artist:0LnHdW6HMPoOlNdhG3DHjE"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0N0d3kjwdY2h7UVuTdJGfp"
+          },
+          "followers": {
+            "href": null,
+            "total": 392810
+          },
+          "genres": [
+            "bubblegum dance",
+            "dance pop",
+            "eurodance",
+            "europop",
+            "german techno",
+            "melbourne bounce international",
+            "pop rap"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0N0d3kjwdY2h7UVuTdJGfp",
+          "id": "0N0d3kjwdY2h7UVuTdJGfp",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/24a5a242d7fcc9136fc14f56ccfa20cd75924bd9",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/6e72b282ed046fcab3662b8e9fdc58e020e7f4ef",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/dd2560171d7dff006fc5d1d41444d2341c8798ed",
+              "width": 160
+            }
+          ],
+          "name": "Cascada",
+          "popularity": 71,
+          "type": "artist",
+          "uri": "spotify:artist:0N0d3kjwdY2h7UVuTdJGfp"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0NV5eY4Jzg4ldg2ikGnV4n"
+          },
+          "followers": {
+            "href": null,
+            "total": 56091
+          },
+          "genres": [
+            "classic dubstep",
+            "dubstep",
+            "grime"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0NV5eY4Jzg4ldg2ikGnV4n",
+          "id": "0NV5eY4Jzg4ldg2ikGnV4n",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab6761610000e5eb894ec7b9a58c771a55cff1fc",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/ab67616100005174894ec7b9a58c771a55cff1fc",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/ab6761610000f178894ec7b9a58c771a55cff1fc",
+              "width": 160
+            }
+          ],
+          "name": "Virus Syndicate",
+          "popularity": 49,
+          "type": "artist",
+          "uri": "spotify:artist:0NV5eY4Jzg4ldg2ikGnV4n"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Nc09HuPN9ELmbTCLyNKnO"
+          },
+          "followers": {
+            "href": null,
+            "total": 54970
+          },
+          "genres": [],
+          "href": "https://api.spotify.com/v1/artists/0Nc09HuPN9ELmbTCLyNKnO",
+          "id": "0Nc09HuPN9ELmbTCLyNKnO",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/6a4f6980f9340f0aac5eb1e9d7c60997d12e3c8e",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/872c6b856e794b46e1739d1c26ee843ff326c9c2",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/ebb8a5655567e66ee9899bfe970bdb280443f4ec",
+              "width": 160
+            }
+          ],
+          "name": "Nadia Rose",
+          "popularity": 46,
+          "type": "artist",
+          "uri": "spotify:artist:0Nc09HuPN9ELmbTCLyNKnO"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0NeC6ploeJUq8oDwYQjNPS"
+          },
+          "followers": {
+            "href": null,
+            "total": 59100
+          },
+          "genres": [
+            "bubblegum dance",
+            "eurodance",
+            "europop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0NeC6ploeJUq8oDwYQjNPS",
+          "id": "0NeC6ploeJUq8oDwYQjNPS",
+          "images": [
+            {
+              "height": 1000,
+              "url": "https://i.scdn.co/image/8c03274ee3176bb93144a39cae2b129efd122d64",
+              "width": 1000
+            },
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/8a9d90b995c4eb84be70b21e1b149eea6d93e5c8",
+              "width": 640
+            },
+            {
+              "height": 200,
+              "url": "https://i.scdn.co/image/475f7c2d34645929a8c510799f8859d97a1a4362",
+              "width": 200
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/f48f8f87cd073e379c3ddc9bce742d1d4beee0ea",
+              "width": 64
+            }
+          ],
+          "name": "Bomfunk MC's",
+          "popularity": 58,
+          "type": "artist",
+          "uri": "spotify:artist:0NeC6ploeJUq8oDwYQjNPS"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Ntl0oWMPWfBOoi9Qcr9ht"
+          },
+          "followers": {
+            "href": null,
+            "total": 685542
+          },
+          "genres": [
+            "francoton",
+            "french pop"
+          ],
+          "href": "https://api.spotify.com/v1/artists/0Ntl0oWMPWfBOoi9Qcr9ht",
+          "id": "0Ntl0oWMPWfBOoi9Qcr9ht",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/32917f1ce15d29ae4d6f067b27a4fd498ca626ce",
+              "width": 640
+            },
+            {
+              "height": 320,
+              "url": "https://i.scdn.co/image/0da86b1fff650935f1788f40b3f1c73889910fb4",
+              "width": 320
+            },
+            {
+              "height": 160,
+              "url": "https://i.scdn.co/image/2dab9be364aa9bf04af44eb6f8971a8b3b84f788",
+              "width": 160
+            }
+          ],
+          "name": "Vitaa",
+          "popularity": 68,
+          "type": "artist",
+          "uri": "spotify:artist:0Ntl0oWMPWfBOoi9Qcr9ht"
+        }
+      ],
+      "next": "https://api.spotify.com/v1/me/following?type=artist&after=0Ntl0oWMPWfBOoi9Qcr9ht&limit=20",
+      "total": 273,
+      "cursors": {
+        "after": "0Ntl0oWMPWfBOoi9Qcr9ht"
+      },
+      "limit": 20,
+      "href": "https://api.spotify.com/v1/me/following?type=artist&limit=20"
+    }
+  },
+  "error": []
+}
