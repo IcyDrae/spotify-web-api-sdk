@@ -1,0 +1,708 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1RlnzIazwomBpkg7vHVs2s"
+      },
+      "followers": {
+        "href": null,
+        "total": 29577
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1RlnzIazwomBpkg7vHVs2s",
+      "id": "1RlnzIazwomBpkg7vHVs2s",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/9534644700c5f5a28ef2009ef27ae053e1f6719b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/534aca546e4338f7047112e072f3848f05a8073e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/84732b7d7cc5c8c347082c7388b817c402969fd8",
+          "width": 160
+        }
+      ],
+      "name": "Omar Hisham",
+      "popularity": 48,
+      "type": "artist",
+      "uri": "spotify:artist:1RlnzIazwomBpkg7vHVs2s"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/619CzMJPPWrCeZwx5qw6ko"
+      },
+      "followers": {
+        "href": null,
+        "total": 61817
+      },
+      "genres": [
+        "alt z",
+        "slap house",
+        "traprun"
+      ],
+      "href": "https://api.spotify.com/v1/artists/619CzMJPPWrCeZwx5qw6ko",
+      "id": "619CzMJPPWrCeZwx5qw6ko",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6cc733f640e4ef40fc06a092",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746cc733f640e4ef40fc06a092",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786cc733f640e4ef40fc06a092",
+          "width": 160
+        }
+      ],
+      "name": "Besomorph",
+      "popularity": 68,
+      "type": "artist",
+      "uri": "spotify:artist:619CzMJPPWrCeZwx5qw6ko"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7GnedB795OhbMbojdC3bzj"
+      },
+      "followers": {
+        "href": null,
+        "total": 189578
+      },
+      "genres": [
+        "azeri traditional",
+        "nasheed"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7GnedB795OhbMbojdC3bzj",
+      "id": "7GnedB795OhbMbojdC3bzj",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/84f430073d8cd3bac9605f65b9d1d9c6b1039844",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/732f6423e0c3284c350922a945f053015332e4aa",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/87d19239eddf77a3d995a5e2be4ab68529f3fabe",
+          "width": 160
+        }
+      ],
+      "name": "Sami Yusuf",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:7GnedB795OhbMbojdC3bzj"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7AflKiIRBursuADYrUWbvL"
+      },
+      "followers": {
+        "href": null,
+        "total": 11080
+      },
+      "genres": [
+        "quran"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7AflKiIRBursuADYrUWbvL",
+      "id": "7AflKiIRBursuADYrUWbvL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/530856d789b3c9213c28dd5b6930c148af3c849d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/7640863769e8258622a870d04bf120357e0857a5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/3274f7f23ade67177b66af34e6782835d035e0f7",
+          "width": 160
+        }
+      ],
+      "name": "Sheikh Raad Al Kurdi",
+      "popularity": 46,
+      "type": "artist",
+      "uri": "spotify:artist:7AflKiIRBursuADYrUWbvL"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1oiZoULxUJDYGOKMgVefP4"
+      },
+      "followers": {
+        "href": null,
+        "total": 30896
+      },
+      "genres": [
+        "europop",
+        "romanian pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1oiZoULxUJDYGOKMgVefP4",
+      "id": "1oiZoULxUJDYGOKMgVefP4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c1262f213b3dde40713164248557ceb510e42e45",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/bea02e223738208189912d57c558a73021f83c25",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/9b4986c55a4d5c033686ce4b75b39bb8f5fbda0d",
+          "width": 160
+        }
+      ],
+      "name": "Morandi",
+      "popularity": 49,
+      "type": "artist",
+      "uri": "spotify:artist:1oiZoULxUJDYGOKMgVefP4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/12UT5dcC6gfiZuEMiVmFOt"
+      },
+      "followers": {
+        "href": null,
+        "total": 3808
+      },
+      "genres": [
+        "quran"
+      ],
+      "href": "https://api.spotify.com/v1/artists/12UT5dcC6gfiZuEMiVmFOt",
+      "id": "12UT5dcC6gfiZuEMiVmFOt",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27320596e2fa89eba4db1018a37",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0220596e2fa89eba4db1018a37",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485120596e2fa89eba4db1018a37",
+          "width": 64
+        }
+      ],
+      "name": "Sheikh Ismail Annuri",
+      "popularity": 35,
+      "type": "artist",
+      "uri": "spotify:artist:12UT5dcC6gfiZuEMiVmFOt"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6q2a4B0AALIpVmaYE8nFAn"
+      },
+      "followers": {
+        "href": null,
+        "total": 19945
+      },
+      "genres": [
+        "nasheed"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6q2a4B0AALIpVmaYE8nFAn",
+      "id": "6q2a4B0AALIpVmaYE8nFAn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe021c2f62a77bec94a3b882d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e021c2f62a77bec94a3b882d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e021c2f62a77bec94a3b882d",
+          "width": 160
+        }
+      ],
+      "name": "Labbayk",
+      "popularity": 48,
+      "type": "artist",
+      "uri": "spotify:artist:6q2a4B0AALIpVmaYE8nFAn"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1dABGukgZ8XKKOdd2rVSHM"
+      },
+      "followers": {
+        "href": null,
+        "total": 153066
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1dABGukgZ8XKKOdd2rVSHM",
+      "id": "1dABGukgZ8XKKOdd2rVSHM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3f8ce769e7a4c355b247b0eb",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051743f8ce769e7a4c355b247b0eb",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1783f8ce769e7a4c355b247b0eb",
+          "width": 160
+        }
+      ],
+      "name": "Lofi Fruits Music",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:1dABGukgZ8XKKOdd2rVSHM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/77aATgrzmuoRjmqxPcEIHU"
+      },
+      "followers": {
+        "href": null,
+        "total": 9216
+      },
+      "genres": [
+        "lo-fi beats"
+      ],
+      "href": "https://api.spotify.com/v1/artists/77aATgrzmuoRjmqxPcEIHU",
+      "id": "77aATgrzmuoRjmqxPcEIHU",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/d539699706b9662a2636340830926ba2caaf192a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/1248b4f0e0bc664dcbbfa7017f88bd652853eed6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/998aa3fd039578f72cacaeb679e122eae01e708c",
+          "width": 160
+        }
+      ],
+      "name": "brillion.",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:77aATgrzmuoRjmqxPcEIHU"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/78vGHNiv7D9UlFxwt1wYVO"
+      },
+      "followers": {
+        "href": null,
+        "total": 5000
+      },
+      "genres": [
+        "quran"
+      ],
+      "href": "https://api.spotify.com/v1/artists/78vGHNiv7D9UlFxwt1wYVO",
+      "id": "78vGHNiv7D9UlFxwt1wYVO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273203b95855b4f0458153e8c27",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02203b95855b4f0458153e8c27",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851203b95855b4f0458153e8c27",
+          "width": 64
+        }
+      ],
+      "name": "Sheikh Mansour Al Sulaimi",
+      "popularity": 37,
+      "type": "artist",
+      "uri": "spotify:artist:78vGHNiv7D9UlFxwt1wYVO"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0LnHdW6HMPoOlNdhG3DHjE"
+      },
+      "followers": {
+        "href": null,
+        "total": 1110670
+      },
+      "genres": [
+        "afghan pop",
+        "arab pop",
+        "belly dance",
+        "lebanese pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0LnHdW6HMPoOlNdhG3DHjE",
+      "id": "0LnHdW6HMPoOlNdhG3DHjE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/850b592270955fbe6fc2b0252c7088c375484b68",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/1e01577b8c72732a2035fa1ca4509502d45cab94",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/5678c87b8110c8b2c4e030fb2bcfb37f0c0d59c5",
+          "width": 160
+        }
+      ],
+      "name": "Nancy Ajram",
+      "popularity": 60,
+      "type": "artist",
+      "uri": "spotify:artist:0LnHdW6HMPoOlNdhG3DHjE"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/53rCVzFVlyntj7jEjnY2oM"
+      },
+      "followers": {
+        "href": null,
+        "total": 6422
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/53rCVzFVlyntj7jEjnY2oM",
+      "id": "53rCVzFVlyntj7jEjnY2oM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e02ad18f354bf4c81cc1bf11005ff43facac9329",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/4c14a574609b1f2203802fa0cebcf467a01e0810",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/d4d174db1d5509cc645e85a31d861857a4425a68",
+          "width": 160
+        }
+      ],
+      "name": "Yasumu",
+      "popularity": 68,
+      "type": "artist",
+      "uri": "spotify:artist:53rCVzFVlyntj7jEjnY2oM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0wcen0V8FgQu6xYupnZMbB"
+      },
+      "followers": {
+        "href": null,
+        "total": 7932
+      },
+      "genres": [
+        "lo-fi beats"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0wcen0V8FgQu6xYupnZMbB",
+      "id": "0wcen0V8FgQu6xYupnZMbB",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/34e6ae871957d8781800e1c3344a19ff592adc36",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/9760e893f99c91e1ccde8e2f7fcc3f0da244a181",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/9879b4d767891a84d94f3766253165d13072af0f",
+          "width": 160
+        }
+      ],
+      "name": "softy",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:0wcen0V8FgQu6xYupnZMbB"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5zUSfxfP1NETZiaWt0Ui0a"
+      },
+      "followers": {
+        "href": null,
+        "total": 6379
+      },
+      "genres": [
+        "lo-fi beats"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5zUSfxfP1NETZiaWt0Ui0a",
+      "id": "5zUSfxfP1NETZiaWt0Ui0a",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/422f206a17b281c3b0880e924309f666627292f4",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/6befee05f5a2c054615858d11fe55ef6c3e83eec",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ae03609358f79d22d795d5e8a20b6944e5a25dc4",
+          "width": 160
+        }
+      ],
+      "name": "Casiio",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:5zUSfxfP1NETZiaWt0Ui0a"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7daSp9zXk1dmqNxwKFkL35"
+      },
+      "followers": {
+        "href": null,
+        "total": 54802
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/7daSp9zXk1dmqNxwKFkL35",
+      "id": "7daSp9zXk1dmqNxwKFkL35",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/2b3ed8ef6fa77e3924f76cbcbe66f7d926f85162",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e5411ab4893748d4852ab21e72a8d8de758206d4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0652aa70b2dbd2287ffb1791667666d23ad6c744",
+          "width": 160
+        }
+      ],
+      "name": "Kupla",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:7daSp9zXk1dmqNxwKFkL35"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7LWdcPFBFcRaamGjIJbPV7"
+      },
+      "followers": {
+        "href": null,
+        "total": 4727
+      },
+      "genres": [
+        "lo-fi beats"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7LWdcPFBFcRaamGjIJbPV7",
+      "id": "7LWdcPFBFcRaamGjIJbPV7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3549944eaf20c14131bc3ea8699905d36eea90ec",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/4524842ae4fc9162e8b95066ff08cbbc5dc1fbf5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/025b1dbb9ac8f1a6868980495fb6021a7a7fe81e",
+          "width": 160
+        }
+      ],
+      "name": "Laffey",
+      "popularity": 70,
+      "type": "artist",
+      "uri": "spotify:artist:7LWdcPFBFcRaamGjIJbPV7"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2tUtuhOCtTvuUUa7I4ovLF"
+      },
+      "followers": {
+        "href": null,
+        "total": 13853
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/2tUtuhOCtTvuUUa7I4ovLF",
+      "id": "2tUtuhOCtTvuUUa7I4ovLF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d052c08bdb6b4685a9e15e4d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d052c08bdb6b4685a9e15e4d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d052c08bdb6b4685a9e15e4d",
+          "width": 64
+        }
+      ],
+      "name": "Hazza Al Blushi",
+      "popularity": 42,
+      "type": "artist",
+      "uri": "spotify:artist:2tUtuhOCtTvuUUa7I4ovLF"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1bbah9s09626gweOzzLbKG"
+      },
+      "followers": {
+        "href": null,
+        "total": 4455
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1bbah9s09626gweOzzLbKG",
+      "id": "1bbah9s09626gweOzzLbKG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb950715f95e58ecfd2d8cb1ff",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174950715f95e58ecfd2d8cb1ff",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178950715f95e58ecfd2d8cb1ff",
+          "width": 160
+        }
+      ],
+      "name": "Towerz",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:1bbah9s09626gweOzzLbKG"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6TeBxtluBMQixZcKkJ3ZrB"
+      },
+      "followers": {
+        "href": null,
+        "total": 22547
+      },
+      "genres": [
+        "lo-fi beats"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6TeBxtluBMQixZcKkJ3ZrB",
+      "id": "6TeBxtluBMQixZcKkJ3ZrB",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/5af650f95d5c94d8618e027aea49becc14dba41b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/62f3978b48b4dc6fc19ab167676d6e5e113f3c95",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/7b44e1dbf1dc3e653953805ff78fc8c7847d9af8",
+          "width": 160
+        }
+      ],
+      "name": "HM Surf",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:6TeBxtluBMQixZcKkJ3ZrB"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06bun5reMRmLxFCbcB6UHW"
+      },
+      "followers": {
+        "href": null,
+        "total": 62701
+      },
+      "genres": [
+        "alt z",
+        "bass trap",
+        "modern alternative rock",
+        "traprun"
+      ],
+      "href": "https://api.spotify.com/v1/artists/06bun5reMRmLxFCbcB6UHW",
+      "id": "06bun5reMRmLxFCbcB6UHW",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb7fc0f91ac770e766bf788502",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051747fc0f91ac770e766bf788502",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1787fc0f91ac770e766bf788502",
+          "width": 160
+        }
+      ],
+      "name": "The Tech Thieves",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:06bun5reMRmLxFCbcB6UHW"
+    }
+  ],
+  "total": 50,
+  "limit": 20,
+  "offset": 0,
+  "previous": null,
+  "href": "https://api.spotify.com/v1/me/top/artists",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=20&offset=20"
+}
