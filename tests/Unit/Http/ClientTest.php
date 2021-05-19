@@ -14,7 +14,6 @@ class ClientTest extends TestCase
     private SdkInterface $sdk;
     private string $clientId = "ZYDPLLBWSK3MVQJSIYHB1OR2JXCY0X2C5UJ2QAR2MAAIT5Q";
     private string $clientSecret = "54zYUAzCFg22ek7iXjATrb0L5gA7Pjry";
-    private string $authorizationCode = "AQDvAtkS5S0JmYpxegURsqmQrMOdNBwuDXOb-hLVWa3jxZghLQEDyFU3iyAMA4aUqmzSuPdqycpXGIvaLa2ReKd4z7o0KF7xOlSDe3ZXbsBm_HDPF6xk93dCAwotZklfrbFFdccHAAPAURHlI_ZzBksPE1Ch2L2I4yYGL_weKxEKvBB_Qflh_xDqERr8jolVafmhdkzE_PXQ3Tf7wxWKfJD8GGqNmCiKBfKfnNX1K2spla7rVxqt2yjJbljPXSJdK2u7lETlB7Cdhx915tmE0_U-KW3w3Bh7XGBpMEe29712";
     private array $scopes = [
         "user-read-private",
         "user-follow-modify",
@@ -73,5 +72,9 @@ class ClientTest extends TestCase
         self::assertJson($returnValue);
 
         $this->assertIsArray($returnValueDecoded);
+        $this->assertIsInt($returnValueDecoded["userId"]);
+        $this->assertIsInt($returnValueDecoded["id"]);
+        $this->assertIsString($returnValueDecoded["title"]);
+        $this->assertIsString($returnValueDecoded["body"]);
     }
 }
