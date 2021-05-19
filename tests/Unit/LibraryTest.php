@@ -49,9 +49,9 @@ class LibraryTest extends TestCase
 
     public function testCreateLibraryInstance()
     {
-        $albums = new Library($this->sdk);
+        $library = new Library($this->sdk);
 
-        $this->assertIsObject($albums);
+        $this->assertIsObject($library);
     }
 
     public function testGetSavedAlbums()
