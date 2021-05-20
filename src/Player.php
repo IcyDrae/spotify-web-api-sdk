@@ -50,7 +50,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function getCurrentPlayback(array $options = []): string
+    public function getCurrentPlayback(array $options = []): ?string
     {
         return $this->delegate("GET", SdkConstants::PLAYER, $options);
     }
@@ -80,7 +80,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function transferPlayback(array $options = []): string
+    public function transferPlayback(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER, $options);
     }
@@ -101,7 +101,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function getAvailableDevices(array $options = []): string
+    public function getAvailableDevices(array $options = []): ?string
     {
         return $this->delegate("GET", SdkConstants::PLAYER . "/devices", $options);
     }
@@ -130,7 +130,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function getCurrentlyPlaying(array $options = []): string
+    public function getCurrentlyPlaying(array $options = []): ?string
     {
         return $this->delegate("GET", SdkConstants::PLAYER . "/currently-playing", $options);
     }
@@ -164,7 +164,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function startPlayback(array $options = []): string
+    public function startPlayback(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/play", $options);
     }
@@ -191,7 +191,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function pausePlayback(array $options = []): string
+    public function pausePlayback(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/pause", $options);
     }
@@ -218,7 +218,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function skipPlayback(array $options = []): string
+    public function skipPlayback(array $options = []): ?string
     {
         return $this->delegate("POST", SdkConstants::PLAYER . "/next", $options);
     }
@@ -247,7 +247,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function seekTrackPosition(array $options = []): string
+    public function seekTrackPosition(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/seek", $options);
     }
@@ -275,7 +275,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function setRepeatMode(array $options = []): string
+    public function setRepeatMode(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/repeat", $options);
     }
@@ -304,7 +304,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function setVolume(array $options = []): string
+    public function setVolume(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/volume", $options);
     }
@@ -333,7 +333,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function toggleShuffle(array $options = []): string
+    public function toggleShuffle(array $options = []): ?string
     {
         return $this->delegate("PUT", SdkConstants::PLAYER . "/shuffle", $options);
     }
@@ -362,7 +362,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function getRecentlyPlayed(array $options = []): string
+    public function getRecentlyPlayed(array $options = []): ?string
     {
         return $this->delegate("GET", SdkConstants::PLAYER . "/recently-played", $options);
     }
@@ -391,7 +391,7 @@ class Player extends Client
      * @throws GuzzleException
      * @return string
      */
-    public function addToQueue(array $options = []): string
+    public function addToQueue(array $options = []): ?string
     {
         return $this->delegate("POST", SdkConstants::PLAYER . "/queue", $options);
     }
