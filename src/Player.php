@@ -48,7 +48,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function getCurrentPlayback(array $options = []): ?string
     {
@@ -78,7 +78,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function transferPlayback(array $options = []): ?string
     {
@@ -99,7 +99,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function getAvailableDevices(array $options = []): ?string
     {
@@ -128,7 +128,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function getCurrentlyPlaying(array $options = []): ?string
     {
@@ -162,7 +162,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function startPlayback(array $options = []): ?string
     {
@@ -189,7 +189,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function pausePlayback(array $options = []): ?string
     {
@@ -216,7 +216,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function skipPlayback(array $options = []): ?string
     {
@@ -245,7 +245,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function seekTrackPosition(array $options = []): ?string
     {
@@ -273,7 +273,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function setRepeatMode(array $options = []): ?string
     {
@@ -302,7 +302,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function setVolume(array $options = []): ?string
     {
@@ -331,7 +331,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function toggleShuffle(array $options = []): ?string
     {
@@ -360,7 +360,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function getRecentlyPlayed(array $options = []): ?string
     {
@@ -389,7 +389,7 @@ class Player extends Client
      *
      * @param array $options (optional) Request parameters
      * @throws GuzzleException
-     * @return string
+     * @return string|null
      */
     public function addToQueue(array $options = []): ?string
     {
