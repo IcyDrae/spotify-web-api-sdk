@@ -1,0 +1,22 @@
+{
+  "devices": [
+    {
+      "id": "111349aea8bd8b11f9f9c9c21ea6f8a1872c1d59",
+      "is_active": false,
+      "is_private_session": false,
+      "is_restricted": false,
+      "name": "Web Player (Firefox)",
+      "type": "Computer",
+      "volume_percent": 100
+    },
+    {
+      "id": "554d46e88f4ad4237f481fdf0701392fb87e0970",
+      "is_active": true,
+      "is_private_session": false,
+      "is_restricted": false,
+      "name": "lnp",
+      "type": "Computer",
+      "volume_percent": 100
+    }
+  ]
+}
