@@ -1,0 +1,810 @@
+{
+  "href": "https://api.spotify.com/v1/shows/38bS44xjbVVZ3No3ByF1dJ/episodes?offset=0&limit=20",
+  "items": [
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/7be6bd18037b62b9de12f7354cf238605c6c166e",
+      "description": "Uroxar, kulande fäbodjäntor och hajpade kosläpp. Kornas historia har format oss människor och landskapet vi lever i och i en ny antologi berättas hur.  Kornas historia har format oss och våra landskap. Det visar en aktuell antologi av redaktörerna Katharina Leibring och Ingvar Svanberg som guidar runt Vetenskapsradion Historia i kohagen bland tjurpiskor, kulning, uroxar och trendiga kosläpp. Dessutom om svarar Dick Harrison på en lyssnarfråga om vikingakändisen Harald Blåtand!",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/4gCgsrm0isa2GscP9hsNzn"
+      },
+      "href": "https://api.spotify.com/v1/episodes/4gCgsrm0isa2GscP9hsNzn",
+      "html_description": "Uroxar, kulande fäbodjäntor och hajpade kosläpp. Kornas historia har format oss människor och landskapet vi lever i och i en ny antologi berättas hur. <br/><br/> Kornas historia har format oss och våra landskap. Det visar en aktuell antologi av redaktörerna Katharina Leibring och Ingvar Svanberg som guidar runt Vetenskapsradion Historia i kohagen bland tjurpiskor, kulning, uroxar och trendiga kosläpp.\nDessutom om svarar Dick Harrison på en lyssnarfråga om vikingakändisen Harald Blåtand!",
+      "id": "4gCgsrm0isa2GscP9hsNzn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a3cbc7b44950a22cc51a88ada",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f3cbc7b44950a22cc51a88ada",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d3cbc7b44950a22cc51a88ada",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Kossornas historia",
+      "release_date": "2021-05-18",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:4gCgsrm0isa2GscP9hsNzn"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/b31e3e258ae475fee55eafe6e305f3fcc254147d",
+      "description": "Vi bär på ett tungt arv ifrån rasbiologiska institutets dagar. Allt sedan Carl von Linnés dagar har tanken på att dela in människan i raser präglat oss och i Uppsala är rasforskningens spår tydliga.  Den 13 maj 1921 fattades det avgörande beslutet av en bred politisk majoritet att inrätta ett statligt rasbiologiskt institut i Sverige. Det var dåtidens spjutspetsforskning som många hoppades skulle skapa ett friskt och sunt svenskt folk, men vars idétraditioner och praktiska arbete är ett mörkt arv i svensk historia. Tobias Svanelid vandrar runt i rasbiologins Uppsala med hjälp av den nyutvecklade digitala stadsvandringen om rasismens historia i staden och träffar också författaren Maja Hagerman för att ta reda på vilka rester som fortfarande finns kvar från rasbiologins dagar.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/1tpZyXRLtZlasEPsWPbJ4w"
+      },
+      "href": "https://api.spotify.com/v1/episodes/1tpZyXRLtZlasEPsWPbJ4w",
+      "html_description": "Vi bär på ett tungt arv ifrån rasbiologiska institutets dagar. Allt sedan Carl von Linnés dagar har tanken på att dela in människan i raser präglat oss och i Uppsala är rasforskningens spår tydliga. <br/><br/> Den 13 maj 1921 fattades det avgörande beslutet av en bred politisk majoritet att inrätta ett statligt rasbiologiskt institut i Sverige. Det var dåtidens spjutspetsforskning som många hoppades skulle skapa ett friskt och sunt svenskt folk, men vars idétraditioner och praktiska arbete är ett mörkt arv i svensk historia.\nTobias Svanelid vandrar runt i rasbiologins Uppsala med hjälp av den nyutvecklade digitala stadsvandringen om rasismens historia i staden och träffar också författaren Maja Hagerman för att ta reda på vilka rester som fortfarande finns kvar från rasbiologins dagar.",
+      "id": "1tpZyXRLtZlasEPsWPbJ4w",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8adc87c83b3c2517f615cb86d2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fdc87c83b3c2517f615cb86d2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68ddc87c83b3c2517f615cb86d2",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Rasbiologiska institutet 100 år",
+      "release_date": "2021-05-11",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:1tpZyXRLtZlasEPsWPbJ4w"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/512bb60761272e4a9836e3c4a832f0fca5c7dd00",
+      "description": "Med 16000 DNA-släktingar är det svårt att ordna familjemiddag tänker Tobias och frågar DNA-släktforskaren om råd för vad han skall använda släktingarna till och om hur vår syn på släktskap förändras.  Tobias Svanelid har DNA-testat sig och fått 16000 nya potentiella släktingar. Men hur relaterar man till en avlägsen DNA-släkting och hur kan DNA-tester hjälpa släktforskare att rita sina släktträd? Peter Sjölund, DNA-släktforskare, berättar hur den nya teknologin revolutionerat släktforskningen, och historikern Adam Hjortén väcker frågan om vad DNA-tester gör med synen på oss själva och vår familj.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/3UFfYpNjxEyYXrUPrrQ1sc"
+      },
+      "href": "https://api.spotify.com/v1/episodes/3UFfYpNjxEyYXrUPrrQ1sc",
+      "html_description": "Med 16000 DNA-släktingar är det svårt att ordna familjemiddag tänker Tobias och frågar DNA-släktforskaren om råd för vad han skall använda släktingarna till och om hur vår syn på släktskap förändras. <br/><br/> Tobias Svanelid har DNA-testat sig och fått 16000 nya potentiella släktingar. Men hur relaterar man till en avlägsen DNA-släkting och hur kan DNA-tester hjälpa släktforskare att rita sina släktträd? Peter Sjölund, DNA-släktforskare, berättar hur den nya teknologin revolutionerat släktforskningen, och historikern Adam Hjortén väcker frågan om vad DNA-tester gör med synen på oss själva och vår familj.",
+      "id": "3UFfYpNjxEyYXrUPrrQ1sc",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a6e1ab0e3e08ca4e7672d5661",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f6e1ab0e3e08ca4e7672d5661",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d6e1ab0e3e08ca4e7672d5661",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "DNA revolutionerar släktforskningen",
+      "release_date": "2021-05-04",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:3UFfYpNjxEyYXrUPrrQ1sc"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/5c951ba72126bc82348f2f403dcce90c14613d32",
+      "description": "Tobias Svanelid analyserar sin \"etnicitetskarta\" utifrån DNA-testet som gjordes i samband med program nr 900. Men vad kan DNA:t egentligen berätta om vårt ursprung och hur påverkar det vår identitet?  DNA-tester blir alltmer populära i syfte att få reda på mer om sin egen släkt och sitt ursprung. De flesta DNA-företag erbjuder också etnicitetskartor, men vad kan de egentligen berätta om en människas ursprung? Tobias Svanelid testar sig själv och frågar arkeologen Anna Källén vad hans etnicitetskarta betyder. Dessutom undersöker vi hur DNA-tester kan aktivera drömmar om vikingatiden och hur DNA-studier av arkeologiska människolämningar tenderar att dela in mänskligheten i olika grupper. Och så får vi bekanta oss med Den svarte vikingen, Geirmund Heljarskinn, som med sitt DNA kan berätta en ny historia om hur Island koloniserades.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/1vG8w9zm5NdFoTIzMYDvo9"
+      },
+      "href": "https://api.spotify.com/v1/episodes/1vG8w9zm5NdFoTIzMYDvo9",
+      "html_description": "Tobias Svanelid analyserar sin \"etnicitetskarta\" utifrån DNA-testet som gjordes i samband med program nr 900. Men vad kan DNA:t egentligen berätta om vårt ursprung och hur påverkar det vår identitet? <br/><br/> DNA-tester blir alltmer populära i syfte att få reda på mer om sin egen släkt och sitt ursprung. De flesta DNA-företag erbjuder också etnicitetskartor, men vad kan de egentligen berätta om en människas ursprung? Tobias Svanelid testar sig själv och frågar arkeologen Anna Källén vad hans etnicitetskarta betyder.\nDessutom undersöker vi hur DNA-tester kan aktivera drömmar om vikingatiden och hur DNA-studier av arkeologiska människolämningar tenderar att dela in mänskligheten i olika grupper. Och så får vi bekanta oss med Den svarte vikingen, Geirmund Heljarskinn, som med sitt DNA kan berätta en ny historia om hur Island koloniserades.",
+      "id": "1vG8w9zm5NdFoTIzMYDvo9",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8ac1b5199f489a1053e67f9c87",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fc1b5199f489a1053e67f9c87",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dc1b5199f489a1053e67f9c87",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Historien i en sträng DNA",
+      "release_date": "2021-04-27",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:1vG8w9zm5NdFoTIzMYDvo9"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/e6a42f1390048ac1f5b2887d144e5de4e5a4611e",
+      "description": "Hur hade en 1600-talsmänniska förklarat coronapandemin? Vad kan 400-åriga tankar om fosterutveckling säga oss idag? Vi tar pulsen på 1600-talskroppen och hur man tänkte sig att den fungerade.  1600-talets kroppar skulle vara funktionsdugliga men var också utsatta för en ständig strid mellan gud och djävulen. Historikern Anton Runesson har undersökt hur vi för 400 år sedan såg på våra kroppar: på vad som gjorde ett foster till en människa, på hur sjukdomar smög sig in och hur man kunde botas, och hur onda och goda makter påverkade våra fysiska förmågor. Tobias Svanelid träffar honom i Härkeberga kyrka bland Albertus Pictors medeltidsmålningar för att prata näsblod och aborter, avsomnande och tidelag. Dessutom om äldre tiders fördomar om folk i andra länder och hur bilden av Sverige och svenskarna varierat genom historien.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/3HygyyR7VUS7YzFZkYTcEW"
+      },
+      "href": "https://api.spotify.com/v1/episodes/3HygyyR7VUS7YzFZkYTcEW",
+      "html_description": "Hur hade en 1600-talsmänniska förklarat coronapandemin? Vad kan 400-åriga tankar om fosterutveckling säga oss idag? Vi tar pulsen på 1600-talskroppen och hur man tänkte sig att den fungerade. <br/><br/> 1600-talets kroppar skulle vara funktionsdugliga men var också utsatta för en ständig strid mellan gud och djävulen. Historikern Anton Runesson har undersökt hur vi för 400 år sedan såg på våra kroppar: på vad som gjorde ett foster till en människa, på hur sjukdomar smög sig in och hur man kunde botas, och hur onda och goda makter påverkade våra fysiska förmågor. Tobias Svanelid träffar honom i Härkeberga kyrka bland Albertus Pictors medeltidsmålningar för att prata näsblod och aborter, avsomnande och tidelag.\nDessutom om äldre tiders fördomar om folk i andra länder och hur bilden av Sverige och svenskarna varierat genom historien.",
+      "id": "3HygyyR7VUS7YzFZkYTcEW",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a9995e90277e4d1fd7353a6d5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f9995e90277e4d1fd7353a6d5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d9995e90277e4d1fd7353a6d5",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "1600-talskroppen under lupp",
+      "release_date": "2021-04-20",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:3HygyyR7VUS7YzFZkYTcEW"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/fa59071629e4439323175f7eb5beb41b14d41cd4",
+      "description": "Hon fick leva med att vara hela 1700-talets sexsymbol. Verklighetens Ulla Winblad var en fattig flicka med kraftfullt temperament som tappade kontrollen över bilden av sig själv.  Maria Christina Kiellström hette hon  kvinnan som inspirerade Carl Michael Bellman att sjunga om Ulla Winblad. Vetenskapsradion Historia beger sig till gränderna i Gamla Stan för att tillsammans med författaren Rebecka Lennartsson söka efter spåren av verklighetens Ulla Winblad, den fattiga flickan som växte upp i ett litet Stockholm, som från början älskade uppmärksamheten från Bellmans visor, men snart kom att tappa kontrollen över bilden av sig själv som 1700-talets sexsymbol. Dessutom sammanfattar vi avgående riksantikvarien Lars Amréus nio år på posten och besvarar en lyssnarfråga om hur Digerdödens Europa handskades med social distansering. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/0s0lzqs3ogq0coJnsYojyo"
+      },
+      "href": "https://api.spotify.com/v1/episodes/0s0lzqs3ogq0coJnsYojyo",
+      "html_description": "Hon fick leva med att vara hela 1700-talets sexsymbol. Verklighetens Ulla Winblad var en fattig flicka med kraftfullt temperament som tappade kontrollen över bilden av sig själv. <br/><br/> Maria Christina Kiellström hette hon  kvinnan som inspirerade Carl Michael Bellman att sjunga om Ulla Winblad. Vetenskapsradion Historia beger sig till gränderna i Gamla Stan för att tillsammans med författaren Rebecka Lennartsson söka efter spåren av verklighetens Ulla Winblad, den fattiga flickan som växte upp i ett litet Stockholm, som från början älskade uppmärksamheten från Bellmans visor, men snart kom att tappa kontrollen över bilden av sig själv som 1700-talets sexsymbol.\nDessutom sammanfattar vi avgående riksantikvarien Lars Amréus nio år på posten och besvarar en lyssnarfråga om hur Digerdödens Europa handskades med social distansering.\nProgramledare är Tobias Svanelid.",
+      "id": "0s0lzqs3ogq0coJnsYojyo",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a76285078237d5185a4e89b59",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f76285078237d5185a4e89b59",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d76285078237d5185a4e89b59",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Verklighetens Ulla Winblad",
+      "release_date": "2021-04-13",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:0s0lzqs3ogq0coJnsYojyo"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/77716b0c683dfd0d5f8d4a39621b5db1cdbbc40b",
+      "description": "Socialister, anarkister och många andra ställde sig på barrikaderna i Paris 1871. Några veckor senare var många av dem dödade och ännu fler deporterades. Men vad var det egentligen som hände?  Våren 1871 reste sig Paris befolkning i revolution. Under dryga två månader blev staden en socialistisk ö där de valda ledarna drog upp planer på ett nytt lyckorike. Men experimentet slogs ner med en blodig invasion av den franska republikens trupper. Tobias Svanelid Pariskommunens korta historia med Håkan Blomqvist för att förstå vad som egentligen hände i Paris för 150 år sedan, hur händelserna påverkade de socialistiska rörelserna och än idag påverkar oss. Dessutom om hur Karl den Stores rike kommit att forma Europas historia fram till våra dagar.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/6wMpCrWZDOFt82yl2KY1GV"
+      },
+      "href": "https://api.spotify.com/v1/episodes/6wMpCrWZDOFt82yl2KY1GV",
+      "html_description": "Socialister, anarkister och många andra ställde sig på barrikaderna i Paris 1871. Några veckor senare var många av dem dödade och ännu fler deporterades. Men vad var det egentligen som hände? <br/><br/> Våren 1871 reste sig Paris befolkning i revolution. Under dryga två månader blev staden en socialistisk ö där de valda ledarna drog upp planer på ett nytt lyckorike. Men experimentet slogs ner med en blodig invasion av den franska republikens trupper. Tobias Svanelid Pariskommunens korta historia med Håkan Blomqvist för att förstå vad som egentligen hände i Paris för 150 år sedan, hur händelserna påverkade de socialistiska rörelserna och än idag påverkar oss.\nDessutom om hur Karl den Stores rike kommit att forma Europas historia fram till våra dagar.",
+      "id": "6wMpCrWZDOFt82yl2KY1GV",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8aec4ab3233012d3d1d45e5aec",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fec4ab3233012d3d1d45e5aec",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dec4ab3233012d3d1d45e5aec",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Pariskommunen – socialismens blodiga experiment",
+      "release_date": "2021-04-06",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:6wMpCrWZDOFt82yl2KY1GV"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/88023a426ee5244aab4a6f6d8e8908dead53a17e",
+      "description": "Det var kärleken till antiken som fick stormakterna att intervenera för grekernas sak i självständighetskriget mot Osmanska riket som drog igång för 200 år sedan.  I mars 1821 tändes gnistan till den grekiska frihetskampen mot det Osmanska riket. Och det var vurmen för den grekiska antiken som hjälpte frihetskämparna att vinna segern tio år senare. Tobias Svanelid diskuterar Greklands självständighetskrig med antikvetaren Johannes Siapkas: om hur Europa flockades under den grekiska fanan i syfte att återuppväcka och bevara den europeiska civilisationens vagga. Dessutom om vikingarnas historiesyn. Dick Harrison förklarar varför vikingarna gärna reste sina runstenar och hövdingahallar vid bronsåldershögar.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/4sSYEtx3qSbpSYf7xvPl0V"
+      },
+      "href": "https://api.spotify.com/v1/episodes/4sSYEtx3qSbpSYf7xvPl0V",
+      "html_description": "Det var kärleken till antiken som fick stormakterna att intervenera för grekernas sak i självständighetskriget mot Osmanska riket som drog igång för 200 år sedan. <br/><br/> I mars 1821 tändes gnistan till den grekiska frihetskampen mot det Osmanska riket. Och det var vurmen för den grekiska antiken som hjälpte frihetskämparna att vinna segern tio år senare. Tobias Svanelid diskuterar Greklands självständighetskrig med antikvetaren Johannes Siapkas: om hur Europa flockades under den grekiska fanan i syfte att återuppväcka och bevara den europeiska civilisationens vagga.\nDessutom om vikingarnas historiesyn. Dick Harrison förklarar varför vikingarna gärna reste sina runstenar och hövdingahallar vid bronsåldershögar.",
+      "id": "4sSYEtx3qSbpSYf7xvPl0V",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a2d6fcede4decec2506991b94",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f2d6fcede4decec2506991b94",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d2d6fcede4decec2506991b94",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Så befriade antiken Grekland",
+      "release_date": "2021-03-30",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:4sSYEtx3qSbpSYf7xvPl0V"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/ccdcfa98be980bcb8d88a9ca72dc54502fac8183",
+      "description": "Striden mellan musslor och människor vid Järle kvarn är nu avgjord. Kvarndammen får rivas, vilket kan få stora konsekvenser för platsens kulturvärden och andra dammars skydd, menar kritiker.  Dammen vid Järle kvarn ska rivas. Det beslutade Mark- och Miljödomstolen i förra veckan och Vetenskapsradion Historia återvänder till ärendet som engagerat tusentals personer och riktat sökarljuset på striden mellan naturvärden och kulturvärden i vårt land. Dessutom om staden Venedig, som i veckan firar en märklig födelsedag  sin 1 600-årsdag! Författarna Carl Tham och Carin Norberg berättar om stadens märkvärdiga ursprungsmyt och om hur staden i tusen år kämpat mot såväl smittor som klimatförändringar för sin överlevnad. Och så svarar Dick Harrison på en lyssnarfråga om den baktalade kejsaren Caligula förklarade krig mot havsguden Neptunus. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/2e514ZktH0FzL4zjTq11td"
+      },
+      "href": "https://api.spotify.com/v1/episodes/2e514ZktH0FzL4zjTq11td",
+      "html_description": "Striden mellan musslor och människor vid Järle kvarn är nu avgjord. Kvarndammen får rivas, vilket kan få stora konsekvenser för platsens kulturvärden och andra dammars skydd, menar kritiker. <br/><br/> Dammen vid Järle kvarn ska rivas. Det beslutade Mark- och Miljödomstolen i förra veckan och Vetenskapsradion Historia återvänder till ärendet som engagerat tusentals personer och riktat sökarljuset på striden mellan naturvärden och kulturvärden i vårt land.\nDessutom om staden Venedig, som i veckan firar en märklig födelsedag  sin 1 600-årsdag! Författarna Carl Tham och Carin Norberg berättar om stadens märkvärdiga ursprungsmyt och om hur staden i tusen år kämpat mot såväl smittor som klimatförändringar för sin överlevnad.\nOch så svarar Dick Harrison på en lyssnarfråga om den baktalade kejsaren Caligula förklarade krig mot havsguden Neptunus.\nProgramledare är Tobias Svanelid.",
+      "id": "2e514ZktH0FzL4zjTq11td",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/0c2cfa66c4827226e631ced3a10120118551e402",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/c74a11d9676e1741fdf1af03ef3735b182b40d8b",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/48b0c111e412b8746e464729a916f06775750933",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Järle kvarn ska rivas",
+      "release_date": "2021-03-23",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:2e514ZktH0FzL4zjTq11td"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/29892849d82d217108561740435ad78842150f35",
+      "description": "En äventyrlig upptäckare, en sävlig bonde eller self made man. Vikingen har bytt karaktär många gånger genom historien, men föddes 1811 när man behövde en superhjälte som skulle återerövra Finland.  När Sverige upplevde sin djupaste kris föddes vikingen. I stimmiga salonger på Stallmästargården i Stockholm träffades Götiska förbundet i början av 1800-talet och mejslade ut en superhjälte som man hoppades kunde rädda Sveriges ära och framtid  vikingen. Tobias Svanelid återvänder till platsen för att reda ut vikingens första stapplande steg i vår historia, och hur han kommit att förändras sedan början av 1800-talet. Vi pratar också fornegyptiska djurkyrkogårdar, mumifieringsrecept och hur städerna Lund och London egentligen hör ihop.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/0XQpQObD8hRPq1uoJ20k8H"
+      },
+      "href": "https://api.spotify.com/v1/episodes/0XQpQObD8hRPq1uoJ20k8H",
+      "html_description": "En äventyrlig upptäckare, en sävlig bonde eller self made man. Vikingen har bytt karaktär många gånger genom historien, men föddes 1811 när man behövde en superhjälte som skulle återerövra Finland. <br/><br/> När Sverige upplevde sin djupaste kris föddes vikingen. I stimmiga salonger på Stallmästargården i Stockholm träffades Götiska förbundet i början av 1800-talet och mejslade ut en superhjälte som man hoppades kunde rädda Sveriges ära och framtid  vikingen. Tobias Svanelid återvänder till platsen för att reda ut vikingens första stapplande steg i vår historia, och hur han kommit att förändras sedan början av 1800-talet.\nVi pratar också fornegyptiska djurkyrkogårdar, mumifieringsrecept och hur städerna Lund och London egentligen hör ihop.",
+      "id": "0XQpQObD8hRPq1uoJ20k8H",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a8c117ef51a3914da43cfac3d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f8c117ef51a3914da43cfac3d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d8c117ef51a3914da43cfac3d",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Så föddes vikingen",
+      "release_date": "2021-03-16",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:0XQpQObD8hRPq1uoJ20k8H"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/c4e73d2bb0aa6356e259a9f4c963d48de7f37624",
+      "description": "Visst har vi offrat människor i Sverige, menar religionshistorikern som nu har pusslat ihop ledtrådarna till en mytomspunnen tradition. Vi träffar honom och firar 900 avsnitt med DNA-svabb!  Offrade människor i heliga lundar. En suggestiv bild av vikingatiden som forskare debatterat i hundratals år. Nu kommer en ny avhandling som en gång för alla försöker reda ut om, hur och varför människor verkligen offrats i Skandinavien. Genom att använda både skrivna källor, sagoberättelser och arkeologiska spår tecknar religionshistorikern Klas Wikström af Edholm en ny bild av de mytomspunna människooffren. Dessutom firar Tobias Svanelid Vetenskapsradion Historias 900:e avsnitt genom att svabba sig för DNA. Arkeologen Anna Källén förklarar att han inte ska ha allt för höga förhoppningar på att få reda på någon sanning om sitt ursprung med hjälp av det DNA-analkyskit han använder.",
+      "duration_ms": 2683612,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/3Roh4UVvnYIJpkeGLHUY8j"
+      },
+      "href": "https://api.spotify.com/v1/episodes/3Roh4UVvnYIJpkeGLHUY8j",
+      "html_description": "Visst har vi offrat människor i Sverige, menar religionshistorikern som nu har pusslat ihop ledtrådarna till en mytomspunnen tradition. Vi träffar honom och firar 900 avsnitt med DNA-svabb! <br/><br/> Offrade människor i heliga lundar. En suggestiv bild av vikingatiden som forskare debatterat i hundratals år. Nu kommer en ny avhandling som en gång för alla försöker reda ut om, hur och varför människor verkligen offrats i Skandinavien. Genom att använda både skrivna källor, sagoberättelser och arkeologiska spår tecknar religionshistorikern Klas Wikström af Edholm en ny bild av de mytomspunna människooffren.\nDessutom firar Tobias Svanelid Vetenskapsradion Historias 900:e avsnitt genom att svabba sig för DNA. Arkeologen Anna Källén förklarar att han inte ska ha allt för höga förhoppningar på att få reda på någon sanning om sitt ursprung med hjälp av det DNA-analkyskit han använder.",
+      "id": "3Roh4UVvnYIJpkeGLHUY8j",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8ac3a8ecebbf82a24ae046688e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fc3a8ecebbf82a24ae046688e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dc3a8ecebbf82a24ae046688e",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "När vi offrade människor",
+      "release_date": "2021-03-09",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:3Roh4UVvnYIJpkeGLHUY8j"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/b1d7a737d935421d011eb7cb601088646f9b645e",
+      "description": "Hur kom det sig att lanssvingande ryttare förvandlades till artiga gentlemän som skrev höviska kärleksdikter? Vi undersöker riddarnas historia och hur mycket av deras värld som lever kvar idag.  De har anor från djupaste medeltid men påverkar oss än idag. Vetenskapsradion Historia tar pulsen på riddarnas historia. En gång i tiden beridna krigare, medeltidens elitsoldater, som med tiden skulle utvecklas till höviska gentlemän som idag håller upp dörrar och skålar artigt. Vi reder ut hur det blev så. Och så uppmärksammar vi varför veckan har just sju, och inte åtta eller tio dagar. Beslutet om sjudagarsveckan fattades i Rom för exakt 1 700 år sedan, men traditionen har ännu längre anor tillbaka till de stjärnskådande sumererna och babylonierna, berättar Dick Harrison. Programledare är Tobias Svanelid.",
+      "duration_ms": 2684997,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/1lUz10UKHTK7C2ZrygATHG"
+      },
+      "href": "https://api.spotify.com/v1/episodes/1lUz10UKHTK7C2ZrygATHG",
+      "html_description": "Hur kom det sig att lanssvingande ryttare förvandlades till artiga gentlemän som skrev höviska kärleksdikter? Vi undersöker riddarnas historia och hur mycket av deras värld som lever kvar idag. <br/><br/> De har anor från djupaste medeltid men påverkar oss än idag. Vetenskapsradion Historia tar pulsen på riddarnas historia. En gång i tiden beridna krigare, medeltidens elitsoldater, som med tiden skulle utvecklas till höviska gentlemän som idag håller upp dörrar och skålar artigt. Vi reder ut hur det blev så.\nOch så uppmärksammar vi varför veckan har just sju, och inte åtta eller tio dagar. Beslutet om sjudagarsveckan fattades i Rom för exakt 1 700 år sedan, men traditionen har ännu längre anor tillbaka till de stjärnskådande sumererna och babylonierna, berättar Dick Harrison.\nProgramledare är Tobias Svanelid.",
+      "id": "1lUz10UKHTK7C2ZrygATHG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8ad590e4fffdc960d6d67db5ca",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fd590e4fffdc960d6d67db5ca",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dd590e4fffdc960d6d67db5ca",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Riddarnas värld",
+      "release_date": "2021-03-02",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:1lUz10UKHTK7C2ZrygATHG"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/fca91193d9cd2b1e1167d6de64d1b8d536b4eecd",
+      "description": "Från att ha varit världsledande i att bygga skyddsrum är de svenska skyddsrummen nu i dåligt skick. Allt för lite görs för att underhålla skyddsrummen, menar kritiker.  Sverige är världsledande på skyddsrum  omkring 65 000 har byggs i landet och tillsammans rymmer de 7 miljoner människor. Vetenskapsradion Historia undersöker hur det kom sig att Sverige blev skyddsrumstokigt vid tiden strax före andra världskrigets utbrott och hur skyddsrummen format landet. Men vi besöker också ett av landets alla skyddsrum för att ta tempen på hur rummen mår idag. - Man har fattat ett antal felaktiga beslut som gör att det drar onödigt långt ut på tiden att få fungerande skyddsrum, säger skyddsrumsspecialisten Anders Nilsson som menar att regering och ansvariga myndigheter inte tar sitt ansvar för att bibehålla skyddsrummen i brukbart skick. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/62MsJJdirBnVlOj0aVsFuS"
+      },
+      "href": "https://api.spotify.com/v1/episodes/62MsJJdirBnVlOj0aVsFuS",
+      "html_description": "Från att ha varit världsledande i att bygga skyddsrum är de svenska skyddsrummen nu i dåligt skick. Allt för lite görs för att underhålla skyddsrummen, menar kritiker. <br/><br/> Sverige är världsledande på skyddsrum  omkring 65 000 har byggs i landet och tillsammans rymmer de 7 miljoner människor. Vetenskapsradion Historia undersöker hur det kom sig att Sverige blev skyddsrumstokigt vid tiden strax före andra världskrigets utbrott och hur skyddsrummen format landet. Men vi besöker också ett av landets alla skyddsrum för att ta tempen på hur rummen mår idag.\n- Man har fattat ett antal felaktiga beslut som gör att det drar onödigt långt ut på tiden att få fungerande skyddsrum, säger skyddsrumsspecialisten Anders Nilsson som menar att regering och ansvariga myndigheter inte tar sitt ansvar för att bibehålla skyddsrummen i brukbart skick.\nProgramledare är Tobias Svanelid.",
+      "id": "62MsJJdirBnVlOj0aVsFuS",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a4c626a26bdcad05f43eb2b2f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f4c626a26bdcad05f43eb2b2f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d4c626a26bdcad05f43eb2b2f",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Skyddsrummens Sverige på dekis",
+      "release_date": "2021-02-23",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:62MsJJdirBnVlOj0aVsFuS"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/ec07249bda8ada5875d2fd7c8c8af8de37de2d75",
+      "description": "Adolf Fredrik är mest känd för att ha ätit ihjäl sig på semlor. Men vem var han egentligen och hur stor skuld hade semlan i kungens död? Tobias Svanelid nystar i kungens - och semlans historia!  Han har påståtts varit Sveriges sämste kung och är mest känd för att ha ätit ihjäl sig på semlor. Vetenskapsradion Historia passar denna fettisdag på att uppmärksamma att det gått 250 år sedan semlekungen trillade av pinn och samtalar med historikern Mikael Alm om Adolf Fredriks misslyckade försök att få mer makt under frihetstidens Sverige. Och så reder vi ut semlans historia och skuld till kungens död. Dessutom svarar Dick Harrison på en lyssnarfråga om Romarrikets planer på att erövra Sverige. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/2Ie6XcNDbWpWHgdypwg04f"
+      },
+      "href": "https://api.spotify.com/v1/episodes/2Ie6XcNDbWpWHgdypwg04f",
+      "html_description": "Adolf Fredrik är mest känd för att ha ätit ihjäl sig på semlor. Men vem var han egentligen och hur stor skuld hade semlan i kungens död? Tobias Svanelid nystar i kungens - och semlans historia! <br/><br/> Han har påståtts varit Sveriges sämste kung och är mest känd för att ha ätit ihjäl sig på semlor. Vetenskapsradion Historia passar denna fettisdag på att uppmärksamma att det gått 250 år sedan semlekungen trillade av pinn och samtalar med historikern Mikael Alm om Adolf Fredriks misslyckade försök att få mer makt under frihetstidens Sverige. Och så reder vi ut semlans historia och skuld till kungens död.\nDessutom svarar Dick Harrison på en lyssnarfråga om Romarrikets planer på att erövra Sverige.\nProgramledare är Tobias Svanelid.",
+      "id": "2Ie6XcNDbWpWHgdypwg04f",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e8628625da263a87f7f821ed3ee6e0d3a8ad8b60",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/a20d7663b2622821811739b8851e2842c64ab74a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/71bfe9533437574de62f003039ca244691da33e4",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Adolf Fredrik och semlorna",
+      "release_date": "2021-02-16",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:2Ie6XcNDbWpWHgdypwg04f"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/14e1f88580e62acd9ef1ba2b4f507ad508166228",
+      "description": "Guldets historia är lika gammal som de äldsta civilisationerna och Vetenskapsradion Historia reder ut vad som fascinerat oss med ädelmetallen och vilken historia Sveriges guldskatter berättar.  Sedan civilisationernas gryning har guldets glimmande fascinerat oss. Vi har grävt upp det ur jorden, jagat efter det i febriga guldrusher och format vackra smycken som vi prytt våra händer med när vi gift oss eller när vi krönt våra regenter. Vetenskapsradion Historia träffar bokaktuella Anette Nyqvist och arkeologen Kent Andersson för att diskutera guldets historia. Dessutom om aktuella Netflixfilmen \"The Dig\" som berättar historien om en av tidernas viktigaste arkeologiska upptäckter  båtgraven i Sutton Hoo, som dessutom har tydliga historiska kopplingar till vendeltidens Uppland. Och så svarar Dick Harrison på en lyssnarfråga om vikingatida människooffer. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/2wVczkNPDaPK1tOyBLw3lK"
+      },
+      "href": "https://api.spotify.com/v1/episodes/2wVczkNPDaPK1tOyBLw3lK",
+      "html_description": "Guldets historia är lika gammal som de äldsta civilisationerna och Vetenskapsradion Historia reder ut vad som fascinerat oss med ädelmetallen och vilken historia Sveriges guldskatter berättar. <br/><br/> Sedan civilisationernas gryning har guldets glimmande fascinerat oss. Vi har grävt upp det ur jorden, jagat efter det i febriga guldrusher och format vackra smycken som vi prytt våra händer med när vi gift oss eller när vi krönt våra regenter. Vetenskapsradion Historia träffar bokaktuella Anette Nyqvist och arkeologen Kent Andersson för att diskutera guldets historia.\nDessutom om aktuella Netflixfilmen \"The Dig\" som berättar historien om en av tidernas viktigaste arkeologiska upptäckter  båtgraven i Sutton Hoo, som dessutom har tydliga historiska kopplingar till vendeltidens Uppland.\nOch så svarar Dick Harrison på en lyssnarfråga om vikingatida människooffer.\nProgramledare är Tobias Svanelid.",
+      "id": "2wVczkNPDaPK1tOyBLw3lK",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/556d2aa437de6eb9ea1ef1071d05a3a177dbe402",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/e91f91f10ae5bd8a88793968ff91c0a70d6023c5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/d1c3d95f1133da82a30828f0b33b20b5e041160a",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Guldets historia",
+      "release_date": "2021-02-09",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:2wVczkNPDaPK1tOyBLw3lK"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/8b44cc55814542a39c8cd12aec58fe850cc178eb",
+      "description": "Varför dränkte Kristian Tyrann abboten och flera munkar vid Nydala kloster? Vetenskapsradion Historia åker till platsen för brottet för att nysta i historien som förvandlade Kristian II till tyrann.  I februari stannade Kristian II:s soldater vid Nydala kloster i Småland. Efter att ha bjudits på mat och dryck betalade de uppehället genom att dränka både abboten och munkarna i en isvak. Vetenskapsradion Historia åker till platsen för det skändliga brottet för att förstå varför blodbadet i Nydala kunde hände  illdådet som gav upphov till öknamnet Kristian Tyrann. Dessutom hedrar vi nyss bortgångne historieförmedlaren Hans Hatte Furuhagen och besvarar en lyssnarfråga om den mytomspunna påven Johanna. Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/54BWdkuoOQtWNB3TdFWfsi"
+      },
+      "href": "https://api.spotify.com/v1/episodes/54BWdkuoOQtWNB3TdFWfsi",
+      "html_description": "Varför dränkte Kristian Tyrann abboten och flera munkar vid Nydala kloster? Vetenskapsradion Historia åker till platsen för brottet för att nysta i historien som förvandlade Kristian II till tyrann. <br/><br/> I februari stannade Kristian II:s soldater vid Nydala kloster i Småland. Efter att ha bjudits på mat och dryck betalade de uppehället genom att dränka både abboten och munkarna i en isvak. Vetenskapsradion Historia åker till platsen för det skändliga brottet för att förstå varför blodbadet i Nydala kunde hände  illdådet som gav upphov till öknamnet Kristian Tyrann.\nDessutom hedrar vi nyss bortgångne historieförmedlaren Hans Hatte Furuhagen och besvarar en lyssnarfråga om den mytomspunna påven Johanna.\nProgramledare är Tobias Svanelid.",
+      "id": "54BWdkuoOQtWNB3TdFWfsi",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f73968a1a25089a09906993274d363e23dcf5298",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/db332a2eb7d1ccd2db3ef14d78bd3ff364cba16e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/c93123ab54d8f66ecc9a4a5dd6e67085c2746a9a",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Blodbadet i Nydala kloster",
+      "release_date": "2021-02-02",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:54BWdkuoOQtWNB3TdFWfsi"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/15a31a119f632131c5d27282b376066e76d9eaef",
+      "description": "För 150 år sedan föddes det Tyska kejsardömet - för fransmännen förnedrande nog i Versailles Spegelsal. Men vilken roll kom denna nya stormakt att spela i Europas historia och för dagens tyskar?  Pickelhuvor och preussiska junkrar och mitt ibland alla den intrigmakande järnkanslern Otto von Bismarck. I januari 1871 hade han fått sin vilja igenom och kunde utropa det Tyska kejsardömet i Spegelsalen i Versailles. Tobias Svanelid och historikern Johan Östling diskuterar detta det andra tyska riket och hur det kom att uppstå som en av Europas nya stormakter. Och vad det tyska kejsardömet kom att få för konsekvenser för en tysk identitet och påstådda särväg i världshistorien. Dessutom om kvinnokrigarna i Dahomey, Afrikas amazoner, som Dick Harrison berättar om.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5NVarcon0WD2IBAgiPFAGy"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5NVarcon0WD2IBAgiPFAGy",
+      "html_description": "För 150 år sedan föddes det Tyska kejsardömet - för fransmännen förnedrande nog i Versailles Spegelsal. Men vilken roll kom denna nya stormakt att spela i Europas historia och för dagens tyskar? <br/><br/> Pickelhuvor och preussiska junkrar och mitt ibland alla den intrigmakande järnkanslern Otto von Bismarck. I januari 1871 hade han fått sin vilja igenom och kunde utropa det Tyska kejsardömet i Spegelsalen i Versailles. Tobias Svanelid och historikern Johan Östling diskuterar detta det andra tyska riket och hur det kom att uppstå som en av Europas nya stormakter. Och vad det tyska kejsardömet kom att få för konsekvenser för en tysk identitet och påstådda särväg i världshistorien.\nDessutom om kvinnokrigarna i Dahomey, Afrikas amazoner, som Dick Harrison berättar om.",
+      "id": "5NVarcon0WD2IBAgiPFAGy",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ff04a73e22d514a75412053a3012d4c8eafeb4db",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/11d8f01014e1b80353ee8a3c35d85fa2a07193ed",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/0f30dbfcbb7608a611667aeb73d333fedc92fd43",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "När Tyskland föddes",
+      "release_date": "2021-01-26",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:5NVarcon0WD2IBAgiPFAGy"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/626714fc3f68a6412c79cf25a8ad9ef134f71c0d",
+      "description": "Tobias Svanelid testar Gustav II Adolfs schack och kortlekar för att komma barockmänniskan närmre. Spelande är ett uråldrigt mänskligt intresse och idag blir historiska brädspel allt mer populära.  I juni 1631 fick Gustav II Adolf en furstlig gåva av staden Augsburg, ett konstskåp fullpackat av brädspel. Tobias Svanelid och konstvetaren Greger Sundin testar de fyrahundraåriga spelen för att försöka komma barockmänniskan närmare. För känslan av frustration över dåliga tärningskast och otur i kortspel är evig, hävdar Greger Sundin som disputerat på en avhandling om 1600-talsspelens historia. Dessutom om hur man idag tillverkar brädspel som handlar om historia. Speldesignern Jon Manker menar att vårt behov av spel är äldre än mänskligheten och att brädspelande idag kan fylla en viktig funktion för att väcka vårt intresse för historia  och för att utveckla vår hjärna! Och så svarar Dick Harrison på en lyssnarfråga om den mytomspunna staden Troja.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5DBEpiO9xAkCQBvaStnBGn"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5DBEpiO9xAkCQBvaStnBGn",
+      "html_description": "Tobias Svanelid testar Gustav II Adolfs schack och kortlekar för att komma barockmänniskan närmre. Spelande är ett uråldrigt mänskligt intresse och idag blir historiska brädspel allt mer populära. <br/><br/> I juni 1631 fick Gustav II Adolf en furstlig gåva av staden Augsburg, ett konstskåp fullpackat av brädspel. Tobias Svanelid och konstvetaren Greger Sundin testar de fyrahundraåriga spelen för att försöka komma barockmänniskan närmare. För känslan av frustration över dåliga tärningskast och otur i kortspel är evig, hävdar Greger Sundin som disputerat på en avhandling om 1600-talsspelens historia.\nDessutom om hur man idag tillverkar brädspel som handlar om historia. Speldesignern Jon Manker menar att vårt behov av spel är äldre än mänskligheten och att brädspelande idag kan fylla en viktig funktion för att väcka vårt intresse för historia  och för att utveckla vår hjärna!\nOch så svarar Dick Harrison på en lyssnarfråga om den mytomspunna staden Troja.",
+      "id": "5DBEpiO9xAkCQBvaStnBGn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/56b7eaac1e0d05ea732bd039b1537489791c7ea6",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/fc63b3446b3907866dc4ad2bce5a618f0cc152dc",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/75e757e115c0c939783b71f67fb4ac96c4a388e1",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Vårt eviga behov av brädspel",
+      "release_date": "2021-01-19",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:5DBEpiO9xAkCQBvaStnBGn"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/fa4f861fb84eba20b4e5b73155bd12adeca9fc92",
+      "description": "Från början var de 16 morska dalkarlar som skulle skydda Gustav Vasa. Femhundra år senare har Livgardet kämpat i drygt trettio krig och räknas nu som ett av världens äldsta militära förband.  I januari 1521 avdelades 16 dalkarlar att vakta den blivande kungen Gustav Vasa. Femhundra år senare har Livgardet kämpat i över trettio krig och deltagit i flertalet internationella insatser. Urban Björstadius besöker femhundraåringen för att ta reda på det rekordgamla regementets historia och hur man idag arbetar för att bevara historien. Dessutom svarar Dick Harrison på en lyssnarfråga om ättestuporna  har de någonsin funnits? Programledare är Tobias Svanelid.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/56kZgrGPTznOJCSfVPRQ65"
+      },
+      "href": "https://api.spotify.com/v1/episodes/56kZgrGPTznOJCSfVPRQ65",
+      "html_description": "Från början var de 16 morska dalkarlar som skulle skydda Gustav Vasa. Femhundra år senare har Livgardet kämpat i drygt trettio krig och räknas nu som ett av världens äldsta militära förband. <br/><br/> I januari 1521 avdelades 16 dalkarlar att vakta den blivande kungen Gustav Vasa. Femhundra år senare har Livgardet kämpat i över trettio krig och deltagit i flertalet internationella insatser. Urban Björstadius besöker femhundraåringen för att ta reda på det rekordgamla regementets historia och hur man idag arbetar för att bevara historien.\nDessutom svarar Dick Harrison på en lyssnarfråga om ättestuporna  har de någonsin funnits?\nProgramledare är Tobias Svanelid.",
+      "id": "56kZgrGPTznOJCSfVPRQ65",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/88bfaec6b9c5725ec298922ce64040ea41e04fd6",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/401e834435a3f5701c1b6a8d1c485abaaa332ed8",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/f828c609e7ded647a68c49e5085510662a8e23be",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Livgardet 500 år",
+      "release_date": "2021-01-12",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:56kZgrGPTznOJCSfVPRQ65"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/fbee250421916cd49299e2e4491118e44e248c84",
+      "description": "För femtio år sedan gick det svenska tvåkammarsystemet i graven, ett politiskt system som skulle modernisera Sverige men istället konserverade en gammal ordning, men till slut stärkte folkhemsbygget.  Den skulle modernisera ett Sverige som på 1800-talet fortfarande använde sig av ett medeltida politiskt system, men i och med demokratins genombrott kom tvåkammarriksdagen istället att bana vägen för en stark socialdemokrati. Tobias Svanelid vandrar tillsammans med historieprofessor Torbjörn Nilsson från nya till gamla riksdagshuset för att berätta om ett parlamentarisk modell som gick i graven för femtio år sedan och som idag sörjs av få  tvåkammarriksdagen. Dessutom om 2020 års viktigaste arkeologiska upptäckter. Urban Björstadius har botaniserat bland mammuthus och Romulustempel för att utse de tio mest iögonenfallande fynden.",
+      "duration_ms": 2685023,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/2CwLJsKqwM0VQRbKrnreNZ"
+      },
+      "href": "https://api.spotify.com/v1/episodes/2CwLJsKqwM0VQRbKrnreNZ",
+      "html_description": "För femtio år sedan gick det svenska tvåkammarsystemet i graven, ett politiskt system som skulle modernisera Sverige men istället konserverade en gammal ordning, men till slut stärkte folkhemsbygget. <br/><br/> Den skulle modernisera ett Sverige som på 1800-talet fortfarande använde sig av ett medeltida politiskt system, men i och med demokratins genombrott kom tvåkammarriksdagen istället att bana vägen för en stark socialdemokrati. Tobias Svanelid vandrar tillsammans med historieprofessor Torbjörn Nilsson från nya till gamla riksdagshuset för att berätta om ett parlamentarisk modell som gick i graven för femtio år sedan och som idag sörjs av få  tvåkammarriksdagen.\nDessutom om 2020 års viktigaste arkeologiska upptäckter. Urban Björstadius har botaniserat bland mammuthus och Romulustempel för att utse de tio mest iögonenfallande fynden.",
+      "id": "2CwLJsKqwM0VQRbKrnreNZ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/9ec4c55a32b8df126c6a15943b7b42e79f24c09c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/26a792c2e57e2a776c7f8d58d79b05f7658748cd",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/1334fb858d43e64e300df0e0b97f71f9acb391a3",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Tvåkammarriksdagen – från adelsnäste till folkhemsbygge",
+      "release_date": "2021-01-05",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:2CwLJsKqwM0VQRbKrnreNZ"
+    }
+  ],
+  "limit": 20,
+  "next": "https://api.spotify.com/v1/shows/38bS44xjbVVZ3No3ByF1dJ/episodes?offset=20&limit=20",
+  "offset": 0,
+  "previous": null,
+  "total": 500
+}
