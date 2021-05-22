@@ -166,16 +166,4 @@ class TracksTest extends TestCase
         $this->assertIsArray($returnValueDecoded);
         $this->assertIsArray($returnValueDecoded["track"]);
     }
-
-
-
-    /*
-
-    public function getAudioAnalysisForSingle(string $id, array $options = []): string
-    {
-        return $this->delegate("GET", SdkConstants::API_VERSION . "/audio-analysis/$id", $options);
-    }
-
-    */
-
 }
