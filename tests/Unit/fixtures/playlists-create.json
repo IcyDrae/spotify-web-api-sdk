@@ -1,0 +1,39 @@
+{
+  "collaborative": false,
+  "description": null,
+  "external_urls": {
+    "spotify": "https://open.spotify.com/playlist/1VxeR9DQA7wIm8PIGgISpT"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/playlists/1VxeR9DQA7wIm8PIGgISpT",
+  "id": "1VxeR9DQA7wIm8PIGgISpT",
+  "images": [],
+  "name": "client_test",
+  "owner": {
+    "display_name": "reard.gjoni97",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/user/reard.gjoni97"
+    },
+    "href": "https://api.spotify.com/v1/users/reard.gjoni97",
+    "id": "reard.gjoni97",
+    "type": "user",
+    "uri": "spotify:user:reard.gjoni97"
+  },
+  "primary_color": null,
+  "public": true,
+  "snapshot_id": "MSwyMTEyYWI5ODZlODdiMjcxNDMyNWY3ZDhhMTVhY2Q3MjVlNTI4Y2Fi",
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/1VxeR9DQA7wIm8PIGgISpT/tracks",
+    "items": [],
+    "limit": 100,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 0
+  },
+  "type": "playlist",
+  "uri": "spotify:playlist:1VxeR9DQA7wIm8PIGgISpT"
+}

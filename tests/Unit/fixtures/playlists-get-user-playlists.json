@@ -1,0 +1,56 @@
+{
+  "href": "https://api.spotify.com/v1/users/test/playlists?offset=0&limit=1",
+  "items": [
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0q4gZc1nWc5T0mmkld0RgN"
+      },
+      "href": "https://api.spotify.com/v1/playlists/0q4gZc1nWc5T0mmkld0RgN",
+      "id": "0q4gZc1nWc5T0mmkld0RgN",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27337cd18af5725b9cad0a5ab53ab67616d0000b273420b2459f35e0fc98bcab288ab67616d0000b2738ceef58faf41b68765ed94c0ab67616d0000b273c35e2f0ae41e675a6930cb70",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27337cd18af5725b9cad0a5ab53ab67616d0000b273420b2459f35e0fc98bcab288ab67616d0000b2738ceef58faf41b68765ed94c0ab67616d0000b273c35e2f0ae41e675a6930cb70",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27337cd18af5725b9cad0a5ab53ab67616d0000b273420b2459f35e0fc98bcab288ab67616d0000b2738ceef58faf41b68765ed94c0ab67616d0000b273c35e2f0ae41e675a6930cb70",
+          "width": 60
+        }
+      ],
+      "name": "asf",
+      "owner": {
+        "display_name": "Test Test",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/test"
+        },
+        "href": "https://api.spotify.com/v1/users/test",
+        "id": "test",
+        "type": "user",
+        "uri": "spotify:user:test"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "NDQsMjFlNGUzN2FhOTFiMTU1ODcxMTVlNDQ1NGYzNDlhYTdlN2VmYzJlNQ==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0q4gZc1nWc5T0mmkld0RgN/tracks",
+        "total": 16
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:0q4gZc1nWc5T0mmkld0RgN"
+    }
+  ],
+  "limit": 1,
+  "next": "https://api.spotify.com/v1/users/test/playlists?offset=1&limit=1",
+  "offset": 0,
+  "previous": null,
+  "total": 85
+}

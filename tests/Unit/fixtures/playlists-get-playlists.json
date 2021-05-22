@@ -1,0 +1,190 @@
+{
+  "href": "https://api.spotify.com/v1/users/reard.gjoni97/playlists?offset=0&limit=5",
+  "items": [
+    {
+      "collaborative": false,
+      "description": "Chill under the stars with this instrumental playlist. Cover: Sami Yusuf.",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX1SGz4XfZKy2"
+      },
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1SGz4XfZKy2",
+      "id": "37i9dQZF1DX1SGz4XfZKy2",
+      "images": [
+        {
+          "height": null,
+          "url": "https://i.scdn.co/image/ab67706f0000000310b2964abac03e8c311ccea8",
+          "width": null
+        }
+      ],
+      "name": "Stargazer",
+      "owner": {
+        "display_name": "Spotify",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/spotify"
+        },
+        "href": "https://api.spotify.com/v1/users/spotify",
+        "id": "spotify",
+        "type": "user",
+        "uri": "spotify:user:spotify"
+      },
+      "primary_color": null,
+      "public": false,
+      "snapshot_id": "MTYyMTYzNzQwMywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1SGz4XfZKy2/tracks",
+        "total": 60
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1DX1SGz4XfZKy2"
+    },
+    {
+      "collaborative": false,
+      "description": "Electronic music with Oriental and Mediterranean influences.",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXd9vfK9DV3I6"
+      },
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXd9vfK9DV3I6",
+      "id": "37i9dQZF1DXd9vfK9DV3I6",
+      "images": [
+        {
+          "height": null,
+          "url": "https://i.scdn.co/image/ab67706f000000037647f41b7ff93fa9af86b4c2",
+          "width": null
+        }
+      ],
+      "name": "mosaic",
+      "owner": {
+        "display_name": "Spotify",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/spotify"
+        },
+        "href": "https://api.spotify.com/v1/users/spotify",
+        "id": "spotify",
+        "type": "user",
+        "uri": "spotify:user:spotify"
+      },
+      "primary_color": null,
+      "public": false,
+      "snapshot_id": "MTYyMTYzNzQwMywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXd9vfK9DV3I6/tracks",
+        "total": 75
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1DXd9vfK9DV3I6"
+    },
+    {
+      "collaborative": false,
+      "description": "24 hours of music for 24 hours of conference. ",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/1TXQMjc32Hb0a2ZxbttfAS"
+      },
+      "href": "https://api.spotify.com/v1/playlists/1TXQMjc32Hb0a2ZxbttfAS",
+      "id": "1TXQMjc32Hb0a2ZxbttfAS",
+      "images": [
+        {
+          "height": null,
+          "url": "https://i.scdn.co/image/ab67706c0000bebb96e27e59ec1d76bc14a6eec9",
+          "width": null
+        }
+      ],
+      "name": "deploy by DigitalOcean",
+      "owner": {
+        "display_name": "Sammy DiOcean",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/digitaloceanmusic"
+        },
+        "href": "https://api.spotify.com/v1/users/digitaloceanmusic",
+        "id": "digitaloceanmusic",
+        "type": "user",
+        "uri": "spotify:user:digitaloceanmusic"
+      },
+      "primary_color": null,
+      "public": false,
+      "snapshot_id": "NDQyLDFlZTJhZTI4N2NjN2Y2NDI1NzRmNzMxZjRhZTcyOWZiYmMxOGRhZjM=",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/1TXQMjc32Hb0a2ZxbttfAS/tracks",
+        "total": 403
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:1TXQMjc32Hb0a2ZxbttfAS"
+    },
+    {
+      "collaborative": false,
+      "description": "Chill techno and tech house.",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0r3x8OtiwEM"
+      },
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0r3x8OtiwEM",
+      "id": "37i9dQZF1DX0r3x8OtiwEM",
+      "images": [
+        {
+          "height": null,
+          "url": "https://i.scdn.co/image/ab67706f00000003895015c72e8b9e48809569e3",
+          "width": null
+        }
+      ],
+      "name": "Lowkey Tech",
+      "owner": {
+        "display_name": "Spotify",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/spotify"
+        },
+        "href": "https://api.spotify.com/v1/users/spotify",
+        "id": "spotify",
+        "type": "user",
+        "uri": "spotify:user:spotify"
+      },
+      "primary_color": null,
+      "public": false,
+      "snapshot_id": "MTYyMTYzNzQwMywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0r3x8OtiwEM/tracks",
+        "total": 60
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1DX0r3x8OtiwEM"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/4BdKVuVoUJBcy5sz6AM7zI"
+      },
+      "href": "https://api.spotify.com/v1/playlists/4BdKVuVoUJBcy5sz6AM7zI",
+      "id": "4BdKVuVoUJBcy5sz6AM7zI",
+      "images": [
+        {
+          "height": null,
+          "url": "https://i.scdn.co/image/ab67706c0000bebb3161f897d7e9a8aaee3a0d2e",
+          "width": null
+        }
+      ],
+      "name": "Pop / Synthpop",
+      "owner": {
+        "display_name": "Madison Porter",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/positron_dream"
+        },
+        "href": "https://api.spotify.com/v1/users/positron_dream",
+        "id": "positron_dream",
+        "type": "user",
+        "uri": "spotify:user:positron_dream"
+      },
+      "primary_color": null,
+      "public": false,
+      "snapshot_id": "MTIyLDAxYmQ2OWNjZGE0OWJlYzYwZWZiNzJlZmZkZTA4YmY0YjllZGZiMzM=",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/4BdKVuVoUJBcy5sz6AM7zI/tracks",
+        "total": 264
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:4BdKVuVoUJBcy5sz6AM7zI"
+    }
+  ],
+  "limit": 5,
+  "next": "https://api.spotify.com/v1/users/reard.gjoni97/playlists?offset=5&limit=5",
+  "offset": 0,
+  "previous": null,
+  "total": 21
+}
