@@ -47,7 +47,7 @@ class ArtistsTest extends TestCase
         return $mock;
     }
 
-    public function testCreateAlbumsInstance()
+    public function testCreateArtistsInstance()
     {
         $artists = new Artists($this->sdk);
 

@@ -60,13 +60,13 @@ class MarketsTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $markets = $this->setUpMockObject(
             "getAvailable",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getAvailable([])
+            $markets->getAvailable([])
         );
 
         self::assertJson($returnValue);

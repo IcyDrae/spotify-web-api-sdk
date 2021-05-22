@@ -60,13 +60,13 @@ class PersonalizationTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $personalization = $this->setUpMockObject(
             "getTop",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getTop("tracks", [])
+            $personalization->getTop("tracks", [])
         );
 
         self::assertJson($returnValue);
@@ -81,13 +81,13 @@ class PersonalizationTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $personalization = $this->setUpMockObject(
             "getTop",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getTop("tracks", [])
+            $personalization->getTop("tracks", [])
         );
 
         self::assertJson($returnValue);

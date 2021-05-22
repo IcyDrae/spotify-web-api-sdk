@@ -60,13 +60,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "getSavedAlbums",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getSavedAlbums([])
+            $library->getSavedAlbums([])
         );
 
         self::assertJson($returnValue);
@@ -77,13 +77,13 @@ class LibraryTest extends TestCase
 
     public function testSaveAlbums()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "saveAlbums",
             '');
 
         $this->assertEquals(
             '',
-            $albums->saveAlbums([
+            $library->saveAlbums([
                 "query_params" => [
                     "ids" => "07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws"
                 ]
@@ -93,13 +93,13 @@ class LibraryTest extends TestCase
 
     public function testRemoveAlbums()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "removeAlbums",
             '');
 
         $this->assertEquals(
             '',
-            $albums->removeAlbums([
+            $library->removeAlbums([
                 "query_params" => [
                     "ids" => "07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws"
                 ]
@@ -112,13 +112,13 @@ class LibraryTest extends TestCase
         $response = getFixture("library-check-saved-albums");
         $returnValue = $response;
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "checkSavedAlbums",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->checkSavedAlbums([
+            $library->checkSavedAlbums([
                 "query_params" => [
                     "ids" => "07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws"
                 ]
@@ -134,13 +134,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "getSavedTracks",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getSavedTracks([])
+            $library->getSavedTracks([])
         );
 
         self::assertJson($returnValue);
@@ -151,25 +151,25 @@ class LibraryTest extends TestCase
 
     public function testSaveTracks()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "saveTracks",
             '');
 
         $this->assertEquals(
             '',
-            $albums->saveTracks([])
+            $library->saveTracks([])
         );
     }
 
     public function testRemoveTracks()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "removeTracks",
             '');
 
         $this->assertEquals(
             '',
-            $albums->removeTracks([])
+            $library->removeTracks([])
         );
     }
 
@@ -179,13 +179,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "getSavedEpisodes",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getSavedEpisodes([])
+            $library->getSavedEpisodes([])
         );
 
         self::assertJson($returnValue);
@@ -196,25 +196,25 @@ class LibraryTest extends TestCase
 
     public function testSaveEpisodes()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "saveEpisodes",
             '');
 
         $this->assertEquals(
             '',
-            $albums->saveEpisodes([])
+            $library->saveEpisodes([])
         );
     }
 
     public function testRemoveEpisodes()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "removeEpisodes",
             '');
 
         $this->assertEquals(
             '',
-            $albums->removeEpisodes([])
+            $library->removeEpisodes([])
         );
     }
 
@@ -224,13 +224,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "checkSavedEpisodes",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->checkSavedEpisodes([
+            $library->checkSavedEpisodes([
                 "query_params" => [
                     "ids" => "77o6BIVlYM3msb4MMIL1jH,0Q86acNRm6V9GYx55SXKwf"
                 ]
@@ -248,13 +248,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "getSavedShows",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->getSavedShows([])
+            $library->getSavedShows([])
         );
 
         self::assertJson($returnValue);
@@ -265,13 +265,13 @@ class LibraryTest extends TestCase
 
     public function testSaveShows()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "saveShows",
             '');
 
         $this->assertEquals(
             '',
-            $albums->saveShows([
+            $library->saveShows([
                 "query_params" => [
                     "ids" => "5AvwZVawapvyhJUIx71pdJ,6ups0LMt1G8n81XLlkbsPo,5AvwZVawapvyhJUIx71pdJ"
                 ]
@@ -281,13 +281,13 @@ class LibraryTest extends TestCase
 
     public function testRemoveShows()
     {
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "removeShows",
             '');
 
         $this->assertEquals(
             '',
-            $albums->removeShows([
+            $library->removeShows([
                 "query_params" => [
                     "ids" => "5AvwZVawapvyhJUIx71pdJ,6ups0LMt1G8n81XLlkbsPo,5AvwZVawapvyhJUIx71pdJ"
                 ]
@@ -301,13 +301,13 @@ class LibraryTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $library = $this->setUpMockObject(
             "checkSavedShows",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->checkSavedShows([
+            $library->checkSavedShows([
                 "query_params" => [
                     "ids" => "5AvwZVawapvyhJUIx71pdJ,6ups0LMt1G8n81XLlkbsPo,5AvwZVawapvyhJUIx71pdJ"
                 ]

@@ -60,13 +60,13 @@ class SearchTest extends TestCase
         $returnValue = $response;
         $returnValueDecoded = json_decode($returnValue, true);
 
-        $albums = $this->setUpMockObject(
+        $search = $this->setUpMockObject(
             "get",
             $returnValue);
 
         $this->assertEquals(
             $returnValue,
-            $albums->get([
+            $search->get([
                 "query_params" => [
                     "q" => "roadhouse%20blues",
                     "type" => "track"
