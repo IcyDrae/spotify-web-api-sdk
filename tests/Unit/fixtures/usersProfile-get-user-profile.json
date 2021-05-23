@@ -1,0 +1,21 @@
+{
+  "display_name": "ray",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/ray"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/users/ray",
+  "id": "ray",
+  "images": [
+    {
+      "height": null,
+      "url": "https://i.scdn.co/image/ab6775700000ee85813412c74a74e6ad377e2b62",
+      "width": null
+    }
+  ],
+  "type": "user",
+  "uri": "spotify:user:ray"
+}

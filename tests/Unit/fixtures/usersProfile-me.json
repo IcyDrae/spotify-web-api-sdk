@@ -1,0 +1,22 @@
+{
+  "country": "DE",
+  "display_name": "reard.gjoni97",
+  "email": "gjoni-r@hotmail.com",
+  "explicit_content": {
+    "filter_enabled": true,
+    "filter_locked": false
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/reard.gjoni97"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/users/reard.gjoni97",
+  "id": "reard.gjoni97",
+  "images": [],
+  "product": "premium",
+  "type": "user",
+  "uri": "spotify:user:reard.gjoni97"
+}

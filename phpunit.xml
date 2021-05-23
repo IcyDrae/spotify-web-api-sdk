@@ -5,8 +5,26 @@
     <testsuites>
         <testsuite name="Spotify Web API SDK Unit Tests">
             <file>tests/Unit/SdkTest.php</file>
-            <file>tests/Unit/ResponseTest.php</file>
-            <file>tests/Unit/AuthorizationTest.php</file>
+            <file>tests/Unit/Http/OutputTest.php</file>
+            <file>tests/Unit/Http/ResponseTest.php</file>
+            <file>tests/Unit/Http/ClientTest.php</file>
+            <file>tests/Unit/Authorization/AuthorizationCodeTest.php</file>
+            <file>tests/Unit/Authorization/AuthorizationCodePKCETest.php</file>
+            <file>tests/Unit/Authorization/ClientCredentialsTest.php</file>
+            <file>tests/Unit/AlbumsTest.php</file>
+            <file>tests/Unit/ArtistsTest.php</file>
+            <file>tests/Unit/BrowseTest.php</file>
+            <file>tests/Unit/EpisodesTest.php</file>
+            <file>tests/Unit/FollowTest.php</file>
+            <file>tests/Unit/LibraryTest.php</file>
+            <file>tests/Unit/MarketsTest.php</file>
+            <file>tests/Unit/PersonalizationTest.php</file>
+            <file>tests/Unit/PlayerTest.php</file>
+            <file>tests/Unit/PlaylistsTest.php</file>
+            <file>tests/Unit/SearchTest.php</file>
+            <file>tests/Unit/ShowsTest.php</file>
+            <file>tests/Unit/TracksTest.php</file>
+            <file>tests/Unit/UsersProfileTest.php</file>
         </testsuite>
     </testsuites>
     <coverage cacheDirectory=".phpunit-coverage-cache">
