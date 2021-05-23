@@ -64,37 +64,4 @@ class ResponseTest extends TestCase
             )
         );
     }
-
-    public function testJsonResponseError()
-    {
-        $response = new Response();
-
-        $error = [
-            "message" => "Unauthorized request to API",
-            "code" => 401,
-        ];
-
-        $output = $response->json(
-            new Output([], $error)
-        );
-        $outputDecoded = json_decode($output, true);
-
-        self::assertJson(
-            $output,
-            "The response is not JSON format."
-        );
-
-        $this->assertTrue(
-            !empty(
-                $outputDecoded["error"]
-            )
-        );
-
-        $this->assertTrue(
-            empty(
-                $outputDecoded["data"]
-            )
-        );
-    }
-
 }

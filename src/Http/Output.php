@@ -17,20 +17,13 @@ class Output implements \JsonSerializable
     private mixed $data;
 
     /**
-     * @var array $error The error representation, if one occurred.
-     */
-    private array $error;
-
-    /**
      * Output constructor.
      *
      * @param array|null $data
-     * @param array $error
      */
-    public function __construct(?array $data, array $error)
+    public function __construct(?array $data)
     {
         $this->data = $data;
-        $this->error = $error;
     }
 
     /**
@@ -40,7 +33,6 @@ class Output implements \JsonSerializable
     {
         return [
             "data" => $this->data,
-            "error" => $this->error
         ];
     }
 }

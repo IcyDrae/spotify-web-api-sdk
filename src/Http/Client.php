@@ -12,7 +12,7 @@ use Gjoni\SpotifyWebApiSdk\SdkConstants;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Message;
+use Gjoni\SpotifyWebApiSdk\Exception\AccessTokenExpiredException;
 
 /**
  * Main request class, handling every request for every API, providing a reusable delegate method.
@@ -31,11 +31,6 @@ class Client extends GuzzleClient
      * @var array|null $data The response data.
      */
     protected ?array $data = [];
-
-    /**
-     * @var array $error The response error.
-     */
-    protected array $error = [];
 
     /**
      * @var int $statusCode The response status code.
@@ -78,16 +73,14 @@ class Client extends GuzzleClient
      * Use <b>$options['query_params']</b> for optional query parameters such as limit, offset etc.
      * @return string|null Json response
      * @throws GuzzleException
+     * @throws AccessTokenExpiredException
      */
     public function delegate(string $method,
-                          string $path,
-                          array $options): ?string
+                             string $path,
+                             array $options): ?string
     {
         if (empty($this->sdk->getAccessToken())) {
-            return $this->response->json(
-                new Output($this->data, ["message" => "Access token has expired."]),
-                401
-            );
+            throw new AccessTokenExpiredException();
         }
 
         $accessToken = $this->sdk->getAccessToken();
@@ -126,21 +119,11 @@ class Client extends GuzzleClient
             $this->data = $body;
             $this->statusCode = $request->getStatusCode();
         } catch (RequestException $exception) {
-            if ($exception->hasResponse()) {
-                $request = Message::toString($exception->getRequest());
-            }
-
-            $this->error = [
-                "message" => $exception->getMessage(),
-                "code" => $exception->getCode(),
-                "request" => $request ?? '',
-                "trace" => $exception->getTrace()
-            ];
-            $this->statusCode = $exception->getCode();
+            throw $exception;
         }
 
         return $this->response->json(
-            new Output($this->data, $this->error),
+            new Output($this->data),
             $this->statusCode
         );
     }

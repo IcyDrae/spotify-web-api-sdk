@@ -94,7 +94,7 @@ abstract class AbstractAuthorization extends Client
         ];
 
         return $this->response->json(
-            new Output($this->data, $this->error),
+            new Output($this->data),
         );
     }
 
@@ -170,19 +170,11 @@ abstract class AbstractAuthorization extends Client
             $this->data = $body;
             $this->statusCode = $request->getStatusCode();
         } catch (RequestException $exception) {
-            if ($exception->hasResponse()) {
-                $request = Message::toString($exception->getRequest());
-            }
-
-            $this->error = [
-                "message" => $exception->getMessage(),
-                "request" => $request ?? ''
-            ];
-            $this->statusCode = $exception->getCode();
+            throw $exception;
         }
 
         return $this->response->json(
-            new Output($this->data, $this->error),
+            new Output($this->data),
             $this->statusCode
         );
     }
