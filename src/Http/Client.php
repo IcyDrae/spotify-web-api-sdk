@@ -15,7 +15,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Message;
 
 /**
- * Serves as a boilerplate with client and request parameters for our specific needs
+ * Main request class, handling every request for every API, providing a reusable delegate method.
  *
  * @package SpotifyAPI\Http
  * @author Reard Gjoni <gjoni-r@hotmail.com>
@@ -83,12 +83,14 @@ class Client extends GuzzleClient
                           string $path,
                           array $options): ?string
     {
-        if (!$accessToken = $this->sdk->getAccessToken()) {
+        if (empty($this->sdk->getAccessToken())) {
             return $this->response->json(
                 new Output($this->data, ["message" => "Access token has expired."]),
                 401
             );
         }
+
+        $accessToken = $this->sdk->getAccessToken();
 
         if (!isset($options["headers"])) {
             $options["headers"] = [];
