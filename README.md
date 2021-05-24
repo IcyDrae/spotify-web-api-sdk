@@ -1,9 +1,8 @@
 
-![GitHub](https://img.shields.io/github/license/ReardGjoni/spotify-api-wrapper?style=flat-square)
-![GitHub](https://img.shields.io/github/v/release/reardgjoni/spotify-web-api-sdk?style=flat-square)
-![GitHub](https://img.shields.io/packagist/v/rgjoni/spotify-web-api-sdk?style=flat-square)
-![GitHub](https://img.shields.io/github/last-commit/reardgjoni/spotify-web-api-sdk/main)
-
+![GitHub](https://img.shields.io/github/license/ReardGjoni/spotify-web-api-sdk?style=flat-square)
+![GitHub](https://img.shields.io/github/v/release/ReardGjoni/spotify-web-api-sdk?style=flat-square)
+![packagist](https://img.shields.io/packagist/v/rgjoni/spotify-web-api-sdk?style=flat-square)
+![GitHub](https://img.shields.io/github/last-commit/ReardGjoni/spotify-web-api-sdk/main?style=flat-square)
 
 # Spotify Web API SDK
 
@@ -360,7 +359,7 @@ by the project.
 
 ## Contributing
 
-Pull requests and issues are welcome, please refer to [CONTRIBUTING.md](docs/CONTRIBUTORS.md)
+Pull requests and issues are welcome, please refer to [CONTRIBUTORS.md](docs/CONTRIBUTORS.md)
 
 ## License
 
