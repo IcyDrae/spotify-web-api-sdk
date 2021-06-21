@@ -57,7 +57,7 @@ authorization flows.
 
 ## Dependencies
 
-- PHP 7.4 or higher
+- PHP 8.0 or higher
 - Guzzle
 
 ### Development dependencies
