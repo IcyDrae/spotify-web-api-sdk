@@ -5,7 +5,6 @@ When contributing to this repository, please open an issue first and explain the
 ### Setup
 
 - ```git clone https://github.com/ReardGjoni/spotify-web-api-sdk```
-- create an empty PHP project with the prerequisites described [here](../README.md#prerequisites),
 - ```composer init``` 
 - add the following to the composer.json:
 
