@@ -1,7 +1,7 @@
 <?php
 
 
-if (function_exists('getFixture')) {
+if (!function_exists('getFixture')) {
     function getFixture(string $name): string {
         $fileContents = "";
         $path = getcwd() . "/tests/Unit/fixtures/$name.json";
