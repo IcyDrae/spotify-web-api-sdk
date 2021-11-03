@@ -158,7 +158,7 @@ abstract class AbstractAuthorization extends Client
     protected function authorize(array $options): string
     {
         try {
-            $request = $this->post("/api/token", $options);
+            $request = $this->client->post("/api/token", $options);
 
             $body = $request->getBody();
 

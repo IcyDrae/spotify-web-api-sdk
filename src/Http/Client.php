@@ -20,8 +20,10 @@ use Gjoni\SpotifyWebApiSdk\Exception\AccessTokenExpiredException;
  * @package SpotifyAPI\Http
  * @author Reard Gjoni <gjoni-r@hotmail.com>
  */
-class Client extends GuzzleClient
+class Client
 {
+    protected GuzzleClient $client;
+
     /**
      * @var Response $response Response object.
      */
@@ -61,7 +63,7 @@ class Client extends GuzzleClient
             "timeout" => 2
         ];
 
-        parent::__construct($options);
+        $this->client = new GuzzleClient($options);
     }
 
     /**
@@ -106,7 +108,7 @@ class Client extends GuzzleClient
         }
 
         try {
-            $request = parent::request($method, $path, $options);
+            $request = $this->client->request($method, $path, $options);
 
             if ($request->getStatusCode() === 204) {
                 $this->response->setHeader(204);
